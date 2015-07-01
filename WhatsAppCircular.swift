@@ -58,13 +58,13 @@ class WhatsAppCircular: NSView {
         tempGroup.repeatCount = 1
         return tempGroup
     }()
+    
     var strokeEndAnimation: CABasicAnimation = {
         var tempAnimation = CABasicAnimation(keyPath: "strokeEnd")
         tempAnimation.repeatCount = 1
         tempAnimation.speed = 2.0
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         tempAnimation.fillMode = kCAFillModeForwards // kCAFillModeBoth
-
         return tempAnimation
         }()
 
@@ -73,7 +73,6 @@ class WhatsAppCircular: NSView {
         tempAnimation.repeatCount = 1
         tempAnimation.speed = 2.0
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-
         return tempAnimation
         }()
     
@@ -146,7 +145,6 @@ class WhatsAppCircular: NSView {
         CATransaction.setDisableActions(true)
         currentRotation += CGFloat(lengthRatio.1) * 360 * 0.01746
         currentRotation %= CGFloat(M_PI * 2)
-        println("CurrentRotations \(currentRotation)")
         progressLayer.setAffineTransform(CGAffineTransformMakeRotation(currentRotation))
         CATransaction.commit()
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
