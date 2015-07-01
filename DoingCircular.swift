@@ -9,16 +9,20 @@
 import Foundation
 import Cocoa
 
+
+private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
+private let defaultStrokeColor = NSColor.whiteColor()
+
 @IBDesignable
 class DoingCircular: NSView {
 
-    @IBInspectable var color: NSColor = NSColor.whiteColor() {
+    @IBInspectable var color: NSColor = defaultStrokeColor {
         didSet {
             progressLayer.strokeColor = color.CGColor
         }
     }
     
-    @IBInspectable var backgroundColor: NSColor = NSColor(calibratedWhite: 0, alpha: 0.39) {
+    @IBInspectable var backgroundColor: NSColor = defaultBackgroundColor {
         didSet {
             backgroundLayer.fillColor = backgroundColor.CGColor
         }
@@ -42,11 +46,15 @@ class DoingCircular: NSView {
         }
     }
     //MARK: Shape Layer
-    var backgroundLayer = CAShapeLayer()
+    var backgroundLayer: CAShapeLayer = {
+        var tempLayer = CAShapeLayer()
+        tempLayer.fillColor = defaultBackgroundColor.CGColor
+        return tempLayer
+    }()
     var rotationBaseLayer = CAShapeLayer()
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
-        tempLayer.strokeColor = NSColor.whiteColor().CGColor
+        tempLayer.strokeColor = defaultStrokeColor.CGColor
         tempLayer.strokeEnd = 0.8
         tempLayer.fillColor = NSColor.clearColor().CGColor
         return tempLayer

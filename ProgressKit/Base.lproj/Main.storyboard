@@ -714,8 +714,30 @@
                                     <rect key="frame" x="1" y="1" width="458" height="108"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-Ap-Osl" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="14" width="80" height="80"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-c7-Pmi" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="121" y="13" width="80" height="80"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.93725490570068359" green="0.92941176891326904" blue="0.92156863212585449" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.52941179275512695" green="0.20392157137393951" blue="0.63921570777893066" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-SB-J0K" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="233" y="20" width="54" height="54"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.14117647707462311" green="0.4117647111415863" blue="0.22352941334247589" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.1411764771" green="0.41176471110000001" blue="0.22352941330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="15" width="80" height="80"/>
                                         </customView>
                                     </subviews>
                                 </view>
@@ -734,6 +756,10 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="doing2" destination="BGV-c7-Pmi" id="LG4-Dm-dNe"/>
+                        <outlet property="doing3" destination="wmn-SB-J0K" id="16J-Ns-YJC"/>
+                    </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

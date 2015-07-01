@@ -10,22 +10,18 @@ import Foundation
 import Cocoa
 
 class InDeterminateViewController: NSViewController {
+    @IBOutlet weak var doing1: DoingCircular!
+    @IBOutlet weak var doing2: DoingCircular!
+    @IBOutlet weak var doing3: DoingCircular!
+    
     override func viewDidLoad() {
         preferredContentSize = NSMakeSize(500, 500)
     }
+    
     @IBAction func startStopAnimation(sender: NSButton) {
-        println("Animation \(sender.state == NSOnState)")
+        let isOn = sender.state == NSOnState
+        doing1.animate = isOn
+        doing2.animate = isOn
+        doing3.animate = isOn
     }
-//
-//    @IBOutlet weak var progressView: WhatsAppCircular!
-//    
-//    @IBOutlet weak var modu: WhatsAppCircular!
-//    @IBOutlet weak var medi: WhatsAppCircular!
-//    @IBOutlet weak var small: WhatsAppCircular!
-//    @IBAction func toggleAnimation(sender: NSButton) {
-//        progressView.animate = sender.state == NSOnState
-//        modu.animate = sender.state == NSOnState
-//        medi.animate = sender.state == NSOnState
-//        small.animate = sender.state == NSOnState
-//    }
 }
