@@ -650,8 +650,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="206" height="54"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -667,13 +667,13 @@
         <!--Tab View Controller-->
         <scene sceneID="rXQ-85-vI9">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="GTh-XG-eDn" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="GTh-XG-eDn" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="90h-OW-Y1a"/>
-                        <tabViewItem id="T4v-4q-PhE"/>
+                        <tabViewItem label="Determinate" id="90h-OW-Y1a"/>
+                        <tabViewItem label="Indeterminate" id="T4v-4q-PhE"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="nfr-Au-q0a">
-                        <rect key="frame" x="0.0" y="0.0" width="477" height="110"/>
+                        <rect key="frame" x="0.0" y="0.0" width="296" height="63"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
@@ -685,7 +685,7 @@
                 </tabViewController>
                 <customObject id="1OV-ck-e09" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254.5" y="98"/>
+            <point key="canvasLocation" x="104" y="-20.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E7X-J3-q7D">
@@ -705,11 +705,11 @@
             <objects>
                 <viewController id="rgo-kk-Wcf" customClass="WhatsAppCircularVC" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="lmx-kT-Si1">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2q-an-hbx">
-                                <rect key="frame" x="354" y="130" width="82" height="32"/>
+                                <rect key="frame" x="354" y="330" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wmd-RJ-R4T">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -719,7 +719,7 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-Jp-sCD" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="51" y="109" width="168" height="168"/>
+                                <rect key="frame" x="51" y="309" width="168" height="168"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" white="0.1025133634868421" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
@@ -727,7 +727,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJl-V9-Jo1" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="33" y="77" width="41" height="41"/>
+                                <rect key="frame" x="33" y="277" width="41" height="41"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" white="0.1025133635" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
@@ -735,7 +735,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0X-bu-l1o" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="205" y="77" width="64" height="64"/>
+                                <rect key="frame" x="205" y="277" width="64" height="64"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" white="0.1025133635" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
@@ -746,13 +746,24 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiZ-6v-UvP" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="266" y="180" width="97" height="97"/>
+                                <rect key="frame" x="266" y="380" width="97" height="97"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" white="0.1025133635" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="0.18823529779911041" green="0.54901963472366333" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-IS-cJH" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="267" y="146" width="40" height="40"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.75686275959014893" green="0.090196080505847931" blue="0.050980392843484879" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.94117647409439087" green="0.24705882370471954" blue="0.21568627655506134" alpha="0.63" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
@@ -767,89 +778,122 @@
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="433"/>
+            <point key="canvasLocation" x="495" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--Determinate View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="DeterminateViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="495"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWa-7D-yF6" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="145" width="99" height="99"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-DU-bI3">
-                                <rect key="frame" x="377" y="63" width="96" height="20"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="kV7-A8-t5m"/>
+                                <rect key="frame" x="136" y="473" width="289" height="20"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.29999999999999999" tickMarkPosition="above" sliderType="linear" id="kV7-A8-t5m"/>
                                 <connections>
-                                    <action selector="continousSlider:" target="XfG-lQ-9wD" id="b6M-Bn-etG"/>
+                                    <action selector="sliderDragged:" target="XfG-lQ-9wD" id="mes-ql-pK5"/>
                                 </connections>
                             </slider>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHR-sw-n5J">
-                                <rect key="frame" x="395" y="-2" width="86" height="32"/>
-                                <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xvt-DS-p8a">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-Jj-cPs">
+                                <rect key="frame" x="18" y="475" width="106" height="18"/>
+                                <buttonCell key="cell" type="check" title="Live Progress" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Pp0-aX-cfK">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="buttonPressed:" target="XfG-lQ-9wD" id="9l8-Xf-4hN"/>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="liveProgress" id="HLe-KU-Em3"/>
                                 </connections>
                             </button>
-                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-It-kC4">
-                                <rect key="frame" x="377" y="32" width="96" height="20"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="uKT-Si-zKd"/>
-                            </slider>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="323" y="107" width="137" height="137"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" white="0.75657894736842102" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-Aw-UGu" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="187" y="113" width="57" height="57"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="di7-Py-JKW" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="187" y="210" width="34" height="34"/>
-                            </customView>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="oldStyle" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="g6f-cv-RfC">
+                                <rect key="frame" x="20" y="344" width="460" height="118"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="458" height="116"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWa-7D-yF6" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="9" width="99" height="99"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-Aw-UGu" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="134" y="53" width="57" height="57"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="di7-Py-JKW" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="185" y="15" width="34" height="34"/>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-Pe-z5Z" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="378" y="41" width="60" height="60"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.14117647707462311" green="0.4117647111415863" blue="0.22352941334247589" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.14117647707462311" green="0.4117647111415863" blue="0.22352941334247589" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="246" y="10" width="106" height="106"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" white="0.75657894736842102" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-N3-gG1">
+                                <rect key="frame" x="437" y="474" width="45" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100 %" id="7Nr-gz-yTj">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="labelPercentage" id="iOe-WH-Nsd"/>
+                                </connections>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="large" destination="LGf-cu-fkt" id="nwr-BE-4FW"/>
-                        <outlet property="medium" destination="gSr-Aw-UGu" id="Qk0-ch-uW4"/>
-                        <outlet property="progressView" destination="VWa-7D-yF6" id="utL-31-sF3"/>
-                        <outlet property="sliderOne" destination="fcd-It-kC4" id="K9i-66-oz3"/>
-                        <outlet property="small" destination="di7-Py-JKW" id="A8y-it-Hiw"/>
+                        <outlet property="circularView1" destination="VWa-7D-yF6" id="jTw-Dj-PUj"/>
+                        <outlet property="circularView2" destination="di7-Py-JKW" id="S6E-Su-0Mv"/>
+                        <outlet property="circularView3" destination="gSr-Aw-UGu" id="nbT-5E-EN1"/>
+                        <outlet property="circularView4" destination="LGf-cu-fkt" id="9uW-uU-c8y"/>
+                        <outlet property="circularView5" destination="SNI-Pe-z5Z" id="bwL-vu-uUy"/>
+                        <outlet property="slider" destination="vwx-DU-bI3" id="esn-lC-yUN"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="412"/>
+            <point key="canvasLocation" x="-51" y="442.5"/>
         </scene>
     </scenes>
 </document>

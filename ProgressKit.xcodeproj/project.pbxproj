@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
-		E3AD65DA1B426758009541CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* ViewController.swift */; };
+		E3AD65DA1B426758009541CD /* Determinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* Determinate.swift */; };
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
 		E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F41B426841009541CD /* CircularProgressView.swift */; };
@@ -30,7 +30,7 @@
 		E3AD65D21B426758009541CD /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65D61B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65D71B426758009541CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3AD65D91B426758009541CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3AD65D91B426758009541CD /* Determinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Determinate.swift; sourceTree = "<group>"; };
 		E3AD65DE1B426758009541CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3AD65E41B426758009541CD /* ProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65E91B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E3AD65D71B426758009541CD /* AppDelegate.swift */,
-				E3AD65D91B426758009541CD /* ViewController.swift */,
+				E3AD65D91B426758009541CD /* Determinate.swift */,
 				E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */,
 				E3AD65DD1B426758009541CD /* Main.storyboard */,
 				E3AD65D51B426758009541CD /* Supporting Files */,
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3AD65F91B427531009541CD /* WhatsAppCircular.swift in Sources */,
-				E3AD65DA1B426758009541CD /* ViewController.swift in Sources */,
+				E3AD65DA1B426758009541CD /* Determinate.swift in Sources */,
 				E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */,
 				E3AD65F71B427511009541CD /* WhatsAppCircularVC.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
@@ -408,6 +408,7 @@
 				E3AD65F01B426758009541CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3AD65F11B426758009541CD /* Build configuration list for PBXNativeTarget "ProgressKitTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +417,7 @@
 				E3AD65F31B426758009541CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,10 @@ import Foundation
 import Cocoa
 
 class WhatsAppCircularVC: NSViewController {
+    override func viewDidLoad() {
+        preferredContentSize = NSMakeSize(500, 500)
+    }
+
     @IBOutlet weak var progressView: WhatsAppCircular!
     
     @IBOutlet weak var modu: WhatsAppCircular!
