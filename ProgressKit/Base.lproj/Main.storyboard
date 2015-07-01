@@ -644,7 +644,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ProgressKit" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="-29"/>
+            <point key="canvasLocation" x="-51" y="-333"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -662,7 +662,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="96"/>
+            <point key="canvasLocation" x="-204" y="-223"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="rXQ-85-vI9">
@@ -673,7 +673,7 @@
                         <tabViewItem label="Indeterminate" id="T4v-4q-PhE"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="nfr-Au-q0a">
-                        <rect key="frame" x="0.0" y="0.0" width="296" height="63"/>
+                        <rect key="frame" x="0.0" y="0.0" width="321" height="113"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
@@ -685,7 +685,7 @@
                 </tabViewController>
                 <customObject id="1OV-ck-e09" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="-20.5"/>
+            <point key="canvasLocation" x="39.5" y="-114.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E7X-J3-q7D">
@@ -778,25 +778,25 @@
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="319"/>
+            <point key="canvasLocation" x="469" y="288"/>
         </scene>
         <!--Determinate View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="DeterminateViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="495"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-DU-bI3">
-                                <rect key="frame" x="136" y="473" width="289" height="20"/>
+                                <rect key="frame" x="136" y="478" width="289" height="20"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.29999999999999999" tickMarkPosition="above" sliderType="linear" id="kV7-A8-t5m"/>
                                 <connections>
                                     <action selector="sliderDragged:" target="XfG-lQ-9wD" id="mes-ql-pK5"/>
                                 </connections>
                             </slider>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-Jj-cPs">
-                                <rect key="frame" x="18" y="475" width="106" height="18"/>
+                                <rect key="frame" x="18" y="480" width="106" height="18"/>
                                 <buttonCell key="cell" type="check" title="Live Progress" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Pp0-aX-cfK">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -806,7 +806,7 @@
                                 </connections>
                             </button>
                             <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="oldStyle" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="g6f-cv-RfC">
-                                <rect key="frame" x="20" y="344" width="460" height="118"/>
+                                <rect key="frame" x="20" y="349" width="460" height="118"/>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="458" height="116"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -880,7 +880,7 @@ Disabled</string>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-N3-gG1">
-                                <rect key="frame" x="437" y="474" width="45" height="17"/>
+                                <rect key="frame" x="437" y="479" width="45" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100 %" id="7Nr-gz-yTj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -903,7 +903,7 @@ Disabled</string>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="442.5"/>
+            <point key="canvasLocation" x="-51" y="285.5"/>
         </scene>
     </scenes>
 </document>
