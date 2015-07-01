@@ -850,6 +850,16 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5EO-rr-E0v">
+                                            <rect key="frame" x="377" y="7" width="66" height="34"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="1u9-DZ-sVd">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">Animation
+Disabled</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="246" y="10" width="106" height="106"/>
                                             <userDefinedRuntimeAttributes>

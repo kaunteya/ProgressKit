@@ -28,7 +28,6 @@ class DeterminateViewController: NSViewController {
         let dragging = event!.type == NSEventType.LeftMouseDragged
 
         if liveProgress || dragEnd {
-            println("Slider value = \(sender.floatValue)")
             setProgress(CGFloat(sender.floatValue))
         }
         labelPercentage = "\(Int(sender.floatValue * 100))%"
@@ -45,23 +44,5 @@ class DeterminateViewController: NSViewController {
     override func viewDidLoad() {
         preferredContentSize = NSMakeSize(500, 500)
     }
-    
-//    @IBAction func continousSlider(sender: NSSlider) {
-//        let sliderValue: CGFloat = CGFloat(sender.floatValue)
-//        progressView.setProgressValue(sliderValue, animated: true)
-//        small.setProgressValue(sliderValue, animated: true)
-//        medium.setProgressValue(sliderValue, animated: true)
-//        large.setProgressValue(sliderValue, animated: true)
-//    }
-//    
-//    
-//    @IBOutlet weak var sliderOne: NSSlider!
-//    @IBAction func buttonPressed(sender: AnyObject) {
-//        let sliderValue: CGFloat = CGFloat(sliderOne.floatValue)
-//        progressView.setProgressValue(sliderValue, animated: true)
-//        small.setProgressValue(sliderValue, animated: true)
-//        medium.setProgressValue(sliderValue, animated: true)
-//        large.setProgressValue(sliderValue, animated: true)
-//    }
 }
 
