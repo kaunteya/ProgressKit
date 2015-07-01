@@ -13,6 +13,7 @@ class InDeterminateViewController: NSViewController {
     @IBOutlet weak var doing1: DoingCircular!
     @IBOutlet weak var doing2: DoingCircular!
     @IBOutlet weak var doing3: DoingCircular!
+    @IBOutlet weak var doing4: DoingCircular!
     
     override func viewDidLoad() {
         preferredContentSize = NSMakeSize(500, 500)
@@ -23,5 +24,6 @@ class InDeterminateViewController: NSViewController {
         doing1.animate = isOn
         doing2.animate = isOn
         doing3.animate = isOn
+        doing4.animate = isOn
     }
 }

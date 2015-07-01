@@ -10,7 +10,7 @@ import Cocoa
 
 class DeterminateViewController: NSViewController {
 
-    dynamic var liveProgress: Bool = false
+    dynamic var liveProgress: Bool = true
     dynamic var labelPercentage: String = "30%"
 
     @IBOutlet weak var circularView1: CircularProgressView!
