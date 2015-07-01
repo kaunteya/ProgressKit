@@ -12,8 +12,8 @@
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
 		E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F41B426841009541CD /* CircularProgressView.swift */; };
-		E3AD65F71B427511009541CD /* WhatsAppCircularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */; };
-		E3AD65F91B427531009541CD /* WhatsAppCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F81B427531009541CD /* WhatsAppCircular.swift */; };
+		E3AD65F71B427511009541CD /* InDeterminate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* InDeterminate.swift */; };
+		E3AD65F91B427531009541CD /* DoingCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F81B427531009541CD /* DoingCircular.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		E3AD65E91B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65EA1B426758009541CD /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
 		E3AD65F41B426841009541CD /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsAppCircularVC.swift; sourceTree = "<group>"; };
-		E3AD65F81B427531009541CD /* WhatsAppCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsAppCircular.swift; sourceTree = "<group>"; };
+		E3AD65F61B427511009541CD /* InDeterminate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InDeterminate.swift; sourceTree = "<group>"; };
+		E3AD65F81B427531009541CD /* DoingCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoingCircular.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		E3AD65C91B426758009541CD = {
 			isa = PBXGroup;
 			children = (
-				E3AD65F81B427531009541CD /* WhatsAppCircular.swift */,
+				E3AD65F81B427531009541CD /* DoingCircular.swift */,
 				E3AD65F41B426841009541CD /* CircularProgressView.swift */,
 				E3AD65D41B426758009541CD /* ProgressKit */,
 				E3AD65E71B426758009541CD /* ProgressKitTests */,
@@ -83,7 +83,7 @@
 			children = (
 				E3AD65D71B426758009541CD /* AppDelegate.swift */,
 				E3AD65D91B426758009541CD /* Determinate.swift */,
-				E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */,
+				E3AD65F61B427511009541CD /* InDeterminate.swift */,
 				E3AD65DD1B426758009541CD /* Main.storyboard */,
 				E3AD65D51B426758009541CD /* Supporting Files */,
 			);
@@ -213,10 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3AD65F91B427531009541CD /* WhatsAppCircular.swift in Sources */,
+				E3AD65F91B427531009541CD /* DoingCircular.swift in Sources */,
 				E3AD65DA1B426758009541CD /* Determinate.swift in Sources */,
 				E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */,
-				E3AD65F71B427511009541CD /* WhatsAppCircularVC.swift in Sources */,
+				E3AD65F71B427511009541CD /* InDeterminate.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

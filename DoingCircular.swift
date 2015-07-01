@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class WhatsAppCircular: NSView {
+class DoingCircular: NSView {
 
     @IBInspectable var color: NSColor = NSColor.whiteColor() {
         didSet {
