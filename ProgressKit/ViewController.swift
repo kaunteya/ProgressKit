@@ -10,18 +10,27 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var small: CircularProgressView!
+    @IBOutlet weak var medium: CircularProgressView!
+    @IBOutlet weak var large: CircularProgressView!
+    @IBOutlet weak var progressView: CircularProgressView!
+    
+    @IBAction func continousSlider(sender: NSSlider) {
+        let sliderValue: CGFloat = CGFloat(sender.floatValue)
+        progressView.setProgressValue(sliderValue, animated: true)
+        small.setProgressValue(sliderValue, animated: true)
+        medium.setProgressValue(sliderValue, animated: true)
+        large.setProgressValue(sliderValue, animated: true)
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    
+    @IBOutlet weak var sliderOne: NSSlider!
+    @IBAction func buttonPressed(sender: AnyObject) {
+        let sliderValue: CGFloat = CGFloat(sliderOne.floatValue)
+        progressView.setProgressValue(sliderValue, animated: true)
+        small.setProgressValue(sliderValue, animated: true)
+        medium.setProgressValue(sliderValue, animated: true)
+        large.setProgressValue(sliderValue, animated: true)
     }
-
-
 }
 

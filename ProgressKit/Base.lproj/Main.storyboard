@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,41 +641,194 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ProgressKit" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-80" y="-29"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="206" height="54"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="GTh-XG-eDn" kind="relationship" relationship="window.shadowedContentViewController" id="ztZ-rM-59J"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-168" y="96"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="rXQ-85-vI9">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="1" id="GTh-XG-eDn" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="90h-OW-Y1a"/>
+                        <tabViewItem id="T4v-4q-PhE"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="nfr-Au-q0a">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="110"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="nlJ-xP-ZKw"/>
+                        <segue destination="rgo-kk-Wcf" kind="relationship" relationship="tabItems" id="4Yk-6n-yUT"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="1OV-ck-e09" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254.5" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E7X-J3-q7D">
+            <objects>
+                <viewController id="Bgu-Ba-IcO" sceneMemberID="viewController">
+                    <view key="view" id="1Ok-sk-gpM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="m0m-Bk-cth" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="-6"/>
+        </scene>
+        <!--Whats App CircularVC-->
+        <scene sceneID="poQ-ev-CZa">
+            <objects>
+                <viewController id="rgo-kk-Wcf" customClass="WhatsAppCircularVC" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="lmx-kT-Si1">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-Jp-sCD" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="36" y="137" width="100" height="100"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2q-an-hbx">
+                                <rect key="frame" x="354" y="130" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wmd-RJ-R4T">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleAnimation:" target="rgo-kk-Wcf" id="jrf-SR-I58"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-He-rtl">
+                                <rect key="frame" x="18" y="36" width="414" height="21"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.10000000000000001" maxValue="2" doubleValue="0.76800000000000002" tickMarkPosition="above" sliderType="linear" id="tFm-qH-upn"/>
+                                <connections>
+                                    <action selector="testSliderUpdated:" target="rgo-kk-Wcf" id="rMX-sD-c1W"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-4V-uoi">
+                                <rect key="frame" x="24" y="63" width="175" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="5aV-Jd-Ut7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="F0T-Jp-sCD" id="bJK-JQ-bzX"/>
+                        <outlet property="testLabel" destination="5bp-4V-uoi" id="tJS-r9-74r"/>
+                        <outlet property="testSlider" destination="Hpx-He-rtl" id="dDG-09-efp"/>
+                    </connections>
+                </viewController>
+                <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="420"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWa-7D-yF6" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="145" width="99" height="99"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-DU-bI3">
+                                <rect key="frame" x="377" y="63" width="96" height="20"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="kV7-A8-t5m"/>
+                                <connections>
+                                    <action selector="continousSlider:" target="XfG-lQ-9wD" id="b6M-Bn-etG"/>
+                                </connections>
+                            </slider>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHR-sw-n5J">
+                                <rect key="frame" x="395" y="-2" width="86" height="32"/>
+                                <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xvt-DS-p8a">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonPressed:" target="XfG-lQ-9wD" id="9l8-Xf-4hN"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-It-kC4">
+                                <rect key="frame" x="377" y="32" width="96" height="20"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="uKT-Si-zKd"/>
+                            </slider>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="323" y="107" width="137" height="137"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.75657894736842102" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-Aw-UGu" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="187" y="113" width="57" height="57"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="di7-Py-JKW" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="187" y="210" width="34" height="34"/>
+                            </customView>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="large" destination="LGf-cu-fkt" id="nwr-BE-4FW"/>
+                        <outlet property="medium" destination="gSr-Aw-UGu" id="Qk0-ch-uW4"/>
+                        <outlet property="progressView" destination="VWa-7D-yF6" id="utL-31-sF3"/>
+                        <outlet property="sliderOne" destination="fcd-It-kC4" id="K9i-66-oz3"/>
+                        <outlet property="small" destination="di7-Py-JKW" id="A8y-it-Hiw"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-59" y="412"/>
         </scene>
     </scenes>
 </document>

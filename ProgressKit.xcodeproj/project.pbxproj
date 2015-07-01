@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
 		E3AD65DA1B426758009541CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* ViewController.swift */; };
-		E3AD65DC1B426758009541CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DB1B426758009541CD /* Images.xcassets */; };
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
+		E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F41B426841009541CD /* CircularProgressView.swift */; };
+		E3AD65F71B427511009541CD /* WhatsAppCircularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */; };
+		E3AD65F91B427531009541CD /* WhatsAppCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F81B427531009541CD /* WhatsAppCircular.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +31,13 @@
 		E3AD65D61B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65D71B426758009541CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3AD65D91B426758009541CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E3AD65DB1B426758009541CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3AD65DE1B426758009541CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3AD65E41B426758009541CD /* ProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65E91B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65EA1B426758009541CD /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
+		E3AD65F41B426841009541CD /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsAppCircularVC.swift; sourceTree = "<group>"; };
+		E3AD65F81B427531009541CD /* WhatsAppCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsAppCircular.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		E3AD65C91B426758009541CD = {
 			isa = PBXGroup;
 			children = (
+				E3AD65F81B427531009541CD /* WhatsAppCircular.swift */,
+				E3AD65F41B426841009541CD /* CircularProgressView.swift */,
 				E3AD65D41B426758009541CD /* ProgressKit */,
 				E3AD65E71B426758009541CD /* ProgressKitTests */,
 				E3AD65D31B426758009541CD /* Products */,
@@ -77,7 +83,7 @@
 			children = (
 				E3AD65D71B426758009541CD /* AppDelegate.swift */,
 				E3AD65D91B426758009541CD /* ViewController.swift */,
-				E3AD65DB1B426758009541CD /* Images.xcassets */,
+				E3AD65F61B427511009541CD /* WhatsAppCircularVC.swift */,
 				E3AD65DD1B426758009541CD /* Main.storyboard */,
 				E3AD65D51B426758009541CD /* Supporting Files */,
 			);
@@ -189,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3AD65DC1B426758009541CD /* Images.xcassets in Resources */,
 				E3AD65DF1B426758009541CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AD65F91B427531009541CD /* WhatsAppCircular.swift in Sources */,
 				E3AD65DA1B426758009541CD /* ViewController.swift in Sources */,
+				E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */,
+				E3AD65F71B427511009541CD /* WhatsAppCircularVC.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
