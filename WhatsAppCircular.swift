@@ -30,9 +30,11 @@ class WhatsAppCircular: NSView {
         didSet {
             //MARK: Animation Handlers
             if animate {
+                self.hidden = false
                 progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
                 rotationBaseLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
             } else {
+                self.hidden = true
                 rotationBaseLayer.removeAllAnimations()
                 progressLayer.removeAllAnimations()
             }
@@ -45,8 +47,7 @@ class WhatsAppCircular: NSView {
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeColor = NSColor.whiteColor().CGColor
-        tempLayer.lineWidth = 4
-        tempLayer.strokeEnd = 0
+        tempLayer.strokeEnd = 0.8
         tempLayer.fillColor = NSColor.clearColor().CGColor
         return tempLayer
     }()
@@ -100,7 +101,6 @@ class WhatsAppCircular: NSView {
         backgroundLayer.frame = rect
         var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: baseLayerRotationRadius, yRadius: baseLayerRotationRadius)
         backgroundLayer.path = backgroundPath.CGPath
-//        backgroundLayer.frame.origin = NSMakePoint(1, 1)
         self.layer?.addSublayer(backgroundLayer)
         
         rotationBaseLayer.frame = rect
@@ -115,7 +115,7 @@ class WhatsAppCircular: NSView {
     func addProgressLayer(rect: NSRect) {
         let radius = (rect.width / 2) * 0.75
         progressLayer.frame =  rect
-
+        progressLayer.lineWidth = radius / 10
         var arcPath = NSBezierPath()
         arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
