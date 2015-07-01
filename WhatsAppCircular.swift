@@ -45,7 +45,7 @@ class WhatsAppCircular: NSView {
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeColor = NSColor.whiteColor().CGColor
-        tempLayer.lineWidth = 5
+        tempLayer.lineWidth = 4
         tempLayer.strokeEnd = 0
         tempLayer.fillColor = NSColor.clearColor().CGColor
         return tempLayer
@@ -94,13 +94,13 @@ class WhatsAppCircular: NSView {
 
     func makeLayers() {
         self.wantsLayer = true
-        let rect = NSInsetRect(self.bounds, 1, 1)
+        let rect = NSInsetRect(self.bounds, 0, 0)
         let baseLayerRotationRadius = NSWidth(rect) / 2
 
-        let xyRadius = NSWidth(rect) * 0.1
         backgroundLayer.frame = rect
         var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: baseLayerRotationRadius, yRadius: baseLayerRotationRadius)
         backgroundLayer.path = backgroundPath.CGPath
+//        backgroundLayer.frame.origin = NSMakePoint(1, 1)
         self.layer?.addSublayer(backgroundLayer)
         
         rotationBaseLayer.frame = rect
@@ -141,6 +141,7 @@ class WhatsAppCircular: NSView {
 
     var currentRotation = CGFloat(0.0)
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+        if !animate { return }
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         currentRotation += CGFloat(lengthRatio.1) * 360 * 0.01746

@@ -708,18 +708,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBk-TJ-64G">
-                                <rect key="frame" x="-110" y="35" width="484" height="341"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSComputer" id="tjH-Wy-K7K"/>
-                            </imageView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-Jp-sCD" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="82" y="143" width="100" height="100"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" white="0.1025133634868421" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2q-an-hbx">
                                 <rect key="frame" x="354" y="130" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wmd-RJ-R4T">
@@ -730,10 +718,51 @@
                                     <action selector="toggleAnimation:" target="rgo-kk-Wcf" id="jrf-SR-I58"/>
                                 </connections>
                             </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-Jp-sCD" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="51" y="109" width="168" height="168"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.1025133634868421" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJl-V9-Jo1" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="33" y="77" width="41" height="41"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.1025133635" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0X-bu-l1o" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="205" y="77" width="64" height="64"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.1025133635" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.015686275437474251" green="0.49803921580314636" blue="0.72156864404678345" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiZ-6v-UvP" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="266" y="180" width="97" height="97"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.1025133635" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.18823529779911041" green="0.54901963472366333" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="medi" destination="P0X-bu-l1o" id="siY-QO-tuQ"/>
+                        <outlet property="modu" destination="wiZ-6v-UvP" id="fiw-xf-fw8"/>
                         <outlet property="progressView" destination="F0T-Jp-sCD" id="bJK-JQ-bzX"/>
+                        <outlet property="small" destination="iJl-V9-Jo1" id="IdX-K2-g7b"/>
                     </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -823,7 +852,4 @@
             <point key="canvasLocation" x="-59" y="412"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSComputer" width="32" height="32"/>
-    </resources>
 </document>

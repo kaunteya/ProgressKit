@@ -12,7 +12,13 @@ import Cocoa
 class WhatsAppCircularVC: NSViewController {
     @IBOutlet weak var progressView: WhatsAppCircular!
     
+    @IBOutlet weak var modu: WhatsAppCircular!
+    @IBOutlet weak var medi: WhatsAppCircular!
+    @IBOutlet weak var small: WhatsAppCircular!
     @IBAction func toggleAnimation(sender: NSButton) {
         progressView.animate = sender.state == NSOnState
+        modu.animate = sender.state == NSOnState
+        medi.animate = sender.state == NSOnState
+        small.animate = sender.state == NSOnState
     }
 }
