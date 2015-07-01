@@ -708,8 +708,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBk-TJ-64G">
+                                <rect key="frame" x="-110" y="35" width="484" height="341"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSComputer" id="tjH-Wy-K7K"/>
+                            </imageView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-Jp-sCD" customClass="WhatsAppCircular" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="36" y="137" width="100" height="100"/>
+                                <rect key="frame" x="82" y="143" width="100" height="100"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.1025133634868421" alpha="0.68000000000000005" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2q-an-hbx">
                                 <rect key="frame" x="354" y="130" width="82" height="32"/>
@@ -721,27 +730,10 @@
                                     <action selector="toggleAnimation:" target="rgo-kk-Wcf" id="jrf-SR-I58"/>
                                 </connections>
                             </button>
-                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-He-rtl">
-                                <rect key="frame" x="18" y="36" width="414" height="21"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.10000000000000001" maxValue="2" doubleValue="0.76800000000000002" tickMarkPosition="above" sliderType="linear" id="tFm-qH-upn"/>
-                                <connections>
-                                    <action selector="testSliderUpdated:" target="rgo-kk-Wcf" id="rMX-sD-c1W"/>
-                                </connections>
-                            </slider>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-4V-uoi">
-                                <rect key="frame" x="24" y="63" width="175" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="5aV-Jd-Ut7">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="progressView" destination="F0T-Jp-sCD" id="bJK-JQ-bzX"/>
-                        <outlet property="testLabel" destination="5bp-4V-uoi" id="tJS-r9-74r"/>
-                        <outlet property="testSlider" destination="Hpx-He-rtl" id="dDG-09-efp"/>
                     </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -831,4 +823,7 @@
             <point key="canvasLocation" x="-59" y="412"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSComputer" width="32" height="32"/>
+    </resources>
 </document>
