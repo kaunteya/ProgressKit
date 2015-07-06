@@ -56,6 +56,7 @@ class DoingCircular: NSView {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeColor = defaultStrokeColor.CGColor
         tempLayer.strokeEnd = 0.8
+        tempLayer.lineCap = kCALineCapRound
         tempLayer.fillColor = NSColor.clearColor().CGColor
         return tempLayer
     }()
