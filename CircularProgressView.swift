@@ -30,7 +30,7 @@ class CircularProgressView: NSView {
         }
     }
     
-    @IBInspectable var strokeWidth: CGFloat = CGFloat(1) {
+    @IBInspectable var strokeWidth: CGFloat = -1 {
         didSet {
             backgroundCircle.lineWidth = self.strokeWidth / 2
             progressLayer.lineWidth = strokeWidth
@@ -78,6 +78,8 @@ class CircularProgressView: NSView {
         
         func addBackgroundCircle() {
             backgroundCircle.frame = rect
+            backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * 0.1 / 2) : strokeWidth / 2
+
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
             backgroundCircle.fillColor = NSColor.clearColor().CGColor
             var backgroundPath = NSBezierPath()
@@ -91,7 +93,8 @@ class CircularProgressView: NSView {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clearColor().CGColor
             progressLayer.lineCap = kCALineCapRound
-            
+            progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * 0.1) : strokeWidth
+
             progressLayer.frame = rect
             progressLayer.strokeColor = color.CGColor
             var arcPath = NSBezierPath()

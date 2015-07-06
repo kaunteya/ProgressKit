@@ -863,9 +863,6 @@ Disabled</string>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="246" y="10" width="106" height="106"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                                    <real key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                     <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
