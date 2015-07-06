@@ -97,7 +97,7 @@ class CircularProgressView: NSView {
         progressLayer.strokeStart = 0 //REMOVe this
         progressLayer.strokeEnd = 0 //REMOVe this
         progressLayer.fillColor = NSColor.clearColor().CGColor
-
+        progressLayer.lineCap = kCALineCapRound
         var arcPath = NSBezierPath()
         var startAngle = CGFloat(90)
         arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
