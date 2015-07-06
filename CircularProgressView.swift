@@ -16,7 +16,7 @@ class CircularProgressView: NSView {
     var progressLayer = CAShapeLayer()
     
     @IBInspectable var progress: CGFloat = CGFloat(0)
-   
+    
     @IBInspectable var color: NSColor = NSColor.whiteColor() {
         didSet {
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
@@ -48,7 +48,6 @@ class CircularProgressView: NSView {
         }
         let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         CATransaction.setAnimationTimingFunction(timing)
-        progressLayer.strokeStart = 0
         progressLayer.strokeEnd = self.progress
         CATransaction.commit()
     }
@@ -66,44 +65,45 @@ class CircularProgressView: NSView {
     func makeLayers() {
         self.wantsLayer = true
         let rect = self.bounds
-        addBackgroundLayer(rect)
         let radius = (rect.width / 2) * 0.75
-        addBackgroundCircle(rect, radius: radius)
-        addProgressLayer(rect, radius: radius)
-    }
 
-    func addBackgroundLayer(rect: NSRect) {
-        let radius = NSWidth(rect) * 0.1
-        backgroundLayer.frame = rect
-        backgroundLayer.fillColor = backgroundColor.CGColor
-        var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
-        backgroundLayer.path = backgroundPath.CGPath
-        self.layer?.addSublayer(backgroundLayer)
-    }
+        func addBackgroundLayer(rect: NSRect) {
+            let radius = NSWidth(rect) * 0.1
+            backgroundLayer.frame = rect
+            backgroundLayer.fillColor = backgroundColor.CGColor
+            var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
+            backgroundLayer.path = backgroundPath.CGPath
+            self.layer?.addSublayer(backgroundLayer)
+        }
+        
+        func addBackgroundCircle() {
+            backgroundCircle.frame = rect
+            backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
+            backgroundCircle.fillColor = NSColor.clearColor().CGColor
+            var backgroundPath = NSBezierPath()
+            backgroundPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: 0, endAngle: 360)
+            backgroundCircle.path = backgroundPath.CGPath
+            self.layer?.addSublayer(backgroundCircle)
+        }
+        
+        func addProgressLayer(rect: NSRect, radius: CGFloat) {
+            progressLayer.strokeStart = 0 //REMOVe this
+            progressLayer.strokeEnd = 0 //REMOVe this
+            progressLayer.fillColor = NSColor.clearColor().CGColor
+            progressLayer.lineCap = kCALineCapRound
+            
+            progressLayer.frame = rect
+            progressLayer.strokeColor = color.CGColor
+            var arcPath = NSBezierPath()
+            var startAngle = CGFloat(90)
+            arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
+            progressLayer.path = arcPath.CGPath
+            self.layer?.addSublayer(progressLayer)
+        }
 
-    func addBackgroundCircle(rect: NSRect, radius: CGFloat) {
-        backgroundCircle.frame = rect
-        backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
-        backgroundCircle.fillColor = NSColor.clearColor().CGColor
-        var backgroundPath = NSBezierPath()
-        backgroundPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: 0, endAngle: 360)
-        backgroundCircle.path = backgroundPath.CGPath
-        self.layer?.addSublayer(backgroundCircle)
-    }
-    
-    func addProgressLayer(rect: NSRect, radius: CGFloat) {
-        progressLayer.frame = rect
-        progressLayer.strokeColor = color.CGColor
-        progressLayer.strokeStart = 0 //REMOVe this
-        progressLayer.strokeEnd = 0 //REMOVe this
-        progressLayer.fillColor = NSColor.clearColor().CGColor
-        progressLayer.lineCap = kCALineCapRound
-        var arcPath = NSBezierPath()
-        var startAngle = CGFloat(90)
-        arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
-        progressLayer.path = arcPath.CGPath
-        //animation var removedOnCompletion: Bool
-        self.layer?.addSublayer(progressLayer)
+        addBackgroundLayer(rect)
+        addBackgroundCircle()
+        addProgressLayer(rect, radius)
     }
 }
 
