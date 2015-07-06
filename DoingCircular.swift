@@ -16,6 +16,12 @@ private let defaultStrokeColor = NSColor.whiteColor()
 @IBDesignable
 class DoingCircular: NSView {
 
+    @IBInspectable var lineWidth: CGFloat = -1 {
+        didSet {
+            progressLayer.lineWidth = lineWidth
+        }
+    }
+    
     @IBInspectable var color: NSColor = defaultStrokeColor {
         didSet {
             progressLayer.strokeColor = color.CGColor
@@ -123,7 +129,7 @@ class DoingCircular: NSView {
     func addProgressLayer(rect: NSRect) {
         let radius = (rect.width / 2) * 0.75
         progressLayer.frame =  rect
-        progressLayer.lineWidth = radius / 10
+        progressLayer.lineWidth = lineWidth == -1 ? radius / 10: lineWidth
         var arcPath = NSBezierPath()
         arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath

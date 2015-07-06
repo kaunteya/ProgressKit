@@ -738,6 +738,11 @@
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="15" y="15" width="80" height="80"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                    <real key="value" value="9"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P04-TQ-vwF" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="349" y="15" width="69" height="69"/>
