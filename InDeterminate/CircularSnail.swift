@@ -42,7 +42,7 @@ class CircularSnail: IndeterminateAnimation {
         tempLayer.fillColor = defaultBackgroundColor.CGColor
         return tempLayer
     }()
-    var rotationBaseLayer = CAShapeLayer()
+
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeColor = defaultStrokeColor.CGColor
@@ -101,11 +101,6 @@ class CircularSnail: IndeterminateAnimation {
         backgroundLayer.backgroundColor = backgroundColor.CGColor
         self.layer?.addSublayer(backgroundLayer)
         
-        rotationBaseLayer.frame = rect
-        rotationBaseLayer.fillColor = NSColor.clearColor().CGColor
-        rotationBaseLayer.path = NSBezierPath(roundedRect: rect, xRadius: 0, yRadius: 0).CGPath
-        backgroundLayer.addSublayer(rotationBaseLayer)
-        
         addProgressLayer(rect)
     }
 
@@ -133,7 +128,7 @@ class CircularSnail: IndeterminateAnimation {
         animationGroup.duration = duration
         animationGroup.delegate = self
         
-        rotationBaseLayer.addSublayer(progressLayer)
+        backgroundLayer.addSublayer(progressLayer)
     }
     
 
@@ -151,10 +146,10 @@ class CircularSnail: IndeterminateAnimation {
     
     override func startAnimation() {
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-        rotationBaseLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
+        backgroundLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
     override func stopAnimation() {
-        rotationBaseLayer.removeAllAnimations()
+        backgroundLayer.removeAllAnimations()
         progressLayer.removeAllAnimations()
     }
 
