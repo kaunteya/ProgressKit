@@ -607,8 +607,7 @@
                                                 <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Zoom" keyEquivalent="m" id="R4o-n2-Eq4">
                                             <connections>
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
                                             </connections>

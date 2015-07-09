@@ -34,11 +34,11 @@ class DeterminateViewController: NSViewController {
     }
 
     func setProgress(progress: CGFloat) {
-        circularView1.updateProgress(progress, animated: true)
-        circularView2.updateProgress(progress, animated: true)
-        circularView3.updateProgress(progress, animated: true)
-        circularView4.updateProgress(progress, animated: true)
-        circularView5.updateProgress(progress, animated: false)
+        circularView1.progress = progress
+        circularView2.progress = progress
+        circularView3.progress = progress
+        circularView4.progress = progress
+        circularView5.progress = progress        
     }
     
     override func viewDidLoad() {

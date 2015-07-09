@@ -10,11 +10,13 @@
 		E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F801B4E88CF00558DAB /* CircularProgressView.swift */; };
 		E3918F841B4E88DE00558DAB /* DoingCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F821B4E88DE00558DAB /* DoingCircular.swift */; };
 		E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F831B4E88DE00558DAB /* ShootingStars.swift */; };
+		E3918F8D1B4E8AB100558DAB /* InDeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */; };
+		E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */; };
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
-		E3AD65DA1B426758009541CD /* Determinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* Determinate.swift */; };
+		E3AD65DA1B426758009541CD /* DeterminateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* DeterminateVC.swift */; };
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
-		E3AD65F71B427511009541CD /* InDeterminate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* InDeterminate.swift */; };
+		E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* InDeterminateVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +33,17 @@
 		E3918F801B4E88CF00558DAB /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Determinate/CircularProgressView.swift; sourceTree = "<group>"; };
 		E3918F821B4E88DE00558DAB /* DoingCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoingCircular.swift; path = InDeterminate/DoingCircular.swift; sourceTree = "<group>"; };
 		E3918F831B4E88DE00558DAB /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootingStars.swift; path = InDeterminate/ShootingStars.swift; sourceTree = "<group>"; };
+		E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InDeterminateAnimation.swift; path = InDeterminate/InDeterminateAnimation.swift; sourceTree = "<group>"; };
+		E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeterminateAnimation.swift; path = Determinate/DeterminateAnimation.swift; sourceTree = "<group>"; };
 		E3AD65D21B426758009541CD /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65D61B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65D71B426758009541CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3AD65D91B426758009541CD /* Determinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Determinate.swift; sourceTree = "<group>"; };
+		E3AD65D91B426758009541CD /* DeterminateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterminateVC.swift; sourceTree = "<group>"; };
 		E3AD65DE1B426758009541CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3AD65E41B426758009541CD /* ProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65E91B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65EA1B426758009541CD /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
-		E3AD65F61B427511009541CD /* InDeterminate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InDeterminate.swift; sourceTree = "<group>"; };
+		E3AD65F61B427511009541CD /* InDeterminateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InDeterminateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		E316CCAA1B4E8633005A9A31 /* InDeterminate */ = {
 			isa = PBXGroup;
 			children = (
+				E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */,
 				E3918F821B4E88DE00558DAB /* DoingCircular.swift */,
 				E3918F831B4E88DE00558DAB /* ShootingStars.swift */,
 			);
@@ -72,6 +77,7 @@
 		E316CCAB1B4E8642005A9A31 /* Determinate */ = {
 			isa = PBXGroup;
 			children = (
+				E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */,
 				E3918F801B4E88CF00558DAB /* CircularProgressView.swift */,
 			);
 			name = Determinate;
@@ -101,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				E3AD65D71B426758009541CD /* AppDelegate.swift */,
-				E3AD65D91B426758009541CD /* Determinate.swift */,
-				E3AD65F61B427511009541CD /* InDeterminate.swift */,
+				E3AD65D91B426758009541CD /* DeterminateVC.swift */,
+				E3AD65F61B427511009541CD /* InDeterminateVC.swift */,
 				E3AD65DD1B426758009541CD /* Main.storyboard */,
 				E3AD65D51B426758009541CD /* Supporting Files */,
 			);
@@ -232,12 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3AD65DA1B426758009541CD /* Determinate.swift in Sources */,
-				E3AD65F71B427511009541CD /* InDeterminate.swift in Sources */,
+				E3AD65DA1B426758009541CD /* DeterminateVC.swift in Sources */,
+				E3918F8D1B4E8AB100558DAB /* InDeterminateAnimation.swift in Sources */,
+				E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */,
 				E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */,
 				E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */,
 				E3918F841B4E88DE00558DAB /* DoingCircular.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
+				E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,11 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class CircularProgressView: NSView {
+class CircularProgressView: DeterminateAnimation {
     var backgroundLayer = CAShapeLayer()
     var backgroundCircle = CAShapeLayer()
     var progressLayer = CAShapeLayer()
-    
-    @IBInspectable var progress: CGFloat = CGFloat(0)
-    
+        
     @IBInspectable var color: NSColor = NSColor.whiteColor() {
         didSet {
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
@@ -37,18 +35,16 @@ class CircularProgressView: NSView {
         }
     }
 
-    func setProgressValue(newProgressValue: CGFloat, animated: Bool) {
-        let currentProgress = progress
-        self.progress = max(0, min(newProgressValue, 1))
+    override func updateProgress() {
         CATransaction.begin()
-        if animated {
+        if animatedProgress {
             CATransaction.setAnimationDuration(0.5)
         } else {
             CATransaction.setDisableActions(true)
         }
         let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         CATransaction.setAnimationTimingFunction(timing)
-        progressLayer.strokeEnd = self.progress
+        progressLayer.strokeEnd = max(0, min(progress, 1))
         CATransaction.commit()
     }
     
