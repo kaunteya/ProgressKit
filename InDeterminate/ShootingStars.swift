@@ -24,6 +24,7 @@ class ShootingStars: NSView {
             starLayer2.backgroundColor = starColor.CGColor
         }
     }
+
     var backgroundLayer = CAShapeLayer()
     var starLayer1 = CAShapeLayer()
     var starLayer2 = CAShapeLayer()
@@ -33,7 +34,6 @@ class ShootingStars: NSView {
         super.init(coder: coder)
         makeLayers()
     }
-    
     
     func makeLayers() {
         self.wantsLayer = true
@@ -69,8 +69,6 @@ class ShootingStars: NSView {
             animation.repeatCount = Float.infinity
         }
         
-        
-        
         addBackgroundLayer()
         makeStar1()
         makeStar2()
@@ -83,14 +81,13 @@ class ShootingStars: NSView {
         tempMiddleAnimation.duration = 0.5
         tempMiddleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
 
-        
         starLayer1.addAnimation(animation, forKey: "p1")
         starLayer2.addAnimation(tempMiddleAnimation, forKey: "tempAnimation")
     }
+    
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
-        println("Animation finished")
         if let tempAnimation = anim as? CABasicAnimation {
-            println("Temp animatino finish \(tempAnimation.keyPath)")
+            // if keypath == "temp" then remove
             starLayer2.addAnimation(animation, forKey: "p2")
         }
     }
