@@ -29,7 +29,7 @@ class CircularSnail: IndeterminateAnimation {
     
     @IBInspectable var backgroundColor: NSColor = defaultBackgroundColor {
         didSet {
-            backgroundLayer.fillColor = backgroundColor.CGColor
+            backgroundLayer.backgroundColor = backgroundColor.CGColor
         }
     }
 
@@ -96,10 +96,9 @@ class CircularSnail: IndeterminateAnimation {
         self.wantsLayer = true
         let rect = NSInsetRect(self.bounds, 0, 0)
         let baseLayerRotationRadius = NSWidth(rect) / 2
-
+        backgroundLayer.cornerRadius = baseLayerRotationRadius
         backgroundLayer.frame = rect
-        var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: baseLayerRotationRadius, yRadius: baseLayerRotationRadius)
-        backgroundLayer.path = backgroundPath.CGPath
+        backgroundLayer.backgroundColor = backgroundColor.CGColor
         self.layer?.addSublayer(backgroundLayer)
         
         rotationBaseLayer.frame = rect
