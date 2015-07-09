@@ -10,7 +10,7 @@
 		E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F801B4E88CF00558DAB /* CircularProgressView.swift */; };
 		E3918F841B4E88DE00558DAB /* DoingCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F821B4E88DE00558DAB /* DoingCircular.swift */; };
 		E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F831B4E88DE00558DAB /* ShootingStars.swift */; };
-		E3918F8D1B4E8AB100558DAB /* InDeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */; };
+		E3918F8D1B4E8AB100558DAB /* IndeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8C1B4E8AB100558DAB /* IndeterminateAnimation.swift */; };
 		E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */; };
 		E3918F911B4EA06F00558DAB /* ProgressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F901B4EA06F00558DAB /* ProgressUtils.swift */; };
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
@@ -34,7 +34,7 @@
 		E3918F801B4E88CF00558DAB /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Determinate/CircularProgressView.swift; sourceTree = "<group>"; };
 		E3918F821B4E88DE00558DAB /* DoingCircular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoingCircular.swift; path = InDeterminate/DoingCircular.swift; sourceTree = "<group>"; };
 		E3918F831B4E88DE00558DAB /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootingStars.swift; path = InDeterminate/ShootingStars.swift; sourceTree = "<group>"; };
-		E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InDeterminateAnimation.swift; path = InDeterminate/InDeterminateAnimation.swift; sourceTree = "<group>"; };
+		E3918F8C1B4E8AB100558DAB /* IndeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndeterminateAnimation.swift; path = InDeterminate/IndeterminateAnimation.swift; sourceTree = "<group>"; };
 		E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeterminateAnimation.swift; path = Determinate/DeterminateAnimation.swift; sourceTree = "<group>"; };
 		E3918F901B4EA06F00558DAB /* ProgressUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressUtils.swift; sourceTree = "<group>"; };
 		E3AD65D21B426758009541CD /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,14 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E316CCAA1B4E8633005A9A31 /* InDeterminate */ = {
+		E316CCAA1B4E8633005A9A31 /* Indeterminate */ = {
 			isa = PBXGroup;
 			children = (
-				E3918F8C1B4E8AB100558DAB /* InDeterminateAnimation.swift */,
+				E3918F8C1B4E8AB100558DAB /* IndeterminateAnimation.swift */,
 				E3918F821B4E88DE00558DAB /* DoingCircular.swift */,
 				E3918F831B4E88DE00558DAB /* ShootingStars.swift */,
 			);
-			name = InDeterminate;
+			name = Indeterminate;
 			sourceTree = "<group>";
 		};
 		E316CCAB1B4E8642005A9A31 /* Determinate */ = {
@@ -88,7 +88,7 @@
 		E3AD65C91B426758009541CD = {
 			isa = PBXGroup;
 			children = (
-				E316CCAA1B4E8633005A9A31 /* InDeterminate */,
+				E316CCAA1B4E8633005A9A31 /* Indeterminate */,
 				E316CCAB1B4E8642005A9A31 /* Determinate */,
 				E3AD65D41B426758009541CD /* ProgressKit */,
 				E3AD65E71B426758009541CD /* ProgressKitTests */,
@@ -243,7 +243,7 @@
 			files = (
 				E3918F911B4EA06F00558DAB /* ProgressUtils.swift in Sources */,
 				E3AD65DA1B426758009541CD /* DeterminateVC.swift in Sources */,
-				E3918F8D1B4E8AB100558DAB /* InDeterminateAnimation.swift in Sources */,
+				E3918F8D1B4E8AB100558DAB /* IndeterminateAnimation.swift in Sources */,
 				E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */,
 				E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */,
 				E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */,

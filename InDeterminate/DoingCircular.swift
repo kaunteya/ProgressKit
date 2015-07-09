@@ -14,7 +14,7 @@ private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 private let defaultStrokeColor = NSColor.whiteColor()
 
 @IBDesignable
-class DoingCircular: InDeterminateAnimation {
+class DoingCircular: IndeterminateAnimation {
 
     @IBInspectable var lineWidth: CGFloat = -1 {
         didSet {

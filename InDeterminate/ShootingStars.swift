@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class ShootingStars: InDeterminateAnimation {
+class ShootingStars: IndeterminateAnimation {
     private let animationDuration = 1.0
     @IBInspectable var backgroundColor: NSColor = NSColor( red: 0.2026, green: 0.7113, blue: 0.9, alpha: 1.0 ) {
         didSet {

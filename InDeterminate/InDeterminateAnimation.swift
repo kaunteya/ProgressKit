@@ -14,7 +14,7 @@ protocol InDeterminable {
     func stopAnimation()
 }
 
-class InDeterminateAnimation: NSView, InDeterminable {
+class IndeterminateAnimation: NSView, InDeterminable {
     @IBInspectable var displayAfterAnimationEnds: Bool = false
     
     var animate: Bool = false {
