@@ -16,9 +16,9 @@ protocol Determinable {
 @IBDesignable
 class DeterminateAnimation: NSView, Determinable {
     
-    var animatedProgress: Bool = true
+    @IBInspectable var animated: Bool = true
 
-    var progress: CGFloat = 0 {
+    @IBInspectable var progress: CGFloat = 0 {
         didSet {
             updateProgress()
         }

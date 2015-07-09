@@ -37,7 +37,7 @@ class CircularProgressView: DeterminateAnimation {
 
     override func updateProgress() {
         CATransaction.begin()
-        if animatedProgress {
+        if animated {
             CATransaction.setAnimationDuration(0.5)
         } else {
             CATransaction.setDisableActions(true)
@@ -72,9 +72,10 @@ class CircularProgressView: DeterminateAnimation {
             self.layer?.addSublayer(backgroundLayer)
         }
         
+        let strokeScalingFactor = CGFloat(0.05)
         func addBackgroundCircle() {
             backgroundCircle.frame = rect
-            backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * 0.1 / 2) : strokeWidth / 2
+            backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor / 2) : strokeWidth / 2
 
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
             backgroundCircle.fillColor = NSColor.clearColor().CGColor
@@ -89,7 +90,7 @@ class CircularProgressView: DeterminateAnimation {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clearColor().CGColor
             progressLayer.lineCap = kCALineCapRound
-            progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * 0.1) : strokeWidth
+            progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor) : strokeWidth
 
             progressLayer.frame = rect
             progressLayer.strokeColor = color.CGColor
