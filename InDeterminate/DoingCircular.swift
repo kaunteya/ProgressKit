@@ -131,7 +131,7 @@ class DoingCircular: NSView {
         progressLayer.frame =  rect
         progressLayer.lineWidth = lineWidth == -1 ? radius / 10: lineWidth
         var arcPath = NSBezierPath()
-        arcPath.appendBezierPathWithArcWithCenter(rect.center(), radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
+        arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
 
         strokeEndAnimation.fromValue = lengthRatio.0

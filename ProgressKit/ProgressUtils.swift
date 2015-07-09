@@ -10,10 +10,12 @@ import Foundation
 import Cocoa
 
 extension NSRect {
-    func center() -> NSPoint {
-        let x = CGRectGetMidX(self)
-        let y = CGRectGetMidY(self)
-        return NSMakePoint(x, y)
+    var mid: NSPoint {
+        get {
+            let x = CGRectGetMidX(self)
+            let y = CGRectGetMidY(self)
+            return NSMakePoint(x, y)
+        }
     }
 }
 
@@ -59,6 +61,7 @@ extension NSBezierPath {
     }
 }
 
+/// All the do_ invocations will be replace by do after Swift 2.0
 func do_ (@noescape work: () -> ()) {
     work()
 }
