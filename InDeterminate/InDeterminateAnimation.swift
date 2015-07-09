@@ -15,6 +15,7 @@ protocol InDeterminable {
 }
 
 class InDeterminateAnimation: NSView, InDeterminable {
+    @IBInspectable var displayAfterAnimationEnds: Bool = false
     
     var animate: Bool = false {
         didSet {
@@ -22,7 +23,9 @@ class InDeterminateAnimation: NSView, InDeterminable {
                 self.hidden = false
                 startAnimation()
             } else {
-                self.hidden = true
+                if !displayAfterAnimationEnds {
+                    self.hidden = true
+                }
                 stopAnimation()
             }
         }

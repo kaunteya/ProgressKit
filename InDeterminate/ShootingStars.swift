@@ -11,7 +11,7 @@ import Cocoa
 
 @IBDesignable
 class ShootingStars: InDeterminateAnimation {
-    
+    private let animationDuration = 1.0
     @IBInspectable var backgroundColor: NSColor = NSColor( red: 0.2026, green: 0.7113, blue: 0.9, alpha: 1.0 ) {
         didSet {
             backgroundLayer.backgroundColor = backgroundColor.CGColor
@@ -64,7 +64,7 @@ class ShootingStars: InDeterminateAnimation {
         do_ {
             animation.fromValue = -dimension
             animation.toValue = rect.width * 0.9
-            animation.duration = 1
+            animation.duration = animationDuration
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
             animation.removedOnCompletion = false
             animation.repeatCount = Float.infinity
@@ -77,18 +77,20 @@ class ShootingStars: InDeterminateAnimation {
         tempAnimation.fromValue = rect.midX
         tempAnimation.toValue = rect.width
         tempAnimation.delegate = self
-        tempAnimation.duration = 0.5
+        tempAnimation.duration = animationDuration / 2
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        
-        /// Add animations
     }
+    
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
-        starLayer2.addAnimation(animation, forKey: "p2")
+        starLayer2.addAnimation(animation, forKey: "default")
     }
+    
+    //MARK: Indeterminable protocol
     override func startAnimation() {
         starLayer1.addAnimation(animation, forKey: "default")
         starLayer2.addAnimation(tempAnimation, forKey: "tempAnimation")
     }
+    
     override func stopAnimation() {
         starLayer1.removeAllAnimations()
         starLayer2.removeAllAnimations()

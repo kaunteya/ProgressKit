@@ -757,23 +757,13 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-fT-1HI">
-                                <rect key="frame" x="14" y="460" width="93" height="32"/>
-                                <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n2T-YO-LWT">
+                                <rect key="frame" x="15" y="461" width="91" height="28"/>
+                                <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n2T-YO-LWT">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="animateDoing:" target="rgo-kk-Wcf" id="wWX-lb-A2b"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-ad-jtK">
-                                <rect key="frame" x="14" y="313" width="93" height="32"/>
-                                <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gYM-2h-P2m">
-                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="Gho-pS-aoK"/>
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-fj-15l">
@@ -798,6 +788,9 @@
                                     <subviews>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="7" y="86" width="442" height="4"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="7" y="62" width="442" height="4"/>
@@ -805,6 +798,7 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                     <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
@@ -816,6 +810,7 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="starColor">
                                                     <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                     </subviews>
@@ -823,6 +818,16 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKK-dK-Lez">
+                                <rect key="frame" x="15" y="313" width="91" height="28"/>
+                                <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="saR-UP-RWR">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="09P-Tk-6GX"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

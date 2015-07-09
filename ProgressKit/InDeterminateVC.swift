@@ -32,6 +32,7 @@ class InDeterminateViewController: NSViewController {
     @IBOutlet weak var shootingStar1: ShootingStars!
     @IBOutlet weak var shootingStar2: ShootingStars!
     @IBOutlet weak var shootingStar3: ShootingStars!
+    
     @IBAction func animateShootingStars(sender: NSButton) {
         let isOn = sender.state == NSOnState
         shootingStar1.animate = isOn
