@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class ShootingStars: NSView {
+class ShootingStars: InDeterminateAnimation {
     
     @IBInspectable var backgroundColor: NSColor = NSColor( red: 0.2026, green: 0.7113, blue: 0.9, alpha: 1.0 ) {
         didSet {
@@ -29,7 +29,8 @@ class ShootingStars: NSView {
     var starLayer1 = CAShapeLayer()
     var starLayer2 = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "position.x")
-    
+    var tempAnimation = CABasicAnimation(keyPath: "position.x")
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         makeLayers()
@@ -73,7 +74,6 @@ class ShootingStars: NSView {
             After finishing it will invoke animationDidStop and starLayer2 is also given default animation.
         The purpose of temp animation is to generate an temporary offset
         */
-        var tempAnimation = CABasicAnimation(keyPath: "position.x")
         tempAnimation.fromValue = rect.midX
         tempAnimation.toValue = rect.width
         tempAnimation.delegate = self
@@ -81,11 +81,16 @@ class ShootingStars: NSView {
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
         /// Add animations
+    }
+    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+        starLayer2.addAnimation(animation, forKey: "p2")
+    }
+    override func startAnimation() {
         starLayer1.addAnimation(animation, forKey: "default")
         starLayer2.addAnimation(tempAnimation, forKey: "tempAnimation")
     }
-    
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
-        starLayer2.addAnimation(animation, forKey: "p2")
+    override func stopAnimation() {
+        starLayer1.removeAllAnimations()
+        starLayer2.removeAllAnimations()
     }
 }

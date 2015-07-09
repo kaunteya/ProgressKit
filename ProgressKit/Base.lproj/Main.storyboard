@@ -757,37 +757,72 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-fT-1HI">
-                                <rect key="frame" x="393" y="464" width="93" height="32"/>
+                                <rect key="frame" x="14" y="460" width="93" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n2T-YO-LWT">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="startStopAnimation:" target="rgo-kk-Wcf" id="QAU-Tp-UEY"/>
+                                    <action selector="animateDoing:" target="rgo-kk-Wcf" id="wWX-lb-A2b"/>
                                 </connections>
                             </button>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="298" width="460" height="4"/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="277" width="460" height="4"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="251" width="460" height="4"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.82745099067687988" green="0.72156864404678345" blue="0.84705883264541626" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="starColor">
-                                        <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-ad-jtK">
+                                <rect key="frame" x="14" y="313" width="93" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start" alternateTitle="Stop" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gYM-2h-P2m">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="Gho-pS-aoK"/>
+                                </connections>
+                            </button>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-fj-15l">
+                                <rect key="frame" x="0.0" y="346" width="500" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awI-4I-PRS">
+                                <rect key="frame" x="386" y="319" width="96" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Shooting Stars" id="2pu-ne-kGI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="oldStyle" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-bJ-ehh">
+                                <rect key="frame" x="20" y="208" width="460" height="110"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="458" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="86" width="442" height="4"/>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="62" width="442" height="4"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="34" width="300" height="7"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.82745099067687988" green="0.72156864404678345" blue="0.84705883264541626" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                                    <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
@@ -795,6 +830,9 @@
                         <outlet property="doing2" destination="BGV-c7-Pmi" id="LG4-Dm-dNe"/>
                         <outlet property="doing3" destination="wmn-SB-J0K" id="16J-Ns-YJC"/>
                         <outlet property="doing4" destination="P04-TQ-vwF" id="HME-P7-RGV"/>
+                        <outlet property="shootingStar1" destination="anZ-xy-bai" id="9ya-fh-3PA"/>
+                        <outlet property="shootingStar2" destination="QNd-xL-VdT" id="kBc-RE-yBz"/>
+                        <outlet property="shootingStar3" destination="W0z-mA-l2i" id="hzw-xz-mga"/>
                     </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
