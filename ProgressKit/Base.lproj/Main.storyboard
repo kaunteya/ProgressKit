@@ -713,7 +713,7 @@
                                     <rect key="frame" x="1" y="1" width="458" height="108"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-c7-Pmi" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-c7-Pmi" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="121" y="13" width="80" height="80"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -725,7 +725,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-SB-J0K" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-SB-J0K" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="233" y="20" width="39" height="39"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -737,7 +737,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="15" y="15" width="80" height="80"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -746,7 +746,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P04-TQ-vwF" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P04-TQ-vwF" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="349" y="15" width="69" height="69"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">

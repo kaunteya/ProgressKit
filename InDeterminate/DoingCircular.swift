@@ -9,12 +9,11 @@
 import Foundation
 import Cocoa
 
-
 private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 private let defaultStrokeColor = NSColor.whiteColor()
 
 @IBDesignable
-class DoingCircular: IndeterminateAnimation {
+class CircularSnail: IndeterminateAnimation {
 
     @IBInspectable var lineWidth: CGFloat = -1 {
         didSet {
@@ -36,12 +35,7 @@ class DoingCircular: IndeterminateAnimation {
 
     let lengthRatio = (0.0, 0.8)
     let duration = 1.5
-//    var animate: Bool = false {
-//        didSet {
-//            //MARK: Animation Handlers
-//
-//        }
-//    }
+
     //MARK: Shape Layer
     var backgroundLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()

@@ -15,10 +15,10 @@ class InDeterminateViewController: NSViewController {
     }
 
     /// MARK: DoingCircular
-    @IBOutlet weak var doing1: DoingCircular!
-    @IBOutlet weak var doing2: DoingCircular!
-    @IBOutlet weak var doing3: DoingCircular!
-    @IBOutlet weak var doing4: DoingCircular!
+    @IBOutlet weak var doing1: CircularSnail!
+    @IBOutlet weak var doing2: CircularSnail!
+    @IBOutlet weak var doing3: CircularSnail!
+    @IBOutlet weak var doing4: CircularSnail!
     
     @IBAction func animateDoing(sender: NSButton) {
         let isOn = sender.state == NSOnState
