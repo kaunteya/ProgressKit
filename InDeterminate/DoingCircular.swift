@@ -14,7 +14,7 @@ private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 private let defaultStrokeColor = NSColor.whiteColor()
 
 @IBDesignable
-class DoingCircular: NSView {
+class DoingCircular: InDeterminateAnimation {
 
     @IBInspectable var lineWidth: CGFloat = -1 {
         didSet {
@@ -36,21 +36,12 @@ class DoingCircular: NSView {
 
     let lengthRatio = (0.0, 0.8)
     let duration = 1.5
-    var animate: Bool = false {
-        didSet {
-            //MARK: Animation Handlers
-            if animate {
-                self.hidden = false
-                progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-                rotationBaseLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
-            } else {
-                self.hidden = true
-                rotationBaseLayer.removeAllAnimations()
-                progressLayer.removeAllAnimations()
-            }
-            
-        }
-    }
+//    var animate: Bool = false {
+//        didSet {
+//            //MARK: Animation Handlers
+//
+//        }
+//    }
     //MARK: Shape Layer
     var backgroundLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
@@ -164,4 +155,14 @@ class DoingCircular: NSView {
         CATransaction.commit()
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
     }
+    
+    override func startAnimation() {
+        progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
+        rotationBaseLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
+    }
+    override func stopAnimation() {
+        rotationBaseLayer.removeAllAnimations()
+        progressLayer.removeAllAnimations()
+    }
+
 }

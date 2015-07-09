@@ -722,6 +722,7 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                     <color key="value" red="0.52941179275512695" green="0.20392157137393951" blue="0.63921570777893066" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-SB-J0K" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
@@ -733,6 +734,7 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                     <color key="value" red="0.1411764771" green="0.41176471110000001" blue="0.22352941330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
@@ -741,6 +743,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                     <real key="value" value="9"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P04-TQ-vwF" customClass="DoingCircular" customModule="ProgressKit" customModuleProvider="target">
@@ -749,6 +752,7 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                     <color key="value" red="0.25490197539329529" green="0.63529413938522339" blue="0.87058824300765991" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                     </subviews>
