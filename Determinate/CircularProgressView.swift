@@ -58,12 +58,15 @@ class CircularProgressView: DeterminateAnimation {
         makeLayers()
     }
     
+    //TODO: Add percentage option to be shown in center of circle. Use CATextLayer
     func makeLayers() {
         self.wantsLayer = true
         let rect = self.bounds
         let radius = (rect.width / 2) * 0.75
-
-        func addBackgroundLayer(rect: NSRect) {
+        let strokeScalingFactor = CGFloat(0.05)
+        
+        /// Add background layer
+        do_ {
             let radius = NSWidth(rect) * 0.1
             backgroundLayer.frame = rect
             backgroundLayer.fillColor = backgroundColor.CGColor
@@ -72,11 +75,11 @@ class CircularProgressView: DeterminateAnimation {
             self.layer?.addSublayer(backgroundLayer)
         }
         
-        let strokeScalingFactor = CGFloat(0.05)
-        func addBackgroundCircle() {
+        /// Add background Circle
+        do_ {
             backgroundCircle.frame = rect
             backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor / 2) : strokeWidth / 2
-
+            
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
             backgroundCircle.fillColor = NSColor.clearColor().CGColor
             var backgroundPath = NSBezierPath()
@@ -85,13 +88,13 @@ class CircularProgressView: DeterminateAnimation {
             self.layer?.addSublayer(backgroundCircle)
         }
         
-        func addProgressLayer(rect: NSRect, radius: CGFloat) {
-            progressLayer.strokeStart = 0 //REMOVe this
+        /// Progress Layer
+        do_ {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clearColor().CGColor
             progressLayer.lineCap = kCALineCapRound
             progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor) : strokeWidth
-
+            
             progressLayer.frame = rect
             progressLayer.strokeColor = color.CGColor
             var arcPath = NSBezierPath()
@@ -100,59 +103,5 @@ class CircularProgressView: DeterminateAnimation {
             progressLayer.path = arcPath.CGPath
             self.layer?.addSublayer(progressLayer)
         }
-
-        addBackgroundLayer(rect)
-        addBackgroundCircle()
-        addProgressLayer(rect, radius)
-    }
-}
-
-extension NSRect {
-    func center() -> NSPoint {
-        let x = CGRectGetMidX(self)
-        let y = CGRectGetMidY(self)
-        return NSMakePoint(x, y)
-    }
-}
-
-extension NSBezierPath {
-    var CGPath: CGPathRef {
-        get {
-            return self.convertToCGPath()
-        }
-    }
-    
-    /// Transforms the NSBezierPath into a CGPathRef
-    ///
-    /// :returns: The transformed NSBezierPath
-    private func convertToCGPath() -> CGPathRef {
-        
-        // Create path
-        var path = CGPathCreateMutable()
-        var points = UnsafeMutablePointer<NSPoint>.alloc(3)
-        let numElements = self.elementCount
-        
-        if numElements > 0 {
-            var didClosePath = true
-            for index in 0..<numElements {
-                let pathType = self.elementAtIndex(index, associatedPoints: points)
-                switch pathType {
-                case .MoveToBezierPathElement:
-                    CGPathMoveToPoint(path, nil, points[0].x, points[0].y)
-                case .LineToBezierPathElement:
-                    CGPathAddLineToPoint(path, nil, points[0].x, points[0].y)
-                    didClosePath = false
-                case .CurveToBezierPathElement:
-                    CGPathAddCurveToPoint(path, nil, points[0].x, points[0].y, points[1].x, points[1].y, points[2].x, points[2].y)
-                    didClosePath = false
-                case .ClosePathBezierPathElement:
-                    CGPathCloseSubpath(path)
-                    didClosePath = true
-                }
-            }
-            if !didClosePath { CGPathCloseSubpath(path) }
-        }
-        points.dealloc(3)
-        return path
     }
 }

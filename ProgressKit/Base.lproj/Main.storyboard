@@ -666,7 +666,7 @@
         <!--Tab View Controller-->
         <scene sceneID="rXQ-85-vI9">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="GTh-XG-eDn" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="GTh-XG-eDn" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Determinate" id="90h-OW-Y1a"/>
                         <tabViewItem label="Indeterminate" id="T4v-4q-PhE"/>
