@@ -767,6 +767,28 @@
                                     <action selector="startStopAnimation:" target="rgo-kk-Wcf" id="QAU-Tp-UEY"/>
                                 </connections>
                             </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="298" width="460" height="4"/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="277" width="460" height="4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="251" width="460" height="4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.82745099067687988" green="0.72156864404678345" blue="0.84705883264541626" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                        <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>

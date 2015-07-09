@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E316CCA91B4E5BEC005A9A31 /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316CCA81B4E5BEC005A9A31 /* ShootingStars.swift */; };
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
 		E3AD65DA1B426758009541CD /* Determinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D91B426758009541CD /* Determinate.swift */; };
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E316CCA81B4E5BEC005A9A31 /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShootingStars.swift; sourceTree = "<group>"; };
 		E3AD65D21B426758009541CD /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65D61B426758009541CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3AD65D71B426758009541CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				E3AD65F81B427531009541CD /* DoingCircular.swift */,
+				E316CCA81B4E5BEC005A9A31 /* ShootingStars.swift */,
 				E3AD65F41B426841009541CD /* CircularProgressView.swift */,
 				E3AD65D41B426758009541CD /* ProgressKit */,
 				E3AD65E71B426758009541CD /* ProgressKitTests */,
@@ -215,6 +218,7 @@
 			files = (
 				E3AD65F91B427531009541CD /* DoingCircular.swift in Sources */,
 				E3AD65DA1B426758009541CD /* Determinate.swift in Sources */,
+				E316CCA91B4E5BEC005A9A31 /* ShootingStars.swift in Sources */,
 				E3AD65F51B426841009541CD /* CircularProgressView.swift in Sources */,
 				E3AD65F71B427511009541CD /* InDeterminate.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
