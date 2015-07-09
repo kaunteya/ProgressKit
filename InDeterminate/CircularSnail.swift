@@ -13,7 +13,6 @@ private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
 private let defaultStrokeColor = NSColor.whiteColor()
 private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
-
 @IBDesignable
 class CircularSnail: IndeterminateAnimation {
 
@@ -22,7 +21,6 @@ class CircularSnail: IndeterminateAnimation {
             progressLayer.lineWidth = lineWidth
         }
     }
-    
     @IBInspectable var color: NSColor = NSColor.whiteColor() {
         didSet {
             progressLayer.strokeColor = color.CGColor
