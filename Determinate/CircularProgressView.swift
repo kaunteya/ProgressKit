@@ -14,11 +14,13 @@ class CircularProgressView: DeterminateAnimation {
     var backgroundLayer = CAShapeLayer()
     var backgroundCircle = CAShapeLayer()
     var progressLayer = CAShapeLayer()
-        
+    var percentLabelLayer = CATextLayer()
+
     @IBInspectable var color: NSColor = NSColor.whiteColor() {
         didSet {
             backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
             progressLayer.strokeColor = color.CGColor
+            percentLabelLayer.foregroundColor = color.CGColor
         }
     }
     
@@ -34,7 +36,12 @@ class CircularProgressView: DeterminateAnimation {
             progressLayer.lineWidth = strokeWidth
         }
     }
-
+    
+    @IBInspectable var showPercent: Bool = true {
+        didSet {
+            percentLabelLayer.hidden = !showPercent
+        }
+    }
     override func updateProgress() {
         CATransaction.begin()
         if animated {
@@ -45,6 +52,7 @@ class CircularProgressView: DeterminateAnimation {
         let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         CATransaction.setAnimationTimingFunction(timing)
         progressLayer.strokeEnd = max(0, min(progress, 1))
+        percentLabelLayer.string = "\(Int(progress * 100))%"
         CATransaction.commit()
     }
     
@@ -102,6 +110,17 @@ class CircularProgressView: DeterminateAnimation {
             arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
             progressLayer.path = arcPath.CGPath
             self.layer?.addSublayer(progressLayer)
+        }
+        
+        do_ {
+            percentLabelLayer.string = "0%"
+            percentLabelLayer.foregroundColor = color.CGColor
+            percentLabelLayer.frame = rect
+            percentLabelLayer.font = NSFont(name: "Helvetica Neue Light", size: 25)
+            percentLabelLayer.alignmentMode = kCAAlignmentCenter
+            percentLabelLayer.position.y = rect.midY * 0.25
+            percentLabelLayer.fontSize = rect.width * 0.2
+            self.layer!.addSublayer(percentLabelLayer)
         }
     }
 }
