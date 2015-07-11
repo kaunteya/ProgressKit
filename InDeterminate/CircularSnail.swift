@@ -125,12 +125,9 @@ class CircularSnail: IndeterminateAnimation {
     }
     
     override func startAnimation() {
-        progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-        backgroundLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
+
     override func stopAnimation() {
-        backgroundLayer.removeAllAnimations()
-        progressLayer.removeAllAnimations()
     }
 
 }
