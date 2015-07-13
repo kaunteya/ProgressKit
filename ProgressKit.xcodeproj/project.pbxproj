@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E36CDEE71B5178830095E43F /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CDEE61B5178830095E43F /* Crawler.swift */; };
 		E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F801B4E88CF00558DAB /* CircularProgressView.swift */; };
 		E3918F841B4E88DE00558DAB /* CircularSnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F821B4E88DE00558DAB /* CircularSnail.swift */; };
 		E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F831B4E88DE00558DAB /* ShootingStars.swift */; };
@@ -34,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E36CDEE61B5178830095E43F /* Crawler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
 		E3918F801B4E88CF00558DAB /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Determinate/CircularProgressView.swift; sourceTree = "<group>"; };
 		E3918F821B4E88DE00558DAB /* CircularSnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularSnail.swift; path = InDeterminate/CircularSnail.swift; sourceTree = "<group>"; };
 		E3918F831B4E88DE00558DAB /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootingStars.swift; path = InDeterminate/ShootingStars.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				E3918F821B4E88DE00558DAB /* CircularSnail.swift */,
 				E3918FA71B4ECF7100558DAB /* Rainbow.swift */,
 				E3A468511B5434F7006DDE31 /* Crawler.swift */,
-				E36CDEE61B5178830095E43F /* Crawler.swift */,
 				E3918F831B4E88DE00558DAB /* ShootingStars.swift */,
 			);
 			name = Indeterminate;
@@ -260,7 +257,6 @@
 				E3918F841B4E88DE00558DAB /* CircularSnail.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 				E3918FA81B4ECF7100558DAB /* Rainbow.swift in Sources */,
-				E36CDEE71B5178830095E43F /* Crawler.swift in Sources */,
 				E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
