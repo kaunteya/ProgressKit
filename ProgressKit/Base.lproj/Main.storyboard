@@ -730,13 +730,13 @@ Background Color: clear</string>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.10980392247438431" green="0.5058823823928833" blue="0.37647059559822083" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.87450981140136719" green="0.40784314274787903" blue="0.074509806931018829" alpha="0.5" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.10980392247438431" green="0.5058823823928833" blue="0.37647059559822083" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.87450981140136719" green="0.40784314274787903" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
@@ -772,70 +772,16 @@ Background Color: clear</string>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="0.11" colorSpace="calibratedRGB"/>
+                                                    <color key="value" white="0.0" alpha="0.38" colorSpace="calibratedWhite"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                    <real key="value" value="3"/>
+                                                    <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.10980392156862745" green="0.50588235294117645" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                    </subviews>
-                                </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </box>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-E3-0zZ">
-                                <rect key="frame" x="1" y="194" width="500" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
-                            <box autoresizesSubviews="NO" fixedFrame="YES" title="ShootingStars" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-bJ-ehh">
-                                <rect key="frame" x="20" y="61" width="460" height="110"/>
-                                <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="458" height="93"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="7" y="60" width="442" height="4"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="18" y="37" width="410" height="4"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="7" y="14" width="300" height="7"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.82745099067687988" green="0.72156864404678345" blue="0.84705883264541626" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="starColor">
-                                                    <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ah-Ro-u8f">
-                                            <rect key="frame" x="2" y="69" width="21" height="28"/>
-                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="ziG-LO-gHd">
-                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="Fso-lW-clB"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -924,6 +870,54 @@ Dark colors</string>
                                                 <action selector="animateCrawler:" target="rgo-kk-Wcf" id="LOP-2c-6Gu"/>
                                             </connections>
                                         </button>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="ShootingStars" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-bJ-ehh">
+                                <rect key="frame" x="6" y="151" width="460" height="98"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="458" height="81"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-xy-bai" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="33" y="63" width="414" height="4"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-xL-VdT" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="12" y="39" width="337" height="4"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" white="0.10236122532894737" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ah-Ro-u8f">
+                                            <rect key="frame" x="2" y="57" width="21" height="28"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="ziG-LO-gHd">
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="Fso-lW-clB"/>
+                                            </connections>
+                                        </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-mA-l2i" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="15" width="300" height="7"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.82745099067687988" green="0.72156864404678345" blue="0.84705883264541626" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                                    <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
