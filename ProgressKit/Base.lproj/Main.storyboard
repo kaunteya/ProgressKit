@@ -897,10 +897,10 @@ Dark colors</string>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-EY-sex" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="315" y="202" width="130" height="130"/>
+                                <rect key="frame" x="409" y="254" width="58" height="58"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJ5-H5-Ikm" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="243" y="265" width="55" height="55"/>
+                                <rect key="frame" x="265" y="231" width="86" height="86"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" red="0.12549020349979401" green="0.56078433990478516" blue="0.54117649793624878" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>

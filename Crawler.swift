@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 private let defaultForegroundColor = NSColor.whiteColor()
-private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
+private let defaultBackgroundColor = NSColor(white: 0.0, alpha: 0.4)
 private let duration = 1.2
 
 @IBDesignable
@@ -32,7 +32,7 @@ class Crawler: IndeterminateAnimation {
     }
     var smallCircleSize: Double {
         get {
-            return Double(self.bounds.width) * 0.16
+            return Double(self.bounds.width) * 0.2
         }
     }
 
@@ -55,13 +55,16 @@ class Crawler: IndeterminateAnimation {
         self.layer?.borderWidth = 0
         self.layer?.cornerRadius = 15
         self.layer?.backgroundColor = backgroundColor.CGColor
-        
         do_ {
-            for var i = 0; i < 5; i++ {
+            var circleWidthSummation = 0.0
+            for var i = 1; i < 5; i++ {
                 var starLayer = CAShapeLayer()
                 starList.append(starLayer)
-                starLayer.backgroundColor = randomColor.CGColor
-                starLayer.bounds = CGRect(x: 0, y: 0, width: smallCircleSize - Double(i), height: smallCircleSize  - Double(i))
+                starLayer.backgroundColor = foregroundColor.CGColor
+                
+                let circleWidth = smallCircleSize - Double(i * 2)
+                circleWidthSummation += circleWidth
+                starLayer.bounds = CGRect(x: 0, y: 0, width: circleWidth, height: circleWidth)
                 starLayer.cornerRadius = CGFloat(smallCircleSize / 2)
                 starLayer.position = CGPoint(x: rect.midX, y: rect.midY + insetRect.height / 2)
                 self.layer?.addSublayer(starLayer)
@@ -73,7 +76,7 @@ class Crawler: IndeterminateAnimation {
                 rotationAnimation.path = arcPath.CGPath
                 rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
                 rotationAnimation.duration = duration
-                rotationAnimation.beginTime = (Double(i) / Double(insetRect.width) * 2)
+                rotationAnimation.beginTime = circleWidthSummation / Double(insetRect.width) * 0.4
                 rotationAnimation.calculationMode = kCAAnimationCubicPaced
                 
                 var animationGroup = CAAnimationGroup()
@@ -86,3 +89,4 @@ class Crawler: IndeterminateAnimation {
         }
     }
 }
+
