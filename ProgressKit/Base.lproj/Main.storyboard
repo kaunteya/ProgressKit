@@ -708,13 +708,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box autoresizesSubviews="NO" fixedFrame="YES" title="CircularSnail" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="5Y4-sm-Dl6">
-                                <rect key="frame" x="21" y="379" width="460" height="110"/>
+                                <rect key="frame" x="6" y="384" width="305" height="110"/>
                                 <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="458" height="93"/>
+                                    <rect key="frame" x="1" y="1" width="303" height="93"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView toolTip="Line Width: 9" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-fq-Ln7" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="43" y="5" width="70" height="70"/>
+                                            <rect key="frame" x="15" y="2" width="70" height="70"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                     <real key="value" value="6"/>
@@ -723,7 +723,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qz-vx-NwL" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="258" y="7" width="80" height="80"/>
+                                            <rect key="frame" x="208" y="6" width="80" height="80"/>
                                             <string key="toolTip">MultiLine Mode: On
 Line Width: 8
 Background Color: clear</string>
@@ -740,8 +740,32 @@ Background Color: clear</string>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-fT-1HI">
+                                            <rect key="frame" x="2" y="69" width="21" height="28"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="n2T-YO-LWT">
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="animateCircularSnail:" target="rgo-kk-Wcf" id="k8U-Y6-nbV"/>
+                                            </connections>
+                                        </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-c7-Pmi" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="96" y="15" width="80" height="80"/>
+                                            <string key="toolTip">Color: Purple
+Background Color: Clear</string>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.93725490570068359" green="0.92941176891326904" blue="0.92156863212585449" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.16862745583057404" green="0.38823530077934265" blue="0.65098041296005249" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="734-zQ-7RI" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="372" y="27" width="40" height="40"/>
+                                            <rect key="frame" x="160" y="1" width="40" height="40"/>
                                             <string key="toolTip">MultiLine Mode: On
 Line Width: 8
 Background Color: clear</string>
@@ -758,40 +782,10 @@ Background Color: clear</string>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-fT-1HI">
-                                            <rect key="frame" x="2" y="69" width="21" height="28"/>
-                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="n2T-YO-LWT">
-                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="animateCircularSnail:" target="rgo-kk-Wcf" id="k8U-Y6-nbV"/>
-                                            </connections>
-                                        </button>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-c7-Pmi" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="144" y="6" width="80" height="80"/>
-                                            <string key="toolTip">Color: Purple
-Background Color: Clear</string>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.93725490570068359" green="0.92941176891326904" blue="0.92156863212585449" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.16862745583057404" green="0.38823530077934265" blue="0.65098041296005249" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </box>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-fj-15l">
-                                <rect key="frame" x="0.0" y="337" width="500" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-E3-0zZ">
                                 <rect key="frame" x="1" y="194" width="500" height="5"/>
@@ -848,9 +842,9 @@ Background Color: Clear</string>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" title="Rainbow" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-7y-Qlp">
-                                <rect key="frame" x="20" y="202" width="217" height="110"/>
+                                <rect key="frame" x="314" y="384" width="182" height="110"/>
                                 <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="215" height="93"/>
+                                    <rect key="frame" x="1" y="1" width="180" height="93"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79G-JN-GYp">
@@ -864,7 +858,7 @@ Background Color: Clear</string>
                                             </connections>
                                         </button>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-xf-Ji5" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="29" y="5" width="80" height="80"/>
+                                            <rect key="frame" x="4" y="-2" width="80" height="80"/>
                                             <string key="toolTip">Rainbow:
 Light colors</string>
                                             <userDefinedRuntimeAttributes>
@@ -878,7 +872,7 @@ Light colors</string>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCa-mj-A8z" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="127" y="5" width="80" height="80"/>
+                                            <rect key="frame" x="91" y="-2" width="80" height="80"/>
                                             <string key="toolTip">Rainbow:
 Dark colors</string>
                                             <userDefinedRuntimeAttributes>
@@ -896,20 +890,50 @@ Dark colors</string>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-EY-sex" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="409" y="254" width="58" height="58"/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJ5-H5-Ikm" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="265" y="231" width="86" height="86"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.12549020349979401" green="0.56078433990478516" blue="0.54117649793624878" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </customView>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Crawler" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="5w0-aP-TWg">
+                                <rect key="frame" x="6" y="254" width="185" height="125"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="183" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJ5-H5-Ikm" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="7" width="86" height="86"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.12549020349979401" green="0.56078433990478516" blue="0.54117649793624878" alpha="0.12" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.082352941176470587" green="0.396078431372549" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-EY-sex" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="118" y="35" width="58" height="58"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKi-Nb-YJ4">
+                                            <rect key="frame" x="2" y="83" width="21" height="28"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="kaN-rg-SO4">
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="animateCrawler:" target="rgo-kk-Wcf" id="LOP-2c-6Gu"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="crawler1" destination="VJ5-H5-Ikm" id="D5R-JE-zkT"/>
+                        <outlet property="crawler2" destination="JiO-EY-sex" id="dpb-8p-F03"/>
                         <outlet property="darkRainbow" destination="iCa-mj-A8z" id="Kk6-k8-mYy"/>
                         <outlet property="doing1" destination="KWB-fq-Ln7" id="j3T-GJ-O8L"/>
                         <outlet property="doing2" destination="BGV-c7-Pmi" id="LG4-Dm-dNe"/>
@@ -923,7 +947,7 @@ Dark colors</string>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="386"/>
+            <point key="canvasLocation" x="477" y="386"/>
         </scene>
         <!--Determinate View Controller-->
         <scene sceneID="hIz-AP-VOD">

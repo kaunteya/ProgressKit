@@ -16,10 +16,11 @@ private let duration = 1.2
 @IBDesignable
 class Crawler: IndeterminateAnimation {
     
+    var backgroundLayer = CAShapeLayer()
     var starList = [CAShapeLayer]()
     @IBInspectable var backgroundColor: NSColor = defaultBackgroundColor {
         didSet {
-            self.layer?.backgroundColor = backgroundColor.CGColor
+            backgroundLayer.backgroundColor = backgroundColor.CGColor
         }
     }
     
@@ -41,6 +42,7 @@ class Crawler: IndeterminateAnimation {
             return self.bounds.width * 0.13
         }
     }
+    var animationGroups = [CAAnimationGroup]()
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.wantsLayer = true
@@ -51,10 +53,11 @@ class Crawler: IndeterminateAnimation {
         let rect = self.bounds
         let insetRect = NSInsetRect(rect, rect.width * 0.15, rect.width * 0.15)
 
-        self.layer?.borderColor = NSColor.blackColor().CGColor
-        self.layer?.borderWidth = 0
-        self.layer?.cornerRadius = 15
-        self.layer?.backgroundColor = backgroundColor.CGColor
+        backgroundLayer.backgroundColor = backgroundColor.CGColor
+        backgroundLayer.frame = self.bounds
+        backgroundLayer.cornerRadius = cornerRadius
+        self.layer?.addSublayer(backgroundLayer)
+        
         do_ {
             var circleWidthSummation = 0.0
             for var i = 1; i < 5; i++ {
@@ -76,7 +79,7 @@ class Crawler: IndeterminateAnimation {
                 rotationAnimation.path = arcPath.CGPath
                 rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
                 rotationAnimation.duration = duration
-                rotationAnimation.beginTime = circleWidthSummation / Double(insetRect.width) * 0.4
+                rotationAnimation.beginTime = circleWidthSummation / Double(insetRect.width) * 0.6
                 rotationAnimation.calculationMode = kCAAnimationCubicPaced
                 
                 var animationGroup = CAAnimationGroup()
@@ -84,9 +87,20 @@ class Crawler: IndeterminateAnimation {
                 animationGroup.duration = duration
                 animationGroup.repeatCount = Float.infinity
                 animationGroup.removedOnCompletion = false
-                starLayer.addAnimation(animationGroup, forKey: "rotate")
+                animationGroups.append(animationGroup)
             }
         }
     }
+    override func startAnimation() {
+        for (index, star) in enumerate(starList) {
+            star.addAnimation(animationGroups[index], forKey: "")
+        }
+    }
+    override func stopAnimation() {
+        for star in starList {
+            star.removeAllAnimations()
+        }
+    }
+
 }
 
