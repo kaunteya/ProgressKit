@@ -923,6 +923,9 @@ Dark colors</string>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wng-c6-TG3" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="175" y="27" width="120" height="120"/>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
