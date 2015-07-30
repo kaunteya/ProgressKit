@@ -923,9 +923,30 @@ Dark colors</string>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wng-c6-TG3" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="175" y="27" width="120" height="120"/>
-                            </customView>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="B8E-rB-kX3">
+                                <rect key="frame" x="204" y="254" width="292" height="125"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="290" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhd-JA-6D2">
+                                            <rect key="frame" x="3" y="83" width="21" height="28"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="e6h-Q6-yx8">
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="animateSpinner:" target="rgo-kk-Wcf" id="rCe-OJ-EEX"/>
+                                            </connections>
+                                        </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wng-c6-TG3" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="170" y="4" width="100" height="100"/>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
@@ -940,6 +961,7 @@ Dark colors</string>
                         <outlet property="shootingStar1" destination="anZ-xy-bai" id="9ya-fh-3PA"/>
                         <outlet property="shootingStar2" destination="QNd-xL-VdT" id="kBc-RE-yBz"/>
                         <outlet property="shootingStar3" destination="W0z-mA-l2i" id="hzw-xz-mga"/>
+                        <outlet property="spinner1" destination="wng-c6-TG3" id="sDG-fI-sPp"/>
                     </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

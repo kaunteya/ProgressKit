@@ -49,12 +49,21 @@ class InDeterminateViewController: NSViewController {
         shootingStar2.animate = isOn
         shootingStar3.animate = isOn
     }
+    
+    //MARK: Crawlers
     @IBOutlet weak var crawler2: Crawler!
     @IBOutlet weak var crawler1: Crawler!
     @IBAction func animateCrawler(sender: NSButton) {
         let isOn = sender.state == NSOnState
         crawler1.animate = isOn
         crawler2.animate = isOn
+    }
+    
+    //MARK: Spinners
+    @IBOutlet weak var spinner1: Spinner!
+    @IBAction func animateSpinner(sender: NSButton) {
+        let isOn = sender.state == NSOnState
+        spinner1.animate = isOn
     }
     
     
