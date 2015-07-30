@@ -10,9 +10,8 @@ import Foundation
 import Cocoa
 
 private let defaultForegroundColor = NSColor.whiteColor()
-private let defaultBackgroundColor = NSColor(white: 0.0, alpha: 0.4)
+private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 
-private let duration = 3.0
 @IBDesignable
 class Spinner: IndeterminateAnimation {
     
@@ -24,7 +23,6 @@ class Spinner: IndeterminateAnimation {
     
     var animation: CAKeyframeAnimation = {
         var animation = CAKeyframeAnimation(keyPath: "transform.rotation")
-        animation.duration = duration
         animation.repeatCount = Float.infinity
         animation.calculationMode = kCAAnimationDiscrete
         return animation
@@ -61,6 +59,19 @@ class Spinner: IndeterminateAnimation {
             updateStars()
         }
     }
+
+    @IBInspectable var duration:Double = 1 {
+        didSet {
+            animation.duration = duration
+        }
+    }
+
+    @IBInspectable var clockwise:Bool = true {
+        didSet {
+            updateStars()
+        }
+    }
+
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -72,12 +83,16 @@ class Spinner: IndeterminateAnimation {
         let rect = self.bounds
         
         backgroundLayer.frame = self.bounds
-        backgroundLayer.backgroundColor = NSColor ( red: 1.0, green: 0.1491, blue: 0.0, alpha: 0.13 ).CGColor
+        backgroundLayer.backgroundColor = backgroundColor.CGColor
+        backgroundLayer.cornerRadius = frame.width * 0.05
         self.layer?.addSublayer(backgroundLayer)
         
         containerLayer.frame = self.bounds
         containerLayer.cornerRadius = frame.width / 2
         backgroundLayer.addSublayer(containerLayer)
+        
+        animation.duration = duration
+
         updateStars()
     }
     
@@ -88,7 +103,9 @@ class Spinner: IndeterminateAnimation {
         animation.values = [Double]()
         
         for var i = 0.0; i < 360; i = i + Double(360 / starCount) {
-            let iRadian = i * M_PI / 180.0
+            var iRadian = CGFloat(i * M_PI / 180.0)
+            if clockwise { iRadian = -iRadian }
+
             animation.values.append(iRadian)
             var starShape = CAShapeLayer()
             starShape.cornerRadius = starSize.width / 2
@@ -101,7 +118,8 @@ class Spinner: IndeterminateAnimation {
             starShape.anchorPoint = CGPoint(x: 0.5, y: 0)
             
             var  rotation: CATransform3D = CATransform3DMakeTranslation(0, 0, 0.0);
-            rotation = CATransform3DRotate(rotation, -CGFloat(iRadian), 0.0, 0.0, 1.0);
+
+            rotation = CATransform3DRotate(rotation, -iRadian, 0.0, 0.0, 1.0);
             rotation = CATransform3DTranslate(rotation, 0, distance, 0.0);
             starShape.transform = rotation
             
