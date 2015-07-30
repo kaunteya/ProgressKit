@@ -27,7 +27,7 @@ class Spinner: IndeterminateAnimation {
 
     var animation: CAKeyframeAnimation = {
         var animation = CAKeyframeAnimation(keyPath: "transform.rotation")
-        animation.duration = 1
+        animation.duration = duration
         animation.repeatCount = Float.infinity
         animation.values = [Double]()
         animation.calculationMode = kCAAnimationDiscrete
