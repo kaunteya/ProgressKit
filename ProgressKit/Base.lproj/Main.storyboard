@@ -1329,7 +1329,7 @@ Disabled</string>
                                 </connections>
                             </textField>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-gs-jO8" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="48" y="292" width="416" height="28"/>
+                                <rect key="frame" x="48" y="305" width="416" height="15"/>
                             </customView>
                         </subviews>
                     </view>
@@ -1339,6 +1339,7 @@ Disabled</string>
                         <outlet property="circularView3" destination="gSr-Aw-UGu" id="nbT-5E-EN1"/>
                         <outlet property="circularView4" destination="LGf-cu-fkt" id="9uW-uU-c8y"/>
                         <outlet property="circularView5" destination="SNI-Pe-z5Z" id="bwL-vu-uUy"/>
+                        <outlet property="progressBar1" destination="ejA-gs-jO8" id="tvB-Pi-yaR"/>
                         <outlet property="slider" destination="vwx-DU-bI3" id="esn-lC-yUN"/>
                     </connections>
                 </viewController>

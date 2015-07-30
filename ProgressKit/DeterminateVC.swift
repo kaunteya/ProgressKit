@@ -13,13 +13,21 @@ class DeterminateViewController: NSViewController {
     dynamic var liveProgress: Bool = true
     dynamic var labelPercentage: String = "30%"
 
+    override func viewDidLoad() {
+        preferredContentSize = NSMakeSize(500, 500)
+    }
+
+    @IBOutlet weak var slider: NSSlider!
+    
     @IBOutlet weak var circularView1: CircularProgressView!
     @IBOutlet weak var circularView2: CircularProgressView!
     @IBOutlet weak var circularView3: CircularProgressView!
     @IBOutlet weak var circularView4: CircularProgressView!
     @IBOutlet weak var circularView5: CircularProgressView!
-    @IBOutlet weak var slider: NSSlider!
 
+    @IBOutlet weak var progressBar1: ProgressBar!
+    
+    
     @IBAction func sliderDragged(sender: NSSlider) {
 
         let event = NSApplication.sharedApplication().currentEvent
@@ -38,11 +46,9 @@ class DeterminateViewController: NSViewController {
         circularView2.progress = progress
         circularView3.progress = progress
         circularView4.progress = progress
-        circularView5.progress = progress        
+        circularView5.progress = progress
+        progressBar1.progress = progress
     }
     
-    override func viewDidLoad() {
-        preferredContentSize = NSMakeSize(500, 500)
-    }
 }
 
