@@ -18,12 +18,14 @@ class DeterminateAnimation: NSView, Determinable {
     
     @IBInspectable var animated: Bool = true
 
+    /// Value of progress now. Range 0..1
     @IBInspectable var progress: CGFloat = 0 {
         didSet {
             updateProgress()
         }
     }
 
+    /// This function will only be called by didSet of progress. Every subclass will have its own implementation
     func updateProgress() {
         fatalError("Must be overriden in subclass")
     }
