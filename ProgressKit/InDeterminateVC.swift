@@ -61,9 +61,26 @@ class InDeterminateViewController: NSViewController {
     
     //MARK: Spinners
     @IBOutlet weak var spinner1: Spinner!
+    @IBOutlet weak var spinner2: Spinner!
+    @IBOutlet weak var spinner3: Spinner!
+    @IBOutlet weak var spinner4: Spinner!
+    @IBOutlet weak var spinner5: Spinner!
+    @IBOutlet weak var spinner6: Spinner!
+    @IBOutlet weak var spinner7: Spinner!
+    @IBOutlet weak var spinner8: Spinner!
+    @IBOutlet weak var spinner9: Spinner!
+    
     @IBAction func animateSpinner(sender: NSButton) {
         let isOn = sender.state == NSOnState
         spinner1.animate = isOn
+        spinner2.animate = isOn
+        spinner3.animate = isOn
+        spinner4.animate = isOn
+        spinner5.animate = isOn
+        spinner6.animate = isOn
+        spinner7.animate = isOn
+        spinner8.animate = isOn
+        spinner9.animate = isOn
     }
     
     

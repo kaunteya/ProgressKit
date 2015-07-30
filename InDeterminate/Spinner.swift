@@ -48,25 +48,32 @@ class Spinner: IndeterminateAnimation {
         }
     }
 
-    @IBInspectable var distance:CGFloat = CGFloat(20) {
+    @IBInspectable var roundedCorners: Bool = true {
         didSet {
             updateStars()
         }
     }
 
-    @IBInspectable var starCount:Int = 10 {
+    
+    @IBInspectable var distance: CGFloat = CGFloat(20) {
         didSet {
             updateStars()
         }
     }
 
-    @IBInspectable var duration:Double = 1 {
+    @IBInspectable var starCount: Int = 10 {
+        didSet {
+            updateStars()
+        }
+    }
+
+    @IBInspectable var duration: Double = 1 {
         didSet {
             animation.duration = duration
         }
     }
 
-    @IBInspectable var clockwise:Bool = true {
+    @IBInspectable var clockwise: Bool = false {
         didSet {
             updateStars()
         }
@@ -84,7 +91,7 @@ class Spinner: IndeterminateAnimation {
         
         backgroundLayer.frame = self.bounds
         backgroundLayer.backgroundColor = backgroundColor.CGColor
-        backgroundLayer.cornerRadius = frame.width * 0.05
+        backgroundLayer.cornerRadius = frame.width * 0.1
         self.layer?.addSublayer(backgroundLayer)
         
         containerLayer.frame = self.bounds
@@ -108,8 +115,8 @@ class Spinner: IndeterminateAnimation {
 
             animation.values.append(iRadian)
             var starShape = CAShapeLayer()
-            starShape.cornerRadius = starSize.width / 2
-            
+            starShape.cornerRadius = roundedCorners ? starSize.width / 2 : 0
+
             let centerLocation = CGPoint(x: frame.width / 2 - starSize.width / 2, y: frame.width / 2 - starSize.height / 2)
             
             starShape.frame = CGRect(origin: centerLocation, size: starSize)

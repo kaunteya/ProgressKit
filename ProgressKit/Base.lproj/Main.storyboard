@@ -951,7 +951,7 @@ Dark colors</string>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpK-br-gAj" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="255" y="45" width="59" height="59"/>
+                                            <rect key="frame" x="248" y="50" width="59" height="59"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                     <integer key="value" value="8"/>
@@ -968,16 +968,42 @@ Dark colors</string>
                                                 <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                     <size key="value" width="12" height="12"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-QA-m4J" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="138" y="11" width="94" height="94"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9S-P8-Bcz" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="270" y="-4" width="59" height="59"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="distance">
-                                                    <real key="value" value="14"/>
+                                                    <real key="value" value="11"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="deviceWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.0" green="0.23137255012989044" blue="0.51372551918029785" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="6" height="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-QA-m4J" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="176" y="6" width="68" height="68"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="6"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                     <color key="value" red="0.10980392247438431" green="0.5058823823928833" blue="0.37647059559822083" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
@@ -986,8 +1012,125 @@ Dark colors</string>
                                                     <color key="value" red="0.10980392247438431" green="0.5058823823928833" blue="0.37647059559822083" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                                    <size key="value" width="4" height="19"/>
+                                                    <size key="value" width="3" height="19"/>
                                                 </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-eE-kfK" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="107" y="5" width="53" height="53"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.76862746477127075" green="0.25882354378700256" blue="0.27058824896812439" alpha="0.23000000000000001" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.76862746477127075" green="0.25882354378700256" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="7" height="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5b-59-AJ1" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="5" width="85" height="85"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="18"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.7607843279838562" green="0.92941176891326904" blue="0.7137255072593689" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.1098039225" green="0.50588238240000005" blue="0.37647059560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="4" height="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-cv-TkC" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="5" width="85" height="85"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="19"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.76078432799999995" green="0.92941176889999999" blue="0.71372550729999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.1098039225" green="0.50588238240000005" blue="0.37647059560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="4" height="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-bA-dlC" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="5" width="85" height="85"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.76078432799999995" green="0.92941176889999999" blue="0.71372550729999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" red="0.1098039225" green="0.50588238240000005" blue="0.37647059560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="4" height="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-26-dg5">
+                                            <rect key="frame" x="107" y="77" width="16" height="16"/>
+                                        </progressIndicator>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UD3-Iv-Wod" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="133" y="70" width="29" height="29"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="3.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="deviceWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="1.5" height="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                     </subviews>
@@ -1010,6 +1153,14 @@ Dark colors</string>
                         <outlet property="shootingStar2" destination="QNd-xL-VdT" id="kBc-RE-yBz"/>
                         <outlet property="shootingStar3" destination="W0z-mA-l2i" id="hzw-xz-mga"/>
                         <outlet property="spinner1" destination="wng-c6-TG3" id="sDG-fI-sPp"/>
+                        <outlet property="spinner2" destination="r9S-P8-Bcz" id="hqf-bd-FTZ"/>
+                        <outlet property="spinner3" destination="dpK-br-gAj" id="6rZ-17-K8b"/>
+                        <outlet property="spinner4" destination="bZY-QA-m4J" id="yiy-Hc-dbH"/>
+                        <outlet property="spinner5" destination="Zbv-eE-kfK" id="eXn-M0-mWo"/>
+                        <outlet property="spinner6" destination="w5b-59-AJ1" id="eMW-sh-b38"/>
+                        <outlet property="spinner7" destination="B4W-cv-TkC" id="Ny6-MO-WWf"/>
+                        <outlet property="spinner8" destination="1Pm-bA-dlC" id="gh2-WR-s6Q"/>
+                        <outlet property="spinner9" destination="UD3-Iv-Wod" id="hjO-7x-ORF"/>
                     </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
