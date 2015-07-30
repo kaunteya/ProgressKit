@@ -11,28 +11,61 @@ import Cocoa
 
 private let defaultForegroundColor = NSColor.whiteColor()
 private let defaultBackgroundColor = NSColor(white: 0.0, alpha: 0.4)
-private let duration = 1.2
 
+private let duration = 3.0
+@IBDesignable
 class Spinner: IndeterminateAnimation {
     
     var basicShape = CAShapeLayer()
     
     var backgroundLayer = CAShapeLayer()
     var containerLayer = CAShapeLayer()
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeLayers()
-    }
-
+    var starList = [CAShapeLayer]()
+    
     var animation: CAKeyframeAnimation = {
         var animation = CAKeyframeAnimation(keyPath: "transform.rotation")
         animation.duration = duration
         animation.repeatCount = Float.infinity
-        animation.values = [Double]()
         animation.calculationMode = kCAAnimationDiscrete
         return animation
-    }()
+        }()
+    
+    @IBInspectable var backgroundColor: NSColor = defaultBackgroundColor {
+        didSet {
+            backgroundLayer.backgroundColor = backgroundColor.CGColor
+        }
+    }
+    
+    @IBInspectable var foregroundColor: NSColor = defaultForegroundColor {
+        didSet {
+            for star in starList {
+                star.backgroundColor = foregroundColor.CGColor
+            }
+        }
+    }
+    
+    @IBInspectable var starSize:CGSize = CGSize(width: 6, height: 15) {
+        didSet {
+            updateStars()
+        }
+    }
+
+    @IBInspectable var distance:CGFloat = CGFloat(20) {
+        didSet {
+            updateStars()
+        }
+    }
+
+    @IBInspectable var starCount:Int = 10 {
+        didSet {
+            updateStars()
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeLayers()
+    }
     
     func makeLayers() {
         self.wantsLayer = true
@@ -42,22 +75,29 @@ class Spinner: IndeterminateAnimation {
         backgroundLayer.backgroundColor = NSColor ( red: 1.0, green: 0.1491, blue: 0.0, alpha: 0.13 ).CGColor
         self.layer?.addSublayer(backgroundLayer)
         
-        let innerFrame = NSInsetRect(self.bounds, self.bounds.width * 0.05, self.bounds.height * 0.05)
-        containerLayer.frame = innerFrame
-        containerLayer.cornerRadius = innerFrame.width / 2
-        containerLayer.borderWidth  = 1
+        containerLayer.frame = self.bounds
+        containerLayer.cornerRadius = frame.width / 2
         backgroundLayer.addSublayer(containerLayer)
-
-        let starSize = CGSize(width: 6, height: 15)
-        let distance = CGFloat(24)
-        let numberOfLines = 10
-        for var i = 0.0; i < 360; i = i + Double(360 / numberOfLines) {
+        updateStars()
+    }
+    
+    
+    func updateStars() {
+        starList.removeAll(keepCapacity: true)
+        containerLayer.sublayers = nil
+        animation.values = [Double]()
+        
+        for var i = 0.0; i < 360; i = i + Double(360 / starCount) {
             let iRadian = i * M_PI / 180.0
             animation.values.append(iRadian)
             var starShape = CAShapeLayer()
             starShape.cornerRadius = starSize.width / 2
-            starShape.frame = CGRect(x: innerFrame.width / 2 - starSize.width / 2, y: innerFrame.width / 2 - starSize.height / 2, width: starSize.width, height: starSize.height)
-            starShape.backgroundColor = NSColor.redColor().CGColor
+            
+            let centerLocation = CGPoint(x: frame.width / 2 - starSize.width / 2, y: frame.width / 2 - starSize.height / 2)
+            
+            starShape.frame = CGRect(origin: centerLocation, size: starSize)
+            
+            starShape.backgroundColor = foregroundColor.CGColor
             starShape.anchorPoint = CGPoint(x: 0.5, y: 0)
             
             var  rotation: CATransform3D = CATransform3DMakeTranslation(0, 0, 0.0);
@@ -67,9 +107,10 @@ class Spinner: IndeterminateAnimation {
             
             starShape.opacity = Float(360 - i) / 360
             containerLayer.addSublayer(starShape)
+            starList.append(starShape)
         }
     }
-    
+
     override func startAnimation() {
         containerLayer.addAnimation(animation, forKey: "rotation")
     }

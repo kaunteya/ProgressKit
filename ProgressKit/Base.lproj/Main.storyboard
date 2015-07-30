@@ -941,6 +941,14 @@ Dark colors</string>
                                         </button>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wng-c6-TG3" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                             <rect key="frame" x="170" y="4" width="100" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="18"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                                    <real key="value" value="17"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </customView>
                                     </subviews>
                                 </view>
