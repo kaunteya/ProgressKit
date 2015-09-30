@@ -14,7 +14,6 @@
 		E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F831B4E88DE00558DAB /* ShootingStars.swift */; };
 		E3918F8D1B4E8AB100558DAB /* IndeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8C1B4E8AB100558DAB /* IndeterminateAnimation.swift */; };
 		E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */; };
-		E3918F911B4EA06F00558DAB /* ProgressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F901B4EA06F00558DAB /* ProgressUtils.swift */; };
 		E3918FA81B4ECF7100558DAB /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918FA71B4ECF7100558DAB /* Rainbow.swift */; };
 		E3A468521B5434F7006DDE31 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A468511B5434F7006DDE31 /* Crawler.swift */; };
 		E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65D71B426758009541CD /* AppDelegate.swift */; };
@@ -23,6 +22,7 @@
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
 		E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* InDeterminateVC.swift */; };
 		E3CCD5981BBC19ED00F7DB9A /* ProgressKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3CCD5971BBC19ED00F7DB9A /* ProgressKit.podspec */; };
+		E3CCD59A1BBC2B9B00F7DB9A /* ProgressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD5991BBC2B9B00F7DB9A /* ProgressUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		E3918F831B4E88DE00558DAB /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootingStars.swift; path = InDeterminate/ShootingStars.swift; sourceTree = "<group>"; };
 		E3918F8C1B4E8AB100558DAB /* IndeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndeterminateAnimation.swift; path = InDeterminate/IndeterminateAnimation.swift; sourceTree = "<group>"; };
 		E3918F8E1B4E8C2900558DAB /* DeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeterminateAnimation.swift; path = Determinate/DeterminateAnimation.swift; sourceTree = "<group>"; };
-		E3918F901B4EA06F00558DAB /* ProgressUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressUtils.swift; sourceTree = "<group>"; };
 		E3918FA71B4ECF7100558DAB /* Rainbow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rainbow.swift; path = InDeterminate/Rainbow.swift; sourceTree = "<group>"; };
 		E3A468511B5434F7006DDE31 /* Crawler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Crawler.swift; path = InDeterminate/Crawler.swift; sourceTree = "<group>"; };
 		E3AD65D21B426758009541CD /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +55,7 @@
 		E3AD65EA1B426758009541CD /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
 		E3AD65F61B427511009541CD /* InDeterminateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InDeterminateVC.swift; sourceTree = "<group>"; };
 		E3CCD5971BBC19ED00F7DB9A /* ProgressKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProgressKit.podspec; sourceTree = SOURCE_ROOT; };
+		E3CCD5991BBC2B9B00F7DB9A /* ProgressUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressUtils.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,8 @@
 		E3AD65D51B426758009541CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E3CCD5991BBC2B9B00F7DB9A /* ProgressUtils.swift */,
 				E3CCD5971BBC19ED00F7DB9A /* ProgressKit.podspec */,
-				E3918F901B4EA06F00558DAB /* ProgressUtils.swift */,
 				E3AD65D61B426758009541CD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -258,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A468521B5434F7006DDE31 /* Crawler.swift in Sources */,
-				E3918F911B4EA06F00558DAB /* ProgressUtils.swift in Sources */,
 				E3AD65DA1B426758009541CD /* DeterminateVC.swift in Sources */,
 				E3918F8D1B4E8AB100558DAB /* IndeterminateAnimation.swift in Sources */,
 				E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */,
@@ -268,6 +267,7 @@
 				E3918F841B4E88DE00558DAB /* CircularSnail.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 				E37568DF1B6AAB530073E26F /* ProgressBar.swift in Sources */,
+				E3CCD59A1BBC2B9B00F7DB9A /* ProgressUtils.swift in Sources */,
 				E3918FA81B4ECF7100558DAB /* Rainbow.swift in Sources */,
 				E3918F8F1B4E8C2900558DAB /* DeterminateAnimation.swift in Sources */,
 			);
