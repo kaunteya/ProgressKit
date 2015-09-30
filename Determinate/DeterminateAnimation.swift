@@ -14,7 +14,7 @@ protocol Determinable {
 }
 
 @IBDesignable
-class DeterminateAnimation: NSView, Determinable {
+class DeterminateAnimation: View, Determinable {
     
     @IBInspectable var animated: Bool = true
 

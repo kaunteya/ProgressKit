@@ -9,6 +9,26 @@
 import Foundation
 import Cocoa
 
+
+#if os(iOS)
+    import UIKit
+    public typealias View = UIView
+    #else
+    import AppKit
+    class View : NSView {
+        override init(frame frameRect: NSRect) {
+            super.init(frame: frameRect)
+            self.wantsLayer = true
+        }
+        required init?(coder: NSCoder) {
+            super.init(coder: coder)
+            self.wantsLayer = true
+        }
+
+    }
+#endif
+
+
 extension NSRect {
     var mid: NSPoint {
         get {
