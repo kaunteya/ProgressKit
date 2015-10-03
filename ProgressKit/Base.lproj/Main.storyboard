@@ -1227,79 +1227,6 @@ Dark colors</string>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="458" height="116"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWa-7D-yF6" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="15" y="9" width="99" height="99"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                    <real key="value" value="0.29999999999999999"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-Aw-UGu" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="134" y="53" width="57" height="57"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                                    <real key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="di7-Py-JKW" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="185" y="15" width="34" height="34"/>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-Pe-z5Z" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="378" y="41" width="60" height="60"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.14117647707462311" green="0.4117647111415863" blue="0.22352941334247589" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.14117647707462311" green="0.4117647111415863" blue="0.22352941334247589" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="animated" value="NO"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                    <real key="value" value="0.10000000000000001"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5EO-rr-E0v">
-                                            <rect key="frame" x="377" y="7" width="66" height="34"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="1u9-DZ-sVd">
-                                                <font key="font" metaFont="system"/>
-                                                <string key="title">Animation
-Disabled</string>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-cu-fkt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="246" y="10" width="106" height="106"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.18823529780000001" green="0.6549019814" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" white="0.75657894736842102" alpha="1" colorSpace="calibratedWhite"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                    <real key="value" value="0.69999999999999996"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                                    <real key="value" value="2"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="showPercent" value="NO"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
-                                    </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1321,11 +1248,6 @@ Disabled</string>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="circularView1" destination="VWa-7D-yF6" id="jTw-Dj-PUj"/>
-                        <outlet property="circularView2" destination="di7-Py-JKW" id="S6E-Su-0Mv"/>
-                        <outlet property="circularView3" destination="gSr-Aw-UGu" id="nbT-5E-EN1"/>
-                        <outlet property="circularView4" destination="LGf-cu-fkt" id="9uW-uU-c8y"/>
-                        <outlet property="circularView5" destination="SNI-Pe-z5Z" id="bwL-vu-uUy"/>
                         <outlet property="progressBar1" destination="ejA-gs-jO8" id="tvB-Pi-yaR"/>
                         <outlet property="slider" destination="vwx-DU-bI3" id="esn-lC-yUN"/>
                     </connections>
