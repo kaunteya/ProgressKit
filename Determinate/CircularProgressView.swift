@@ -53,7 +53,6 @@ class CircularProgressView: DeterminateAnimation {
         CATransaction.commit()
     }
 
-    //TODO: Add percentage option to be shown in center of circle. Use CATextLayer
     override func configureLayers() {
         super.configureLayers()
         let rect = self.bounds
@@ -61,7 +60,7 @@ class CircularProgressView: DeterminateAnimation {
         let strokeScalingFactor = CGFloat(0.05)
         
 
-        /// Add background Circle
+        // Add background Circle
         do_ {
             backgroundCircle.frame = rect
             backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor / 2) : strokeWidth / 2
@@ -74,7 +73,7 @@ class CircularProgressView: DeterminateAnimation {
             self.layer?.addSublayer(backgroundCircle)
         }
         
-        /// Progress Layer
+        // Progress Layer
         do_ {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clearColor().CGColor
@@ -89,7 +88,8 @@ class CircularProgressView: DeterminateAnimation {
             progressLayer.path = arcPath.CGPath
             self.layer?.addSublayer(progressLayer)
         }
-        
+
+        // Percentage Layer
         do_ {
             percentLabelLayer.string = "0%"
             percentLabelLayer.foregroundColor = foreground.CGColor
