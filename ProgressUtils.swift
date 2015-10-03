@@ -6,36 +6,23 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
-import Foundation
-import Cocoa
 
-
-#if os(iOS)
-    import UIKit
-    public typealias View = UIView
-    #else
-    import AppKit
-    class View : NSView {
-        override init(frame frameRect: NSRect) {
-            super.init(frame: frameRect)
-            self.wantsLayer = true
-        }
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-            self.wantsLayer = true
-        }
-
+import AppKit
+class View : NSView {
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        self.wantsLayer = true
     }
-#endif
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.wantsLayer = true
+    }
 
+}
 
 extension NSRect {
-    var mid: NSPoint {
-        get {
-            let x = CGRectGetMidX(self)
-            let y = CGRectGetMidY(self)
-            return NSMakePoint(x, y)
-        }
+    var mid: CGPoint {
+        return CGPoint(x: CGRectGetMidX(self), y: CGRectGetMidY(self))
     }
 }
 
