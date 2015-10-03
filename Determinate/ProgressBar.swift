@@ -12,7 +12,6 @@ import Cocoa
 @IBDesignable
 class ProgressBar: DeterminateAnimation {
 
-    var backgroundLayer = CAShapeLayer()
     var borderLayer = CAShapeLayer()
     var progressLayer = CAShapeLayer()
     
@@ -22,28 +21,18 @@ class ProgressBar: DeterminateAnimation {
         }
     }
 
-    @IBInspectable var progressColor: NSColor = NSColor ( red: 0.2676, green: 0.5006, blue: 0.8318, alpha: 1.0 ) {
-        didSet {
-            progressLayer.backgroundColor = progressColor.CGColor
-        }
-    }
-
     override func configureLayers() {
         super.configureLayers()
-        let rect = self.bounds
-        
-        backgroundLayer.frame = rect
-        self.layer!.addSublayer(backgroundLayer)
 
-        borderLayer.frame = NSInsetRect(rect, 0, 0)
+        borderLayer.frame = self.bounds
         borderLayer.cornerRadius = borderLayer.frame.height / 2
         borderLayer.borderWidth = 1.0
-        backgroundLayer.addSublayer(borderLayer)
+        self.layer?.addSublayer(borderLayer)
 
         progressLayer.frame = NSInsetRect(borderLayer.bounds, 3, 3)
         progressLayer.frame.size.width = (borderLayer.bounds.width - 6)
         progressLayer.cornerRadius = progressLayer.frame.height / 2
-        progressLayer.backgroundColor = progressColor.CGColor
+        progressLayer.backgroundColor = foreground.CGColor
         borderLayer.addSublayer(progressLayer)
 
     }

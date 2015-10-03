@@ -17,20 +17,6 @@ class CircularProgressView: DeterminateAnimation {
     var progressLayer = CAShapeLayer()
     var percentLabelLayer = CATextLayer()
 
-    @IBInspectable var color: NSColor = NSColor.whiteColor() {
-        didSet {
-            backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
-            progressLayer.strokeColor = color.CGColor
-            percentLabelLayer.foregroundColor = color.CGColor
-        }
-    }
-    
-    @IBInspectable var backgroundColor: NSColor = NSColor(calibratedWhite: 0, alpha: 0.39) {
-        didSet {
-            backgroundLayer.fillColor = backgroundColor.CGColor
-        }
-    }
-    
     @IBInspectable var strokeWidth: CGFloat = -1 {
         didSet {
             backgroundCircle.lineWidth = self.strokeWidth / 2
@@ -43,6 +29,7 @@ class CircularProgressView: DeterminateAnimation {
             percentLabelLayer.hidden = !showPercent
         }
     }
+
     override func updateProgress() {
         CATransaction.begin()
         if animated {
@@ -64,22 +51,13 @@ class CircularProgressView: DeterminateAnimation {
         let radius = (rect.width / 2) * 0.75
         let strokeScalingFactor = CGFloat(0.05)
         
-        /// Add background layer
-        do_ {
-            let radius = NSWidth(rect) * 0.1
-            backgroundLayer.frame = rect
-            backgroundLayer.fillColor = backgroundColor.CGColor
-            var backgroundPath = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
-            backgroundLayer.path = backgroundPath.CGPath
-            self.layer?.addSublayer(backgroundLayer)
-        }
-        
+
         /// Add background Circle
         do_ {
             backgroundCircle.frame = rect
             backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor / 2) : strokeWidth / 2
             
-            backgroundCircle.strokeColor = color.colorWithAlphaComponent(0.5).CGColor
+            backgroundCircle.strokeColor = foreground.colorWithAlphaComponent(0.5).CGColor
             backgroundCircle.fillColor = NSColor.clearColor().CGColor
             var backgroundPath = NSBezierPath()
             backgroundPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360)
@@ -95,7 +73,7 @@ class CircularProgressView: DeterminateAnimation {
             progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor) : strokeWidth
             
             progressLayer.frame = rect
-            progressLayer.strokeColor = color.CGColor
+            progressLayer.strokeColor = foreground.CGColor
             var arcPath = NSBezierPath()
             var startAngle = CGFloat(90)
             arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
@@ -105,7 +83,7 @@ class CircularProgressView: DeterminateAnimation {
         
         do_ {
             percentLabelLayer.string = "0%"
-            percentLabelLayer.foregroundColor = color.CGColor
+            percentLabelLayer.foregroundColor = foreground.CGColor
             percentLabelLayer.frame = rect
             percentLabelLayer.font = NSFont(name: "Helvetica Neue Light", size: 25)
             percentLabelLayer.alignmentMode = kCAAlignmentCenter

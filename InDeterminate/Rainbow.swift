@@ -9,15 +9,16 @@
 import Foundation
 import Cocoa
 
-
 @IBDesignable
 class Rainbow: CircularSnail {
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        backgroundColor = NSColor.clearColor()
-        color = NSColor.redColor()
-    }
+
     @IBInspectable var onLightOffDark: Bool = false
+
+    override func configureLayers() {
+        super.configureLayers()
+        self.background = NSColor.clearColor()
+    }
+
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
         super.animationDidStop(anim, finished: flag)
         if onLightOffDark {
@@ -30,12 +31,10 @@ class Rainbow: CircularSnail {
 }
 
 var randomColor: NSColor {
-get {
     let red = CGFloat(Double(arc4random()) % 256.0 / 256.0)
     let green = CGFloat(Double(arc4random()) % 256.0 / 256.0)
     let blue = CGFloat(Double(arc4random()) % 256.0 / 256.0)
     return NSColor(calibratedRed: red, green: green, blue: blue, alpha: 1.0)
-}
 }
 
 private let lightColorList:[NSColor] = [

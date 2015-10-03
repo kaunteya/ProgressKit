@@ -13,6 +13,7 @@ private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
 private let defaultStrokeColor = NSColor.whiteColor()
 private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
+
 @IBDesignable
 class CircularSnail: IndeterminateAnimation {
 
@@ -21,20 +22,6 @@ class CircularSnail: IndeterminateAnimation {
             progressLayer.lineWidth = lineWidth
         }
     }
-    @IBInspectable var color: NSColor = NSColor.whiteColor() {
-        didSet {
-            progressLayer.strokeColor = color.CGColor
-        }
-    }
-    
-    @IBInspectable var backgroundColor: NSColor = NSColor(calibratedWhite: 0.07, alpha: 0.7) {
-        didSet {
-            backgroundLayer.backgroundColor = backgroundColor.CGColor
-        }
-    }
-
-    //MARK: Shape Layer
-    var backgroundLayer = CAShapeLayer()
 
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
@@ -55,6 +42,7 @@ class CircularSnail: IndeterminateAnimation {
     
     var strokeStartAnimation: CABasicAnimation!
     var strokeEndAnimation: CABasicAnimation!
+
     func makeStrokeAnimations() {
         func makeAnimation(keyPath: String) -> CABasicAnimation {
             var tempAnimation = CABasicAnimation(keyPath: keyPath)
@@ -85,14 +73,11 @@ class CircularSnail: IndeterminateAnimation {
         return tempRotation
         }()
 
-    func makeLayers() {
-        self.wantsLayer = true
+    override func configureLayers() {
+        super.configureLayers()
+        makeStrokeAnimations()
         let rect = self.bounds
-        backgroundLayer.cornerRadius = rect.midX
-        backgroundLayer.frame = rect
-        backgroundLayer.backgroundColor = backgroundColor.CGColor
-        self.layer?.addSublayer(backgroundLayer)
-        
+
         // Progress Layer
         let radius = (rect.width / 2) * 0.75
         progressLayer.frame =  rect
@@ -100,15 +85,7 @@ class CircularSnail: IndeterminateAnimation {
         var arcPath = NSBezierPath()
         arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
-        backgroundLayer.addSublayer(progressLayer)
-    }
-    
-    
-    //MARK: Initialization
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeStrokeAnimations()
-        makeLayers()
+        self.layer!.addSublayer(progressLayer)
     }
 
     var currentRotation = 0.0
@@ -126,10 +103,10 @@ class CircularSnail: IndeterminateAnimation {
     
     override func startAnimation() {
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-        backgroundLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
+        self.layer!.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
     override func stopAnimation() {
-        backgroundLayer.removeAllAnimations()
+        self.layer!.removeAllAnimations()
         progressLayer.removeAllAnimations()
     }
 }

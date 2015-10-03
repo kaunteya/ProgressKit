@@ -37,19 +37,10 @@ class Crawler: IndeterminateAnimation {
         }
     }
 
-    var cornerRadius: CGFloat {
-        get {
-            return self.bounds.width * 0.13
-        }
-    }
     var animationGroups = [CAAnimation]()
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.wantsLayer = true
-        makeLayer()
-    }
-    
-    func makeLayer() {
+
+    override func configureLayers() {
+        super.configureLayers()
         let rect = self.bounds
         let insetRect = NSInsetRect(rect, rect.width * 0.15, rect.width * 0.15)
 
