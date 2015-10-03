@@ -11,6 +11,7 @@ import Cocoa
 
 @IBDesignable
 class CircularProgressView: DeterminateAnimation {
+
     var backgroundLayer = CAShapeLayer()
     var backgroundCircle = CAShapeLayer()
     var progressLayer = CAShapeLayer()
@@ -55,19 +56,10 @@ class CircularProgressView: DeterminateAnimation {
         percentLabelLayer.string = "\(Int(progress * 100))%"
         CATransaction.commit()
     }
-    
-    override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-        makeLayers()
-    }
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeLayers()
-    }
-    
     //TODO: Add percentage option to be shown in center of circle. Use CATextLayer
-    func makeLayers() {
+    override func configure() {
+        super.configure()
         self.wantsLayer = true
         let rect = self.bounds
         let radius = (rect.width / 2) * 0.75

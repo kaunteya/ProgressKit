@@ -9,12 +9,12 @@
 import Foundation
 import Cocoa
 
-protocol Determinable {
+protocol DeterminableAnimation {
     func updateProgress()
 }
 
 @IBDesignable
-class DeterminateAnimation: View, Determinable {
+class DeterminateAnimation: View, DeterminableAnimation {
     
     @IBInspectable var animated: Bool = true
 

@@ -9,15 +9,21 @@
 
 import AppKit
 class View : NSView {
+
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        self.wantsLayer = true
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.wantsLayer = true
+        self.configure()
     }
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.configure()
+    }
+
+    /// Configures the layer setup
+    func configure() {
+        self.wantsLayer = true
+    }
 }
 
 extension NSRect {
@@ -27,22 +33,12 @@ extension NSRect {
 }
 
 extension NSBezierPath {
+    /// Converts NSBezierPath to CGPath
     var CGPath: CGPathRef {
-        get {
-            return self.convertToCGPath()
-        }
-    }
-    
-    /// Transforms the NSBezierPath into a CGPathRef
-    ///
-    /// :returns: The transformed NSBezierPath
-    private func convertToCGPath() -> CGPathRef {
-        
-        // Create path
         var path = CGPathCreateMutable()
         var points = UnsafeMutablePointer<NSPoint>.alloc(3)
         let numElements = self.elementCount
-        
+
         if numElements > 0 {
             var didClosePath = true
             for index in 0..<numElements {

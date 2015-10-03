@@ -28,14 +28,9 @@ class ProgressBar: DeterminateAnimation {
         }
     }
 
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeLayers()
-    }
-    
-    func makeLayers() {
-        self.wantsLayer = true
+    override func configure() {
+        super.configure()
+
         let rect = self.bounds
         
         backgroundLayer.frame = rect
@@ -64,7 +59,6 @@ class ProgressBar: DeterminateAnimation {
         let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         CATransaction.setAnimationTimingFunction(timing)
         progressLayer.frame.size.width = (borderLayer.bounds.width - 6) * progress
-//        percentLabelLayer.string = "\(Int(progress * 100))%"
         CATransaction.commit()
     }
 }
