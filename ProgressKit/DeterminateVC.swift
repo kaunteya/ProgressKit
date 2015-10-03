@@ -26,7 +26,8 @@ class DeterminateViewController: NSViewController {
     @IBOutlet weak var circularView5: CircularProgressView?
 
     @IBOutlet weak var progressBar1: ProgressBar?
-    
+    @IBOutlet weak var progressBar2: ProgressBar?
+
     
     @IBAction func sliderDragged(sender: NSSlider) {
 
@@ -48,6 +49,7 @@ class DeterminateViewController: NSViewController {
         circularView4?.progress = progress
         circularView5?.progress = progress
         progressBar1?.progress = progress
+        progressBar2?.progress = progress
     }
     
 }

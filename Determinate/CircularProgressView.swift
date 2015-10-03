@@ -12,22 +12,31 @@ import Cocoa
 @IBDesignable
 class CircularProgressView: DeterminateAnimation {
 
-    var backgroundLayer = CAShapeLayer()
     var backgroundCircle = CAShapeLayer()
     var progressLayer = CAShapeLayer()
     var percentLabelLayer = CATextLayer()
 
     @IBInspectable var strokeWidth: CGFloat = -1 {
         didSet {
-            backgroundCircle.lineWidth = self.strokeWidth / 2
-            progressLayer.lineWidth = strokeWidth
+            notifyViewRedesigned()
         }
     }
     
     @IBInspectable var showPercent: Bool = true {
         didSet {
-            percentLabelLayer.hidden = !showPercent
+            notifyViewRedesigned()
         }
+    }
+
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
+        backgroundCircle.lineWidth = self.strokeWidth / 2
+        progressLayer.lineWidth = strokeWidth
+        percentLabelLayer.hidden = !showPercent
+
+        backgroundCircle.strokeColor = foreground.colorWithAlphaComponent(0.5).CGColor
+        progressLayer.strokeColor = foreground.CGColor
+        percentLabelLayer.foregroundColor = foreground.CGColor
     }
 
     override func updateProgress() {
@@ -85,11 +94,11 @@ class CircularProgressView: DeterminateAnimation {
             percentLabelLayer.string = "0%"
             percentLabelLayer.foregroundColor = foreground.CGColor
             percentLabelLayer.frame = rect
-            percentLabelLayer.font = NSFont(name: "Helvetica Neue Light", size: 25)
+            percentLabelLayer.font = "Helvetica Neue Light"
             percentLabelLayer.alignmentMode = kCAAlignmentCenter
             percentLabelLayer.position.y = rect.midY * 0.25
             percentLabelLayer.fontSize = rect.width * 0.2
-            self.layer!.addSublayer(percentLabelLayer)
+            self.layer?.addSublayer(percentLabelLayer)
         }
     }
 }

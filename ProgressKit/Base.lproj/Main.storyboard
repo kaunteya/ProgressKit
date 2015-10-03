@@ -816,8 +816,25 @@
                                     <rect key="frame" x="1" y="1" width="458" height="116"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S81-p1-vGt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="182" y="37" width="64" height="64"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                                    <color key="value" red="0.83921569585800171" green="0.44705882668495178" blue="0.43921568989753723" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                                    <color key="value" red="0.29411765933036804" green="0.22352941334247589" blue="0.5372549295425415" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                    <real key="value" value="0.34999999999999998"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYN-D7-hBy" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
-                                            <rect key="frame" x="15" y="3" width="111" height="111"/>
+                                            <rect key="frame" x="15" y="8" width="101" height="101"/>
                                         </customView>
                                     </subviews>
                                 </view>
@@ -835,6 +852,14 @@
                                     <binding destination="XfG-lQ-9wD" name="value" keyPath="labelPercentage" id="iOe-WH-Nsd"/>
                                 </connections>
                             </textField>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-hN-yoj" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="234" width="416" height="42"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.29411765933036804" green="0.22352941334247589" blue="0.5372549295425415" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-gs-jO8" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="48" y="305" width="416" height="15"/>
                             </customView>
@@ -842,7 +867,9 @@
                     </view>
                     <connections>
                         <outlet property="circularView1" destination="dYN-D7-hBy" id="Y18-e9-Ky4"/>
+                        <outlet property="circularView2" destination="S81-p1-vGt" id="nZ9-do-IMz"/>
                         <outlet property="progressBar1" destination="ejA-gs-jO8" id="tvB-Pi-yaR"/>
+                        <outlet property="progressBar2" destination="fRz-hN-yoj" id="H6b-sx-niy"/>
                         <outlet property="slider" destination="vwx-DU-bI3" id="esn-lC-yUN"/>
                     </connections>
                 </viewController>

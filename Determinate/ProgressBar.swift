@@ -17,8 +17,15 @@ class ProgressBar: DeterminateAnimation {
     
     @IBInspectable var borderColor: NSColor = NSColor.blackColor() {
         didSet {
-            borderLayer.borderColor = borderColor.CGColor
+            notifyViewRedesigned()
         }
+    }
+
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
+        self.layer?.backgroundColor = NSColor.clearColor().CGColor
+        borderLayer.borderColor = borderColor.CGColor
+        progressLayer.backgroundColor = foreground.CGColor
     }
 
     override func configureLayers() {
