@@ -8,23 +8,6 @@
 
 
 import AppKit
-class View : NSView {
-
-    override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-        self.configure()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.configure()
-    }
-
-    /// Configures the layer setup
-    func configure() {
-        self.wantsLayer = true
-    }
-}
 
 extension NSRect {
     var mid: CGPoint {

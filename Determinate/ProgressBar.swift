@@ -28,9 +28,8 @@ class ProgressBar: DeterminateAnimation {
         }
     }
 
-    override func configure() {
-        super.configure()
-
+    override func configureLayers() {
+        super.configureLayers()
         let rect = self.bounds
         
         backgroundLayer.frame = rect

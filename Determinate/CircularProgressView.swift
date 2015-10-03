@@ -58,9 +58,8 @@ class CircularProgressView: DeterminateAnimation {
     }
 
     //TODO: Add percentage option to be shown in center of circle. Use CATextLayer
-    override func configure() {
-        super.configure()
-        self.wantsLayer = true
+    override func configureLayers() {
+        super.configureLayers()
         let rect = self.bounds
         let radius = (rect.width / 2) * 0.75
         let strokeScalingFactor = CGFloat(0.05)
