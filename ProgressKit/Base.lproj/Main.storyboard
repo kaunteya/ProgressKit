@@ -710,6 +710,9 @@
                                                 <action selector="animateCircularSnail:" target="rgo-kk-Wcf" id="k8U-Y6-nbV"/>
                                             </connections>
                                         </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-BT-qLK" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="33" y="6" width="80" height="80"/>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -780,6 +783,9 @@
                             </box>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="snail1" destination="qjG-BT-qLK" id="cqB-El-Hi3"/>
+                    </connections>
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

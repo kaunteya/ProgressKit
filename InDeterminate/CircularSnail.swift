@@ -11,8 +11,6 @@ import Cocoa
 
 private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
-private let defaultStrokeColor = NSColor.whiteColor()
-private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 
 @IBDesignable
 class CircularSnail: IndeterminateAnimation {
@@ -23,9 +21,15 @@ class CircularSnail: IndeterminateAnimation {
         }
     }
 
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
+        progressLayer.strokeColor = foreground.CGColor
+    }
+
+    var backgroundRotationLayer = CAShapeLayer()
+
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
-        tempLayer.strokeColor = defaultStrokeColor.CGColor
         tempLayer.strokeEnd = CGFloat(strokeRange.end)
         tempLayer.lineCap = kCALineCapRound
         tempLayer.fillColor = NSColor.clearColor().CGColor
@@ -43,26 +47,6 @@ class CircularSnail: IndeterminateAnimation {
     var strokeStartAnimation: CABasicAnimation!
     var strokeEndAnimation: CABasicAnimation!
 
-    func makeStrokeAnimations() {
-        func makeAnimation(keyPath: String) -> CABasicAnimation {
-            var tempAnimation = CABasicAnimation(keyPath: keyPath)
-            tempAnimation.repeatCount = 1
-            tempAnimation.speed = 2.0
-            tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            
-            tempAnimation.fromValue = strokeRange.start
-            tempAnimation.toValue =  strokeRange.end
-            tempAnimation.duration = duration
-            
-            return tempAnimation
-        }
-        strokeEndAnimation = makeAnimation("strokeEnd")
-        strokeStartAnimation = makeAnimation("strokeStart")
-        strokeStartAnimation.beginTime = duration / 2
-        animationGroup.animations = [strokeEndAnimation, strokeStartAnimation, ]
-        animationGroup.delegate = self
-    }
-    
     var rotationAnimation: CABasicAnimation = {
         var tempRotation = CABasicAnimation(keyPath: "transform.rotation")
         tempRotation.repeatCount = Float.infinity
@@ -73,10 +57,34 @@ class CircularSnail: IndeterminateAnimation {
         return tempRotation
         }()
 
+    /// Makes animation for Stroke Start and Stroke End
+    func makeStrokeAnimationGroup() {
+        func makeAnimationforKeyPath(keyPath: String) -> CABasicAnimation {
+            var tempAnimation = CABasicAnimation(keyPath: keyPath)
+            tempAnimation.repeatCount = 1
+            tempAnimation.speed = 2.0
+            tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+
+            tempAnimation.fromValue = strokeRange.start
+            tempAnimation.toValue =  strokeRange.end
+            tempAnimation.duration = duration
+
+            return tempAnimation
+        }
+        strokeEndAnimation = makeAnimationforKeyPath("strokeEnd")
+        strokeStartAnimation = makeAnimationforKeyPath("strokeStart")
+        strokeStartAnimation.beginTime = duration / 2
+        animationGroup.animations = [strokeEndAnimation, strokeStartAnimation, ]
+        animationGroup.delegate = self
+    }
+
     override func configureLayers() {
         super.configureLayers()
-        makeStrokeAnimations()
+        makeStrokeAnimationGroup()
         let rect = self.bounds
+
+        backgroundRotationLayer.frame = rect
+        self.layer?.addSublayer(backgroundRotationLayer)
 
         // Progress Layer
         let radius = (rect.width / 2) * 0.75
@@ -85,7 +93,7 @@ class CircularSnail: IndeterminateAnimation {
         var arcPath = NSBezierPath()
         arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
-        self.layer!.addSublayer(progressLayer)
+        backgroundRotationLayer.addSublayer(progressLayer)
     }
 
     var currentRotation = 0.0
@@ -100,13 +108,13 @@ class CircularSnail: IndeterminateAnimation {
         CATransaction.commit()
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
     }
-    
+
     override func startAnimation() {
         progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-        self.layer!.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
+        backgroundRotationLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
     override func stopAnimation() {
-        self.layer!.removeAllAnimations()
+        backgroundRotationLayer.removeAllAnimations()
         progressLayer.removeAllAnimations()
     }
 }

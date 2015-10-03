@@ -9,14 +9,14 @@
 import Foundation
 import Cocoa
 
-protocol InDeterminable {
+protocol AnimationActivityProtocol {
     func startAnimation()
     func stopAnimation()
 }
 
-class IndeterminateAnimation: BaseView, InDeterminable {
+class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
     @IBInspectable var displayAfterAnimationEnds: Bool = false
-    
+
     var animate: Bool = false {
         didSet {
             if animate {

@@ -15,17 +15,17 @@ class InDeterminateViewController: NSViewController {
     }
 
     // MARK: DoingCircular
-    @IBOutlet weak var doing1: CircularSnail?
-    @IBOutlet weak var doing2: CircularSnail?
-    @IBOutlet weak var doing3: CircularSnail?
-    @IBOutlet weak var doing4: CircularSnail?
+    @IBOutlet weak var snail1: CircularSnail?
+    @IBOutlet weak var snail2: CircularSnail?
+    @IBOutlet weak var snail3: CircularSnail?
+    @IBOutlet weak var snail4: CircularSnail?
 
     @IBAction func animateCircularSnail(sender: NSButton) {
         let isOn = sender.state == NSOnState
-        doing1?.animate = isOn
-        doing2?.animate = isOn
-        doing3?.animate = isOn
-        doing4?.animate = isOn
+        snail1?.animate = isOn
+        snail2?.animate = isOn
+        snail3?.animate = isOn
+        snail4?.animate = isOn
     }
 
     //MARK: Rainbow
