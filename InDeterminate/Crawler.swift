@@ -24,6 +24,12 @@ class Crawler: IndeterminateAnimation {
 
     var animationGroups = [CAAnimation]()
 
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
+        for star in starList {
+            star.backgroundColor = foreground.CGColor
+        }
+    }
     override func configureLayers() {
         super.configureLayers()
         let rect = self.bounds

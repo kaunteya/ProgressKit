@@ -44,8 +44,6 @@ class CircularSnail: IndeterminateAnimation {
         return tempGroup
     }()
     
-    var strokeStartAnimation: CABasicAnimation!
-    var strokeEndAnimation: CABasicAnimation!
 
     var rotationAnimation: CABasicAnimation = {
         var tempRotation = CABasicAnimation(keyPath: "transform.rotation")
@@ -59,6 +57,9 @@ class CircularSnail: IndeterminateAnimation {
 
     /// Makes animation for Stroke Start and Stroke End
     func makeStrokeAnimationGroup() {
+        var strokeStartAnimation: CABasicAnimation!
+        var strokeEndAnimation: CABasicAnimation!
+
         func makeAnimationforKeyPath(keyPath: String) -> CABasicAnimation {
             var tempAnimation = CABasicAnimation(keyPath: keyPath)
             tempAnimation.repeatCount = 1

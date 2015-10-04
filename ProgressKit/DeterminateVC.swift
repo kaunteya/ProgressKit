@@ -14,7 +14,7 @@ class DeterminateViewController: NSViewController {
     dynamic var labelPercentage: String = "30%"
 
     override func viewDidLoad() {
-        preferredContentSize = NSMakeSize(500, 500)
+        preferredContentSize = NSMakeSize(500, 300)
     }
 
     @IBOutlet weak var slider: NSSlider!
