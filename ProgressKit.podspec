@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name = 'ProgressKit'
   spec.version = '0.0.1'
   spec.license = 'MIT'
-  spec.summary = 'ProgressViews for Mac'
+  spec.summary = 'Animated ProgressViews for OSX'
   spec.homepage = 'https://github.com/kaunteya/ProgressKit'
   spec.authors = { 'Kaunteya Suryawanshi' => 'k.suryawanshi@gmail.com' }
   spec.source = { :git => 'https://github.com/kaunteya/ProgressKit.git', :tag => spec.version }
