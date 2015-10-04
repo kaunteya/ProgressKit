@@ -16,8 +16,6 @@ private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
 class Spinner: IndeterminateAnimation {
     
     var basicShape = CAShapeLayer()
-    
-    var backgroundLayer = CAShapeLayer()
     var containerLayer = CAShapeLayer()
     var starList = [CAShapeLayer]()
     
@@ -27,43 +25,29 @@ class Spinner: IndeterminateAnimation {
         animation.calculationMode = kCAAnimationDiscrete
         return animation
         }()
-    
-    @IBInspectable var backgroundColor: NSColor = defaultBackgroundColor {
-        didSet {
-            backgroundLayer.backgroundColor = backgroundColor.CGColor
-        }
-    }
-    
-    @IBInspectable var foregroundColor: NSColor = defaultForegroundColor {
-        didSet {
-            for star in starList {
-                star.backgroundColor = foregroundColor.CGColor
-            }
-        }
-    }
-    
+
     @IBInspectable var starSize:CGSize = CGSize(width: 6, height: 15) {
         didSet {
-            updateStars()
+            notifyViewRedesigned()
         }
     }
 
     @IBInspectable var roundedCorners: Bool = true {
         didSet {
-            updateStars()
+            notifyViewRedesigned()
         }
     }
 
     
     @IBInspectable var distance: CGFloat = CGFloat(20) {
         didSet {
-            updateStars()
+            notifyViewRedesigned()
         }
     }
 
     @IBInspectable var starCount: Int = 10 {
         didSet {
-            updateStars()
+            notifyViewRedesigned()
         }
     }
 
@@ -75,40 +59,26 @@ class Spinner: IndeterminateAnimation {
 
     @IBInspectable var clockwise: Bool = false {
         didSet {
-            updateStars()
+            notifyViewRedesigned()
         }
     }
 
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeLayers()
-    }
-    
-    func makeLayers() {
-        self.wantsLayer = true
-        let rect = self.bounds
-        
-        backgroundLayer.frame = self.bounds
-        backgroundLayer.backgroundColor = backgroundColor.CGColor
-        backgroundLayer.cornerRadius = frame.width * 0.1
-        self.layer?.addSublayer(backgroundLayer)
-        
+    override func configureLayers() {
+        super.configureLayers()
+
         containerLayer.frame = self.bounds
         containerLayer.cornerRadius = frame.width / 2
-        backgroundLayer.addSublayer(containerLayer)
+        self.layer?.addSublayer(containerLayer)
         
         animation.duration = duration
-
-        updateStars()
     }
     
-    
-    func updateStars() {
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
         starList.removeAll(keepCapacity: true)
         containerLayer.sublayers = nil
         animation.values = [Double]()
-        
+
         for var i = 0.0; i < 360; i = i + Double(360 / starCount) {
             var iRadian = CGFloat(i * M_PI / 180.0)
             if clockwise { iRadian = -iRadian }
@@ -118,18 +88,18 @@ class Spinner: IndeterminateAnimation {
             starShape.cornerRadius = roundedCorners ? starSize.width / 2 : 0
 
             let centerLocation = CGPoint(x: frame.width / 2 - starSize.width / 2, y: frame.width / 2 - starSize.height / 2)
-            
+
             starShape.frame = CGRect(origin: centerLocation, size: starSize)
-            
-            starShape.backgroundColor = foregroundColor.CGColor
+
+            starShape.backgroundColor = foreground.CGColor
             starShape.anchorPoint = CGPoint(x: 0.5, y: 0)
-            
+
             var  rotation: CATransform3D = CATransform3DMakeTranslation(0, 0, 0.0);
 
             rotation = CATransform3DRotate(rotation, -iRadian, 0.0, 0.0, 1.0);
             rotation = CATransform3DTranslate(rotation, 0, distance, 0.0);
             starShape.transform = rotation
-            
+
             starShape.opacity = Float(360 - i) / 360
             containerLayer.addSublayer(starShape)
             starList.append(starShape)
