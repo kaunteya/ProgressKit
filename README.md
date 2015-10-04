@@ -12,7 +12,7 @@
 - [Determinate Progress](#determinate-progress)
   - [Circular Progress] (#circular-progress)
   - [Progress Bar](#progress-bar)
-
+- [License](#license)
 
 # Installation
 ##CocoaPods
@@ -69,4 +69,6 @@ Determinate progress views can be used for tasks whos progress can be seen and d
 ## Progress Bar
 ![Progress Bar](/Images/ProgressBar.png)
 
+# License
+`ProgressKit` is released under the MIT license. See LICENSE for details.
 
