@@ -18,17 +18,7 @@ class DeterminateViewController: NSViewController {
     }
 
     @IBOutlet weak var slider: NSSlider!
-    
-    @IBOutlet weak var circularView1: CircularProgressView?
-    @IBOutlet weak var circularView2: CircularProgressView?
-    @IBOutlet weak var circularView3: CircularProgressView?
-    @IBOutlet weak var circularView4: CircularProgressView?
-    @IBOutlet weak var circularView5: CircularProgressView?
 
-    @IBOutlet weak var progressBar1: ProgressBar?
-    @IBOutlet weak var progressBar2: ProgressBar?
-
-    
     @IBAction func sliderDragged(sender: NSSlider) {
 
         let event = NSApplication.sharedApplication().currentEvent
@@ -43,13 +33,11 @@ class DeterminateViewController: NSViewController {
     }
 
     func setProgress(progress: CGFloat) {
-        circularView1?.progress = progress
-        circularView2?.progress = progress
-        circularView3?.progress = progress
-        circularView4?.progress = progress
-        circularView5?.progress = progress
-        progressBar1?.progress = progress
-        progressBar2?.progress = progress
+        for view in self.view.subviews {
+            if view is DeterminateAnimation {
+                (view as! DeterminateAnimation).progress = progress
+            }
+        }
     }
     
 }

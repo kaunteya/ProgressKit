@@ -23,7 +23,7 @@ class ProgressBar: DeterminateAnimation {
 
     override func notifyViewRedesigned() {
         super.notifyViewRedesigned()
-        self.layer?.backgroundColor = NSColor.clearColor().CGColor
+        self.layer?.cornerRadius = self.frame.height / 2
         borderLayer.borderColor = borderColor.CGColor
         progressLayer.backgroundColor = foreground.CGColor
     }
