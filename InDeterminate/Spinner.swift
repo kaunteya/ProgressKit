@@ -9,9 +9,6 @@
 import Foundation
 import Cocoa
 
-private let defaultForegroundColor = NSColor.whiteColor()
-private let defaultBackgroundColor = NSColor(calibratedWhite: 0.07, alpha: 0.7)
-
 @IBDesignable
 class Spinner: IndeterminateAnimation {
     
