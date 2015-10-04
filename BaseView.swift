@@ -11,10 +11,6 @@ import AppKit
 @IBDesignable
 public class BaseView : NSView {
 
-    var viewLayer: CALayer {
-        return self.layer!
-    }
-
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         self.configureLayers()
@@ -51,7 +47,7 @@ public class BaseView : NSView {
 
     /// Call when any IBInspectable variable is changed
     func notifyViewRedesigned() {
-        self.viewLayer.backgroundColor = background.CGColor
-        self.viewLayer.cornerRadius = cornerRadius
+        self.layer?.backgroundColor = background.CGColor
+        self.layer?.cornerRadius = cornerRadius
     }
 }
