@@ -781,9 +781,34 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Crawler" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-iu-oQl">
+                                <rect key="frame" x="315" y="384" width="185" height="110"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="183" height="93"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sjr-ph-xhi">
+                                            <rect key="frame" x="2" y="68" width="21" height="28"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSlideshowTemplate" imagePosition="left" alignment="center" alternateImage="NSStopProgressTemplate" controlSize="small" imageScaling="proportionallyDown" inset="2" id="DtG-Pn-0By">
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="animateRainbow:" target="rgo-kk-Wcf" id="Dbn-Th-MCG"/>
+                                            </connections>
+                                        </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ey2-Vk-yMt" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="24" y="6" width="80" height="80"/>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="lightRainbow" destination="ey2-Vk-yMt" id="Bxq-6C-EbS"/>
                         <outlet property="snail1" destination="qjG-BT-qLK" id="cqB-El-Hi3"/>
                     </connections>
                 </viewController>
