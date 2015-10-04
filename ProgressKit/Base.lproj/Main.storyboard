@@ -698,8 +698,8 @@
                                 <rect key="frame" x="20" y="84" width="80" height="80"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-2H-wiR">
-                                <rect key="frame" x="20" y="59" width="76" height="17"/>
-                                <buttonCell key="cell" type="inline" title="Show more" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="lBv-3R-Zg0">
+                                <rect key="frame" x="59" y="59" width="41" height="17"/>
+                                <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="lBv-3R-Zg0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
@@ -726,23 +726,13 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-8G-HkC">
-                                <rect key="frame" x="162" y="59" width="76" height="17"/>
-                                <buttonCell key="cell" type="inline" title="Show more" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="SqX-Fr-AwH">
+                                <rect key="frame" x="199" y="59" width="41" height="17"/>
+                                <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="SqX-Fr-AwH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="iQ1-7I-gIf" kind="popover" popoverAnchorView="Npu-8G-HkC" popoverBehavior="t" preferredEdge="maxY" id="cHP-vz-pJQ"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-1B-PXN">
-                                <rect key="frame" x="306" y="59" width="76" height="17"/>
-                                <buttonCell key="cell" type="inline" title="Show more" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="Z8O-Rd-zkL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="smallSystemBold"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="DYk-pp-mvu" kind="popover" popoverAnchorView="Q8N-1B-PXN" popoverBehavior="t" preferredEdge="maxY" id="4W2-kM-ewl"/>
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-H3-AT2" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
@@ -758,6 +748,9 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfH-n9-vtu" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="11" width="438" height="3"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <color key="color" red="0.25490197539329529" green="0.63529413938522339" blue="0.87058824300765991" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="foreground">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -770,6 +763,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-1B-PXN">
+                                <rect key="frame" x="343" y="59" width="41" height="17"/>
+                                <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" controlSize="small" borderStyle="border" inset="2" id="Z8O-Rd-zkL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="DYk-pp-mvu" kind="popover" popoverAnchorView="Q8N-1B-PXN" popoverBehavior="t" preferredEdge="maxY" id="4W2-kM-ewl"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>
@@ -879,13 +882,16 @@
                                 </connections>
                             </textField>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-hN-yoj" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="26" y="37" width="454" height="17"/>
+                                <rect key="frame" x="26" y="45" width="454" height="9"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="foreground">
                                         <color key="value" red="0.29411765933036804" green="0.22352941334247589" blue="0.5372549295425415" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.59999999999999998"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
@@ -899,6 +905,11 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYN-D7-hBy" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="132" width="101" height="101"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.40999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S81-p1-vGt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="171" y="150" width="64" height="64"/>
@@ -913,7 +924,7 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.34999999999999998"/>
+                                        <real key="value" value="0.76000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
@@ -927,13 +938,19 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showPercent" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.070588238537311554" green="0.40392157435417175" blue="0.60392159223556519" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.37"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-PV-rE0" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="67" width="454" height="11"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.34999999999999998"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.92941176891326904" green="0.39215686917304993" blue="0.14509804546833038" alpha="1" colorSpace="calibratedRGB"/>
