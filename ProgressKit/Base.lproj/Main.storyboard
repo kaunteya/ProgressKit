@@ -761,6 +761,9 @@
                                                 <action selector="animateShootingStars:" target="rgo-kk-Wcf" id="Fso-lW-clB"/>
                                             </connections>
                                         </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-H3-AT2" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="5" y="37" width="438" height="6"/>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -816,6 +819,7 @@
                     <connections>
                         <outlet property="crawler1" destination="haM-Vg-aIY" id="ruY-Tm-fD7"/>
                         <outlet property="lightRainbow" destination="ey2-Vk-yMt" id="Bxq-6C-EbS"/>
+                        <outlet property="shootingStar1" destination="kmB-H3-AT2" id="D2O-29-rvX"/>
                         <outlet property="snail1" destination="qjG-BT-qLK" id="cqB-El-Hi3"/>
                     </connections>
                 </viewController>

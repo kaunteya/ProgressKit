@@ -12,52 +12,38 @@ import Cocoa
 @IBDesignable
 class ShootingStars: IndeterminateAnimation {
     private let animationDuration = 1.0
-    @IBInspectable var backgroundColor: NSColor = NSColor( red: 0.2026, green: 0.7113, blue: 0.9, alpha: 1.0 ) {
-        didSet {
-            backgroundLayer.backgroundColor = backgroundColor.CGColor
-        }
-    }
-    
-    @IBInspectable var starColor: NSColor = NSColor.whiteColor() {
-        didSet {
-            starLayer1.backgroundColor = starColor.CGColor
-            starLayer2.backgroundColor = starColor.CGColor
-        }
-    }
-    
-    var backgroundLayer = CAShapeLayer()
+
     var starLayer1 = CAShapeLayer()
     var starLayer2 = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "position.x")
     var tempAnimation = CABasicAnimation(keyPath: "position.x")
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        makeLayers()
+    override func notifyViewRedesigned() {
+        super.notifyViewRedesigned()
+        starLayer1.backgroundColor = foreground.CGColor
+        starLayer2.backgroundColor = foreground.CGColor
     }
-    
-    func makeLayers() {
-        self.wantsLayer = true
+
+    override func configureLayers() {
+        super.configureLayers()
+
         let rect = self.bounds
         let dimension = rect.height
         let starWidth = dimension * 1.5
         
-        /// Add background layer
-        backgroundLayer.frame = rect
-        backgroundLayer.backgroundColor = backgroundColor.CGColor
-        self.layer?.addSublayer(backgroundLayer)
-        
+        self.layer?.cornerRadius = 0
+
         /// Add Stars
         do_ {
             starLayer1.position = CGPoint(x: dimension / 2, y: dimension / 2)
             starLayer1.bounds.size = CGSize(width: starWidth, height: dimension)
-            starLayer1.backgroundColor = starColor.CGColor
-            backgroundLayer.addSublayer(starLayer1)
+            starLayer1.backgroundColor = foreground.CGColor
+            self.layer?.addSublayer(starLayer1)
             
             starLayer2.position = CGPoint(x: rect.midX, y: dimension / 2)
             starLayer2.bounds.size = CGSize(width: starWidth, height: dimension)
-            starLayer2.backgroundColor = starColor.CGColor
-            backgroundLayer.addSublayer(starLayer2)
+            starLayer2.backgroundColor = foreground.CGColor
+            self.layer?.addSublayer(starLayer2)
         }
         
         /// Add default animation
