@@ -734,6 +734,12 @@
                                                 <action selector="animateCrawler:" target="rgo-kk-Wcf" id="LOP-2c-6Gu"/>
                                             </connections>
                                         </button>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haM-Vg-aIY" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -781,7 +787,7 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Crawler" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-iu-oQl">
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="Rainbow" boxType="oldStyle" borderType="line" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-iu-oQl">
                                 <rect key="frame" x="315" y="384" width="185" height="110"/>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="183" height="93"/>
@@ -808,6 +814,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="crawler1" destination="haM-Vg-aIY" id="ruY-Tm-fD7"/>
                         <outlet property="lightRainbow" destination="ey2-Vk-yMt" id="Bxq-6C-EbS"/>
                         <outlet property="snail1" destination="qjG-BT-qLK" id="cqB-El-Hi3"/>
                     </connections>
