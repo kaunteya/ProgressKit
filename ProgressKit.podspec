@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.platform = :osx, '10.9'
   spec.requires_arc = true
 
-  spec.source_files = 'Determinate/*.swift', 'InDeterminate/*.swift', 'ProgressUtils.swift'
+  spec.source_files = 'Determinate/*.swift', 'InDeterminate/*.swift', 'ProgressUtils.swift', 'BaseView.swift'
 end
