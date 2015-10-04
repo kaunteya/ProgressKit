@@ -14,7 +14,7 @@ private let defaultBackgroundColor = NSColor(white: 0.0, alpha: 0.4)
 private let duration = 1.2
 
 @IBDesignable
-class Crawler: IndeterminateAnimation {
+public class Crawler: IndeterminateAnimation {
     
     var starList = [CAShapeLayer]()
 

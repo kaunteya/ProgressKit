@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class CircularProgressView: DeterminateAnimation {
+public class CircularProgressView: DeterminateAnimation {
 
     var backgroundCircle = CAShapeLayer()
     var progressLayer = CAShapeLayer()

@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class Rainbow: CircularSnail {
+public class Rainbow: CircularSnail {
 
     @IBInspectable var onLightOffDark: Bool = false
 
@@ -19,7 +19,7 @@ class Rainbow: CircularSnail {
         self.background = NSColor.clearColor()
     }
 
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
         super.animationDidStop(anim, finished: flag)
         if onLightOffDark {
            progressLayer.strokeColor = lightColorList[Int(arc4random()) % lightColorList.count].CGColor

@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class ShootingStars: IndeterminateAnimation {
+public class ShootingStars: IndeterminateAnimation {
     private let animationDuration = 1.0
 
     var starLayer1 = CAShapeLayer()
@@ -67,7 +67,7 @@ class ShootingStars: IndeterminateAnimation {
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
     }
     
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
         starLayer2.addAnimation(animation, forKey: "default")
     }
     

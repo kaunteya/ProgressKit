@@ -14,7 +14,7 @@ protocol AnimationActivityProtocol {
     func stopAnimation()
 }
 
-class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
+public class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
     @IBInspectable var displayAfterAnimationEnds: Bool = false
 
     var animate: Bool = false {

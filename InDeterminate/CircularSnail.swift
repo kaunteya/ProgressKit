@@ -13,7 +13,7 @@ private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
 
 @IBDesignable
-class CircularSnail: IndeterminateAnimation {
+public class CircularSnail: IndeterminateAnimation {
 
     @IBInspectable var lineWidth: CGFloat = -1 {
         didSet {
@@ -99,7 +99,7 @@ class CircularSnail: IndeterminateAnimation {
 
     var currentRotation = 0.0
     let π2 = M_PI * 2
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
         if !animate { return }
         CATransaction.begin()
         CATransaction.setDisableActions(true)

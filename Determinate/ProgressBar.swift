@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class ProgressBar: DeterminateAnimation {
+public class ProgressBar: DeterminateAnimation {
 
     var borderLayer = CAShapeLayer()
     var progressLayer = CAShapeLayer()

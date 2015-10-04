@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class Spinner: IndeterminateAnimation {
+public class Spinner: IndeterminateAnimation {
     
     var basicShape = CAShapeLayer()
     var containerLayer = CAShapeLayer()

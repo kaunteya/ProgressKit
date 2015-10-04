@@ -9,7 +9,7 @@
 import AppKit
 
 @IBDesignable
-class BaseView : NSView {
+public class BaseView : NSView {
 
     var viewLayer: CALayer {
         return self.layer!
@@ -20,7 +20,7 @@ class BaseView : NSView {
         self.configureLayers()
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.configureLayers()
     }
