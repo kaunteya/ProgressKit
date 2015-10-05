@@ -38,7 +38,7 @@ $ pod install
 - Set the size such that width and height are equal
 - Drag `IBOutlet` to View Controller
 - For `Indeterminate` Progress Views
-  - Call `view.startAnimation()` and `view.stopAnimation()`
+  - Set `Boolean` value to `view.animate`
 - For `Determinate` Progress Views:
   - Set `view.progress` to value in `0...1`
   
