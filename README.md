@@ -1,5 +1,5 @@
 
-![Image](/Images/banner.png)
+![Image](/Images/banner.gif)
 
 
 # Contents
