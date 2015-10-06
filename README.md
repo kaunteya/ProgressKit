@@ -34,7 +34,7 @@ $ pod install
   
 # Usage
 - Drag  a View at desired location in `XIB` or `Storyboard`
-- Change the Class to any of the desired progress Views
+- Change the Class to any of the desired progress views
 - Set the size such that width and height are equal
 - Drag `IBOutlet` to View Controller
 - For `Indeterminate` Progress Views
@@ -49,7 +49,6 @@ $ pod install
 Progress indicators which animate indefinately are `Indeterminate Progress` Views.
 
 This are the InDeterminate Progress Indicators.
-
 
 ## CircularSnail
 ![CircularSnail](/Images/CircularSnail.gif)
