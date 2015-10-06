@@ -12,7 +12,7 @@
 - [Determinate Progress](#determinate-progress)
   - [Circular Progress] (#circular-progress)
   - [Progress Bar](#progress-bar)
-
+- [License](#license)
 
 # Installation
 ##CocoaPods
@@ -38,7 +38,7 @@ $ pod install
 - Set the size such that width and height are equal
 - Drag `IBOutlet` to View Controller
 - For `Indeterminate` Progress Views
-  - Call `view.startAnimation()` and `view.stopAnimation()`
+  - Set `Boolean` value to `view.animate`
 - For `Determinate` Progress Views:
   - Set `view.progress` to value in `0...1`
   
@@ -69,4 +69,6 @@ Determinate progress views can be used for tasks whos progress can be seen and d
 ## Progress Bar
 ![Progress Bar](/Images/ProgressBar.png)
 
+# License
+`ProgressKit` is released under the MIT license. See LICENSE for details.
 
