@@ -1,6 +1,8 @@
 
 ![Image](/Images/banner.gif)
 
+`ProgressKit` has set of cool `IBDesignable` progress views, with huge customisation options. 
+You can now make spinners, progress bar, crawlers etc, which nicely gets integrated according to your app theme.
 
 # Contents
 - [Installation](#installation)
