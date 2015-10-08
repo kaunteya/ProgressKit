@@ -61,7 +61,7 @@ public class CircularSnail: IndeterminateAnimation {
         var strokeEndAnimation: CABasicAnimation!
 
         func makeAnimationforKeyPath(keyPath: String) -> CABasicAnimation {
-            var tempAnimation = CABasicAnimation(keyPath: keyPath)
+            let tempAnimation = CABasicAnimation(keyPath: keyPath)
             tempAnimation.repeatCount = 1
             tempAnimation.speed = 2.0
             tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -91,7 +91,7 @@ public class CircularSnail: IndeterminateAnimation {
         let radius = (rect.width / 2) * 0.75
         progressLayer.frame =  rect
         progressLayer.lineWidth = lineWidth == -1 ? radius / 10: lineWidth
-        var arcPath = NSBezierPath()
+        let arcPath = NSBezierPath()
         arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
         backgroundRotationLayer.addSublayer(progressLayer)
@@ -99,7 +99,7 @@ public class CircularSnail: IndeterminateAnimation {
 
     var currentRotation = 0.0
     let π2 = M_PI * 2
-    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if !animate { return }
         CATransaction.begin()
         CATransaction.setDisableActions(true)

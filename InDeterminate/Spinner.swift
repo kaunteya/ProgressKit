@@ -80,8 +80,8 @@ public class Spinner: IndeterminateAnimation {
             var iRadian = CGFloat(i * M_PI / 180.0)
             if clockwise { iRadian = -iRadian }
 
-            animation.values.append(iRadian)
-            var starShape = CAShapeLayer()
+            animation.values?.append(iRadian)
+            let starShape = CAShapeLayer()
             starShape.cornerRadius = roundedCorners ? starSize.width / 2 : 0
 
             let centerLocation = CGPoint(x: frame.width / 2 - starSize.width / 2, y: frame.width / 2 - starSize.height / 2)

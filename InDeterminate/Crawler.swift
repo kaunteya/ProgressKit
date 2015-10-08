@@ -36,7 +36,7 @@ public class Crawler: IndeterminateAnimation {
         let insetRect = NSInsetRect(rect, rect.width * 0.15, rect.width * 0.15)
 
         for var i = 0.0; i < 5; i++ {
-            var starShape = CAShapeLayer()
+            let starShape = CAShapeLayer()
             starList.append(starShape)
             starShape.backgroundColor = foreground.CGColor
 
@@ -46,16 +46,16 @@ public class Crawler: IndeterminateAnimation {
             starShape.position = CGPoint(x: rect.midX, y: rect.midY + insetRect.height / 2)
             self.layer?.addSublayer(starShape)
 
-            var arcPath = NSBezierPath()
+            let arcPath = NSBezierPath()
             arcPath.appendBezierPathWithArcWithCenter(insetRect.mid, radius: insetRect.width / 2, startAngle: 90, endAngle: -360 + 90, clockwise: true)
 
-            var rotationAnimation = CAKeyframeAnimation(keyPath: "position")
+            let rotationAnimation = CAKeyframeAnimation(keyPath: "position")
             rotationAnimation.path = arcPath.CGPath
             rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             rotationAnimation.beginTime = (duration * 0.075) * i
             rotationAnimation.calculationMode = kCAAnimationCubicPaced
 
-            var animationGroup = CAAnimationGroup()
+            let animationGroup = CAAnimationGroup()
             animationGroup.animations = [rotationAnimation]
             animationGroup.duration = duration
             animationGroup.repeatCount = Float.infinity
@@ -65,7 +65,7 @@ public class Crawler: IndeterminateAnimation {
     }
 
     override func startAnimation() {
-        for (index, star) in enumerate(starList) {
+        for (index, star) in starList.enumerate() {
             star.addAnimation(animationGroups[index], forKey: "")
         }
     }

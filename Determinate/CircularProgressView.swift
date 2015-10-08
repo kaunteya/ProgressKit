@@ -67,7 +67,7 @@ public class CircularProgressView: DeterminateAnimation {
             
             backgroundCircle.strokeColor = foreground.colorWithAlphaComponent(0.5).CGColor
             backgroundCircle.fillColor = NSColor.clearColor().CGColor
-            var backgroundPath = NSBezierPath()
+            let backgroundPath = NSBezierPath()
             backgroundPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360)
             backgroundCircle.path = backgroundPath.CGPath
             self.layer?.addSublayer(backgroundCircle)
@@ -82,8 +82,8 @@ public class CircularProgressView: DeterminateAnimation {
             
             progressLayer.frame = rect
             progressLayer.strokeColor = foreground.CGColor
-            var arcPath = NSBezierPath()
-            var startAngle = CGFloat(90)
+            let arcPath = NSBezierPath()
+            let startAngle = CGFloat(90)
             arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
             progressLayer.path = arcPath.CGPath
             self.layer?.addSublayer(progressLayer)

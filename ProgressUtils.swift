@@ -18,8 +18,8 @@ extension NSRect {
 extension NSBezierPath {
     /// Converts NSBezierPath to CGPath
     var CGPath: CGPathRef {
-        var path = CGPathCreateMutable()
-        var points = UnsafeMutablePointer<NSPoint>.alloc(3)
+        let path = CGPathCreateMutable()
+        let points = UnsafeMutablePointer<NSPoint>.alloc(3)
         let numElements = self.elementCount
 
         if numElements > 0 {

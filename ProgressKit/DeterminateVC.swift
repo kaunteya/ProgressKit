@@ -22,9 +22,9 @@ class DeterminateViewController: NSViewController {
     @IBAction func sliderDragged(sender: NSSlider) {
 
         let event = NSApplication.sharedApplication().currentEvent
-        let dragStart = event!.type == NSEventType.LeftMouseDown
+//        let dragStart = event!.type == NSEventType.LeftMouseDown
         let dragEnd = event!.type == NSEventType.LeftMouseUp
-        let dragging = event!.type == NSEventType.LeftMouseDragged
+//        let dragging = event!.type == NSEventType.LeftMouseDragged
 
         if liveProgress || dragEnd {
             setProgress(CGFloat(sender.floatValue))

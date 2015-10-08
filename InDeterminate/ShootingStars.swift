@@ -67,7 +67,7 @@ public class ShootingStars: IndeterminateAnimation {
         tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
     }
     
-    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         starLayer2.addAnimation(animation, forKey: "default")
     }
     
