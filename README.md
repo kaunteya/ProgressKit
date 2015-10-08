@@ -18,7 +18,7 @@ You can now make spinners, progress bar, crawlers etc, which nicely gets integra
 
 # Installation
 ##CocoaPods
-[CocoaPods 0.36](http://cocoapods.org) adds supports for Swift and embedded frameworks.
+[CocoaPods](http://cocoapods.org) adds supports for Swift and embedded frameworks.
 
 To integrate ProgressKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -50,7 +50,7 @@ $ pod install
 ![Indeterminate](/Images/indeterminate.gif)  
 Progress indicators which animate indefinately are `Indeterminate Progress` Views.
 
-This are the InDeterminate Progress Indicators.
+This are the set of Indeterminate Progress Indicators.
 
 ## CircularSnail
 ![CircularSnail](/Images/CircularSnail.gif)
@@ -62,7 +62,7 @@ This are the InDeterminate Progress Indicators.
 ![Spinner](/Images/Spinner.gif)
 
 # Determinate Progress
-Determinate progress views can be used for tasks whos progress can be seen and determined gradually.
+Determinate progress views can be used for tasks whos progress can be seen and determined.
 
 ## Circular Progress
 ![Circular Progress](/Images/CircularProgress.png)
