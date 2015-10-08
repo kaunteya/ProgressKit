@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.authors = { 'Kaunteya Suryawanshi' => 'k.suryawanshi@gmail.com' }
   spec.source = { :git => 'https://github.com/kaunteya/ProgressKit.git', :tag => spec.version }
 
-  spec.platform = :osx, '10.9'
+  spec.platform = :osx, '10.10'
   spec.requires_arc = true
 
   spec.source_files = 'Determinate/*.swift', 'InDeterminate/*.swift', 'ProgressUtils.swift', 'BaseView.swift'
