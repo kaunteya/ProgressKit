@@ -47,11 +47,6 @@ extension NSBezierPath {
     }
 }
 
-/// All the do_ invocations will be replace by do after Swift 2.0
-func do_ (@noescape work: () -> ()) {
-    work()
-}
-
 func degreeToRadian(degree: Int) -> Double {
     return Double(degree) * (M_PI / 180)
 }

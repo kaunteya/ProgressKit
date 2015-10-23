@@ -34,7 +34,7 @@ public class ShootingStars: IndeterminateAnimation {
         self.layer?.cornerRadius = 0
 
         /// Add Stars
-        do_ {
+        do {
             starLayer1.position = CGPoint(x: dimension / 2, y: dimension / 2)
             starLayer1.bounds.size = CGSize(width: starWidth, height: dimension)
             starLayer1.backgroundColor = foreground.CGColor
@@ -47,7 +47,7 @@ public class ShootingStars: IndeterminateAnimation {
         }
         
         /// Add default animation
-        do_ {
+        do {
             animation.fromValue = -dimension
             animation.toValue = rect.width * 0.9
             animation.duration = animationDuration
