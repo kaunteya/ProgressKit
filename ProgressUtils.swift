@@ -51,3 +51,16 @@ extension NSBezierPath {
 func do_ (@noescape work: () -> ()) {
     work()
 }
+
+func degreeToRadian(degree: Int) -> Double {
+    return Double(degree) * (M_PI / 180)
+}
+
+func radianToDegree(radian: Double) -> Int {
+    return Int(radian * (180 / M_PI))
+}
+
+func + (p1: CGPoint, p2: CGPoint) -> CGPoint {
+    return CGPoint(x: p1.x + p2.x, y: p1.y + p2.y)
+}
+
