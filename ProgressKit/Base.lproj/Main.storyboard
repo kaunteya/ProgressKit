@@ -795,11 +795,11 @@
             <objects>
                 <viewController id="Y7I-2Q-c7j" customClass="InDeterminateViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="tpW-6T-RtR">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="115"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="180"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-Jc-Yju" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="15" width="80" height="80"/>
+                                <rect key="frame" x="20" y="80" width="80" height="80"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
@@ -811,7 +811,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-2r-OsR" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="235" y="15" width="80" height="80"/>
+                                <rect key="frame" x="235" y="80" width="80" height="80"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
@@ -829,7 +829,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv2-cL-kGS" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="370" y="37" width="40" height="40"/>
+                                <rect key="frame" x="370" y="102" width="40" height="40"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
@@ -844,11 +844,25 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCf-PU-fcx" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="123" y="15" width="80" height="80"/>
+                                <rect key="frame" x="123" y="80" width="80" height="80"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rp1-na-hhA" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                <animations/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-mO-3Yh" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="123" y="0.0" width="80" height="80"/>
+                                <animations/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="onLightOffDark" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
@@ -858,7 +872,7 @@
                 </viewController>
                 <customObject id="qek-pA-X3K" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="492.5"/>
+            <point key="canvasLocation" x="804" y="525"/>
         </scene>
         <!--Determinate View Controller-->
         <scene sceneID="hIz-AP-VOD">
