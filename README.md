@@ -9,8 +9,10 @@ You can now make spinners, progress bar, crawlers etc, which nicely gets integra
 - [Usage](#usage)
 - [Indeterminate Progress](#indeterminate-progress)
   - [CircularSnail](#circularsnail)
+  - [Rainbow](#rainbow)
   - [Crawler](#crawler)
   - [Spinner](#spinner)
+  - [Shooting Stars](#shooting-stars)
 - [Determinate Progress](#determinate-progress)
   - [Circular Progress] (#circular-progress)
   - [Progress Bar](#progress-bar)
@@ -55,11 +57,16 @@ This are the set of Indeterminate Progress Indicators.
 ## CircularSnail
 ![CircularSnail](/Images/CircularSnail.gif)
 
+## Rainbow
+![Rainbow](/Images/Rainbow.gif)
 ## Crawler
 ![Crawler](/Images/Crawler.gif)
 
 ## Spinner
 ![Spinner](/Images/Spinner.gif)
+
+## Shooting Stars
+![Shooting Stars](/Images/ShootingStars.gif)
 
 # Determinate Progress
 Determinate progress views can be used for tasks whos progress can be seen and determined.
