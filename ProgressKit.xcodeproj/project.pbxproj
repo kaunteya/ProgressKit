@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E31617A61BC0596C007AD70F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31617A51BC0596C007AD70F /* BaseView.swift */; };
+		E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340FDB71BDE45F000CE6550 /* RotatingArc.swift */; settings = {ASSET_TAGS = (); }; };
 		E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35D1C6B1B676889001DBAF2 /* Spinner.swift */; };
 		E37568DF1B6AAB530073E26F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37568DE1B6AAB530073E26F /* ProgressBar.swift */; };
 		E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F801B4E88CF00558DAB /* CircularProgressView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		E31617A51BC0596C007AD70F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E340FDB71BDE45F000CE6550 /* RotatingArc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RotatingArc.swift; path = InDeterminate/RotatingArc.swift; sourceTree = "<group>"; };
 		E35D1C6B1B676889001DBAF2 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinner.swift; path = InDeterminate/Spinner.swift; sourceTree = "<group>"; };
 		E37568DE1B6AAB530073E26F /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = Determinate/ProgressBar.swift; sourceTree = "<group>"; };
 		E3918F801B4E88CF00558DAB /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Determinate/CircularProgressView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				E3A468511B5434F7006DDE31 /* Crawler.swift */,
 				E3918F831B4E88DE00558DAB /* ShootingStars.swift */,
 				E35D1C6B1B676889001DBAF2 /* Spinner.swift */,
+				E340FDB71BDE45F000CE6550 /* RotatingArc.swift */,
 			);
 			name = Indeterminate;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				E3918F841B4E88DE00558DAB /* CircularSnail.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 				E37568DF1B6AAB530073E26F /* ProgressBar.swift in Sources */,
+				E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */,
 				E3CCD59A1BBC2B9B00F7DB9A /* ProgressUtils.swift in Sources */,
 				E31617A61BC0596C007AD70F /* BaseView.swift in Sources */,
 				E3918FA81B4ECF7100558DAB /* Rainbow.swift in Sources */,

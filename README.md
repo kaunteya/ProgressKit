@@ -13,6 +13,7 @@ You can now make spinners, progress bar, crawlers etc, which nicely gets integra
   - [Crawler](#crawler)
   - [Spinner](#spinner)
   - [Shooting Stars](#shooting-stars)
+  - [Rotating Arc](#rotating-arc)
 - [Determinate Progress](#determinate-progress)
   - [Circular Progress] (#circular-progress)
   - [Progress Bar](#progress-bar)
@@ -67,6 +68,9 @@ This are the set of Indeterminate Progress Indicators.
 
 ## Shooting Stars
 ![Shooting Stars](/Images/ShootingStars.gif)
+
+## Rotating Arc
+![Rotating Arc](/Images/RotatingArc.gif)
 
 # Determinate Progress
 Determinate progress views can be used for tasks whos progress can be seen and determined.
