@@ -16,10 +16,10 @@ protocol DeterminableAnimation {
 @IBDesignable
 public class DeterminateAnimation: BaseView, DeterminableAnimation {
     
-    @IBInspectable var animated: Bool = true
+    @IBInspectable public var animated: Bool = true
 
     /// Value of progress now. Range 0..1
-    @IBInspectable var progress: CGFloat = 0 {
+    @IBInspectable public var progress: CGFloat = 0 {
         didSet {
             updateProgress()
         }

@@ -24,7 +24,7 @@ public class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
     True invokes `startAnimation()` on subclass of IndeterminateAnimation
     False invokes `stopAnimation()` on subclass of IndeterminateAnimation
     */
-    var animate: Bool = false {
+    public var animate: Bool = false {
         didSet {
             if animate {
                 self.hidden = false
