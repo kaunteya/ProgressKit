@@ -2,7 +2,7 @@
 ![Image](/Images/banner.gif)
 
 `ProgressKit` has set of cool `IBDesignable` progress views, with huge customisation options. 
-You can now make spinners, progress bar, crawlers etc, which nicely gets integrated according to your app theme.
+You can now make spinners, progress bar, crawlers etc, which can be finely customised according to your app palette.
 
 # Contents
 - [Installation](#installation)
@@ -43,7 +43,7 @@ $ pod install
 - Set the size such that width and height are equal
 - Drag `IBOutlet` to View Controller
 - For `Indeterminate` Progress Views
-  - Set `Boolean` value to `view.animate`
+  - Set `true / false` to `view.animate`
 - For `Determinate` Progress Views:
   - Set `view.progress` to value in `0...1`
   
