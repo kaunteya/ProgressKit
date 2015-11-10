@@ -1,6 +1,12 @@
 
 ![ProgressKit Banner](/Images/banner.gif)
 
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/ProgressKit.svg)](https://img.shields.io/cocoapods/v/ProgressKit.svg)
+[![Platform](https://img.shields.io/cocoapods/p/ProgressKit.svg?style=flat)](http://cocoadocs.org/docsets/ProgressKit)
+[![License](https://img.shields.io/cocoapods/l/ProgressKit.svg?style=flat)](http://cocoadocs.org/docsets/ProgressKit)
+
+
+
 `ProgressKit` has set of cool `IBDesignable` progress views, with huge customisation options. 
 You can now make spinners, progress bar, crawlers etc, which can be finely customised according to your app palette.
 
