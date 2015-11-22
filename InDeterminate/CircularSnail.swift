@@ -15,7 +15,7 @@ private let strokeRange = (start: 0.0, end: 0.8)
 @IBDesignable
 public class CircularSnail: IndeterminateAnimation {
 
-    @IBInspectable var lineWidth: CGFloat = -1 {
+    @IBInspectable public var lineWidth: CGFloat = -1 {
         didSet {
             progressLayer.lineWidth = lineWidth
         }

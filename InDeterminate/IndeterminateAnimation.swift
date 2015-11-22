@@ -17,7 +17,7 @@ protocol AnimationActivityProtocol {
 public class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
 
     /// View is hidden when *animate* property is false
-    @IBInspectable var displayAfterAnimationEnds: Bool = false
+    @IBInspectable public var displayAfterAnimationEnds: Bool = false
 
     /**
     Control point for all Indeterminate animation

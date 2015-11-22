@@ -15,7 +15,7 @@ public class ProgressBar: DeterminateAnimation {
     var borderLayer = CAShapeLayer()
     var progressLayer = CAShapeLayer()
     
-    @IBInspectable var borderColor: NSColor = NSColor.blackColor() {
+    @IBInspectable public var borderColor: NSColor = NSColor.blackColor() {
         didSet {
             notifyViewRedesigned()
         }
