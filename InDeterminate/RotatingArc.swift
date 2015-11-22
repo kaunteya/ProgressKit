@@ -17,19 +17,19 @@ public class RotatingArc: IndeterminateAnimation {
     var backgroundCircle = CAShapeLayer()
     var arcLayer = CAShapeLayer()
 
-    @IBInspectable var strokeWidth: CGFloat = 5 {
+    @IBInspectable public var strokeWidth: CGFloat = 5 {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable var arcLength: Int = 35 {
+    @IBInspectable public var arcLength: Int = 35 {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable var clockWise: Bool = true {
+    @IBInspectable public var clockWise: Bool = true {
         didSet {
             notifyViewRedesigned()
         }

@@ -16,13 +16,13 @@ public class CircularProgressView: DeterminateAnimation {
     var progressLayer = CAShapeLayer()
     var percentLabelLayer = CATextLayer()
 
-    @IBInspectable var strokeWidth: CGFloat = -1 {
+    @IBInspectable public var strokeWidth: CGFloat = -1 {
         didSet {
             notifyViewRedesigned()
         }
     }
     
-    @IBInspectable var showPercent: Bool = true {
+    @IBInspectable public var showPercent: Bool = true {
         didSet {
             notifyViewRedesigned()
         }

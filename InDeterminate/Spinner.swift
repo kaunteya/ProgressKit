@@ -23,38 +23,38 @@ public class Spinner: IndeterminateAnimation {
         return animation
         }()
 
-    @IBInspectable var starSize:CGSize = CGSize(width: 6, height: 15) {
+    @IBInspectable public var starSize:CGSize = CGSize(width: 6, height: 15) {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable var roundedCorners: Bool = true {
+    @IBInspectable public var roundedCorners: Bool = true {
         didSet {
             notifyViewRedesigned()
         }
     }
 
     
-    @IBInspectable var distance: CGFloat = CGFloat(20) {
+    @IBInspectable public var distance: CGFloat = CGFloat(20) {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable var starCount: Int = 10 {
+    @IBInspectable public var starCount: Int = 10 {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable var duration: Double = 1 {
+    @IBInspectable public var duration: Double = 1 {
         didSet {
             animation.duration = duration
         }
     }
 
-    @IBInspectable var clockwise: Bool = false {
+    @IBInspectable public var clockwise: Bool = false {
         didSet {
             notifyViewRedesigned()
         }

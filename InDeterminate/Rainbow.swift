@@ -12,7 +12,7 @@ import Cocoa
 @IBDesignable
 public class Rainbow: CircularSnail {
 
-    @IBInspectable var onLightOffDark: Bool = false
+    @IBInspectable public var onLightOffDark: Bool = false
 
     override func configureLayers() {
         super.configureLayers()
