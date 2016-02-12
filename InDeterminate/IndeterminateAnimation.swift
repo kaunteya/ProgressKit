@@ -26,6 +26,7 @@ public class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
     */
     public var animate: Bool = false {
         didSet {
+            guard animate != oldValue else { return }
             if animate {
                 self.hidden = false
                 startAnimation()

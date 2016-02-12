@@ -13,17 +13,13 @@ class InDeterminateViewController: NSViewController {
 
     override func viewDidAppear() {
         for view in self.view.subviews {
-            if view is IndeterminateAnimation {
-                (view as! IndeterminateAnimation).animate = true
-            }
+            (view as? IndeterminateAnimation)?.animate = true
         }
     }
 
     override func viewWillDisappear() {
         for view in self.view.subviews {
-            if view is IndeterminateAnimation {
-                (view as! IndeterminateAnimation).animate = false
-            }
+            (view as? IndeterminateAnimation)?.animate = false
         }
     }
 }
