@@ -75,8 +75,8 @@ public class Spinner: IndeterminateAnimation {
         starList.removeAll(keepCapacity: true)
         containerLayer.sublayers = nil
         animation.values = [Double]()
-
-        for var i = 0.0; i < 360; i = i + Double(360 / starCount) {
+        var i = 0.0
+        while i < 360 {
             var iRadian = CGFloat(i * M_PI / 180.0)
             if clockwise { iRadian = -iRadian }
 
@@ -100,6 +100,7 @@ public class Spinner: IndeterminateAnimation {
             starShape.opacity = Float(360 - i) / 360
             containerLayer.addSublayer(starShape)
             starList.append(starShape)
+            i = i + Double(360 / starCount)
         }
     }
 

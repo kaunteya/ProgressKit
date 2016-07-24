@@ -35,12 +35,12 @@ public class Crawler: IndeterminateAnimation {
         let rect = self.bounds
         let insetRect = NSInsetRect(rect, rect.width * 0.15, rect.width * 0.15)
 
-        for var i = 0.0; i < 5; i++ {
+        for i in 0 ..< 5 {
             let starShape = CAShapeLayer()
             starList.append(starShape)
             starShape.backgroundColor = foreground.CGColor
 
-            let circleWidth = smallCircleSize - i * 2
+            let circleWidth = smallCircleSize - Double(i) * 2
             starShape.bounds = CGRect(x: 0, y: 0, width: circleWidth, height: circleWidth)
             starShape.cornerRadius = CGFloat(circleWidth / 2)
             starShape.position = CGPoint(x: rect.midX, y: rect.midY + insetRect.height / 2)
@@ -52,7 +52,7 @@ public class Crawler: IndeterminateAnimation {
             let rotationAnimation = CAKeyframeAnimation(keyPath: "position")
             rotationAnimation.path = arcPath.CGPath
             rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-            rotationAnimation.beginTime = (duration * 0.075) * i
+            rotationAnimation.beginTime = (duration * 0.075) * Double(i)
             rotationAnimation.calculationMode = kCAAnimationCubicPaced
 
             let animationGroup = CAAnimationGroup()
