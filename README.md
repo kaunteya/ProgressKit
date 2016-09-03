@@ -36,6 +36,11 @@ use_frameworks!
 
 pod 'ProgressKit'
 ```
+For Swift 3 install directly from `swift-3` branch form github
+
+```ruby
+pod 'ProgressKit', :git => "https://github.com/kaunteya/ProgressKit.git", :branch => 'swift-3'
+```
 
 Then, run the following command:
 
