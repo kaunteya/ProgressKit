@@ -14,7 +14,7 @@ You can now make spinners, progress bar, crawlers etc, which can be finely custo
 - [Installation](#installation)
 - [Usage](#usage)
 - [Indeterminate Progress](#indeterminate-progress)
-  - [CircularSnail](#circularsnail)
+  - [MaterialProgress](#MaterialProgress)
   - [Rainbow](#rainbow)
   - [Crawler](#crawler)
   - [Spinner](#spinner)
@@ -61,7 +61,7 @@ Progress indicators which animate indefinately are `Indeterminate Progress` View
 
 This are the set of Indeterminate Progress Indicators.
 
-## CircularSnail
+## MaterialProgress
 ![CircularSnail](/Images/CircularSnail.gif)
 
 ## Rainbow
