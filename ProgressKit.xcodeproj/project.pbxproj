@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E31617A61BC0596C007AD70F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31617A51BC0596C007AD70F /* BaseView.swift */; };
-		E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340FDB71BDE45F000CE6550 /* RotatingArc.swift */; settings = {ASSET_TAGS = (); }; };
+		E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340FDB71BDE45F000CE6550 /* RotatingArc.swift */; };
 		E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35D1C6B1B676889001DBAF2 /* Spinner.swift */; };
 		E37568DF1B6AAB530073E26F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37568DE1B6AAB530073E26F /* ProgressBar.swift */; };
 		E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3918F801B4E88CF00558DAB /* CircularProgressView.swift */; };
@@ -210,14 +210,16 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kauntey Suryawanshi";
 				TargetAttributes = {
 					E3AD65D11B426758009541CD = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 					};
 					E3AD65E31B426758009541CD = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = E3AD65D11B426758009541CD;
 					};
 				};
@@ -326,8 +328,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -371,8 +375,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -391,6 +397,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -403,6 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaunteya.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -415,6 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaunteya.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -435,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaunteya.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProgressKit.app/Contents/MacOS/ProgressKit";
 			};
 			name = Debug;
@@ -452,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaunteya.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProgressKit.app/Contents/MacOS/ProgressKit";
 			};
 			name = Release;

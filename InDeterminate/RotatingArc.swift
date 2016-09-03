@@ -12,24 +12,24 @@ import Cocoa
 private let duration = 0.25
 
 @IBDesignable
-public class RotatingArc: IndeterminateAnimation {
+open class RotatingArc: IndeterminateAnimation {
 
     var backgroundCircle = CAShapeLayer()
     var arcLayer = CAShapeLayer()
 
-    @IBInspectable public var strokeWidth: CGFloat = 5 {
+    @IBInspectable open var strokeWidth: CGFloat = 5 {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable public var arcLength: Int = 35 {
+    @IBInspectable open var arcLength: Int = 35 {
         didSet {
             notifyViewRedesigned()
         }
     }
 
-    @IBInspectable public var clockWise: Bool = true {
+    @IBInspectable open var clockWise: Bool = true {
         didSet {
             notifyViewRedesigned()
         }
@@ -44,7 +44,7 @@ public class RotatingArc: IndeterminateAnimation {
         tempRotation.repeatCount = Float.infinity
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
-        tempRotation.cumulative = true
+        tempRotation.isCumulative = true
         tempRotation.duration = duration
         return tempRotation
         }()
@@ -52,8 +52,8 @@ public class RotatingArc: IndeterminateAnimation {
     override func notifyViewRedesigned() {
         super.notifyViewRedesigned()
 
-        arcLayer.strokeColor = foreground.CGColor
-        backgroundCircle.strokeColor = foreground.colorWithAlphaComponent(0.4).CGColor
+        arcLayer.strokeColor = foreground.cgColor
+        backgroundCircle.strokeColor = foreground.withAlphaComponent(0.4).cgColor
 
         backgroundCircle.lineWidth = self.strokeWidth
         arcLayer.lineWidth = strokeWidth
@@ -61,7 +61,7 @@ public class RotatingArc: IndeterminateAnimation {
 
         let arcPath = NSBezierPath()
         let endAngle: CGFloat = CGFloat(-360) * CGFloat(arcLength) / 100
-        arcPath.appendBezierPathWithArcWithCenter(self.bounds.mid, radius: radius, startAngle: 0, endAngle: endAngle, clockwise: true)
+        arcPath.appendArc(withCenter: self.bounds.mid, radius: radius, startAngle: 0, endAngle: endAngle, clockwise: true)
 
         arcLayer.path = arcPath.CGPath
     }
@@ -75,27 +75,27 @@ public class RotatingArc: IndeterminateAnimation {
             backgroundCircle.frame = rect
             backgroundCircle.lineWidth = strokeWidth
 
-            backgroundCircle.strokeColor = foreground.colorWithAlphaComponent(0.5).CGColor
-            backgroundCircle.fillColor = NSColor.clearColor().CGColor
+            backgroundCircle.strokeColor = foreground.withAlphaComponent(0.5).cgColor
+            backgroundCircle.fillColor = NSColor.clear.cgColor
             let backgroundPath = NSBezierPath()
-            backgroundPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360)
+            backgroundPath.appendArc(withCenter: rect.mid, radius: radius, startAngle: 0, endAngle: 360)
             backgroundCircle.path = backgroundPath.CGPath
             self.layer?.addSublayer(backgroundCircle)
         }
 
         // Arc Layer
         do {
-            arcLayer.fillColor = NSColor.clearColor().CGColor
+            arcLayer.fillColor = NSColor.clear.cgColor
             arcLayer.lineWidth = strokeWidth
 
             arcLayer.frame = rect
-            arcLayer.strokeColor = foreground.CGColor
+            arcLayer.strokeColor = foreground.cgColor
             self.layer?.addSublayer(arcLayer)
         }
     }
 
     override func startAnimation() {
-        arcLayer.addAnimation(rotationAnimation, forKey: "")
+        arcLayer.add(rotationAnimation, forKey: "")
     }
 
     override func stopAnimation() {

@@ -14,25 +14,25 @@ protocol AnimationActivityProtocol {
     func stopAnimation()
 }
 
-public class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
+open class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
 
     /// View is hidden when *animate* property is false
-    @IBInspectable public var displayAfterAnimationEnds: Bool = false
+    @IBInspectable open var displayAfterAnimationEnds: Bool = false
 
     /**
     Control point for all Indeterminate animation
     True invokes `startAnimation()` on subclass of IndeterminateAnimation
     False invokes `stopAnimation()` on subclass of IndeterminateAnimation
     */
-    public var animate: Bool = false {
+    open var animate: Bool = false {
         didSet {
             guard animate != oldValue else { return }
             if animate {
-                self.hidden = false
+                self.isHidden = false
                 startAnimation()
             } else {
                 if !displayAfterAnimationEnds {
-                    self.hidden = true
+                    self.isHidden = true
                 }
                 stopAnimation()
             }
