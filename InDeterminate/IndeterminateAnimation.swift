@@ -6,15 +6,14 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
-import Foundation
 import Cocoa
 
-protocol AnimationActivityProtocol {
+protocol AnimationStatusDelegate {
     func startAnimation()
     func stopAnimation()
 }
 
-open class IndeterminateAnimation: BaseView, AnimationActivityProtocol {
+open class IndeterminateAnimation: BaseView, AnimationStatusDelegate {
 
     /// View is hidden when *animate* property is false
     @IBInspectable open var displayAfterAnimationEnds: Bool = false

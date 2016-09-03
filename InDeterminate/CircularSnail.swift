@@ -1,5 +1,5 @@
 //
-//  WhatsAppCircular.swift
+//  MaterialProgress.swift
 //  ProgressKit
 //
 //  Created by Kauntey Suryawanshi on 30/06/15.
@@ -13,7 +13,7 @@ private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
 
 @IBDesignable
-open class CircularSnail: IndeterminateAnimation {
+open class MaterialProgress: IndeterminateAnimation {
 
     @IBInspectable open var lineWidth: CGFloat = -1 {
         didSet {
@@ -110,7 +110,7 @@ open class CircularSnail: IndeterminateAnimation {
     }
 }
 
-extension CircularSnail: CAAnimationDelegate {
+extension MaterialProgress: CAAnimationDelegate {
     open func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if !animate { return }
         CATransaction.begin()

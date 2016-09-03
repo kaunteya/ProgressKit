@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11198.2"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -694,11 +694,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="184"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-BT-qLK" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-BT-qLK" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-2H-wiR">
                                 <rect key="frame" x="59" y="59" width="41" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="lBv-3R-Zg0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
@@ -709,6 +711,7 @@
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VR-oT-y2I" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="250" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="7" height="14"/>
@@ -721,12 +724,14 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haM-Vg-aIY" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="129" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-8G-HkC">
                                 <rect key="frame" x="168" y="59" width="41" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="SqX-Fr-AwH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
@@ -737,6 +742,7 @@
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-H3-AT2" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="34" width="438" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="foreground">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,6 +754,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfH-n9-vtu" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="11" width="438" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow" blurRadius="1">
                                     <color key="color" red="0.25490197539329529" green="0.63529413938522339" blue="0.87058824300765991" alpha="1" colorSpace="calibratedRGB"/>
                                 </shadow>
@@ -765,6 +772,7 @@
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-1B-PXN">
                                 <rect key="frame" x="289" y="59" width="41" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" controlSize="small" borderStyle="border" inset="2" id="Z8O-Rd-zkL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
@@ -775,6 +783,7 @@
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-Bp-9Zv">
                                 <rect key="frame" x="422" y="59" width="41" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" controlSize="small" borderStyle="border" inset="2" id="zgh-wl-Oer">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
@@ -785,6 +794,7 @@
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR0-9k-CEu" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="378" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
                     </view>
@@ -803,6 +813,7 @@
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-BV-WIW" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="14" y="126" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
                                         <real key="value" value="9"/>
@@ -814,6 +825,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-ct-TGA" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="215" y="126" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="arcLength">
                                         <integer key="value" value="75"/>
@@ -825,6 +837,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUA-cq-CIL" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="31" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockWise" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="arcLength">
@@ -834,6 +847,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgU-aF-axh" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="113" y="126" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.1647058874" green="0.65882354970000001" blue="0.53333336109999996" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -848,6 +862,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTF-Fa-o4i" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="31" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.0" green="0.23137255012989044" blue="0.51372551918029785" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -860,6 +875,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-0P-V6h" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="128" y="30" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.0" green="0.23137255012989044" blue="0.51372551918029785" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -871,6 +887,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swG-XB-dD9" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="121" y="23" width="95" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.0" green="0.23137255009999999" blue="0.51372551919999998" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -885,6 +902,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WU-rT-wd5" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="138" y="40" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.0" green="0.23137255009999999" blue="0.51372551919999998" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -899,6 +917,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-P2-8sn" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="224" y="30" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.47450980544090271" green="0.23529411852359772" blue="0.46666666865348816" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -916,6 +935,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2W-FJ-v1G" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="229" y="35" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.47450980539999998" green="0.23529411850000001" blue="0.46666666870000001" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -930,6 +950,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-hY-ZRh" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="234" y="40" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.47450980539999998" green="0.23529411850000001" blue="0.46666666870000001" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -947,6 +968,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtF-Gh-lRq" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="239" y="45" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.47450980539999998" green="0.23529411850000001" blue="0.46666666870000001" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -977,8 +999,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="180"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-Jc-Yju" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-Jc-Yju" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="80" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.93725490570068359" green="0.92941176891326904" blue="0.92156863212585449" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -988,8 +1011,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-2r-OsR" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-2r-OsR" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="235" y="80" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.13725490868091583" green="0.49019607901573181" blue="0.81568628549575806" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
@@ -1005,8 +1029,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv2-cL-kGS" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv2-cL-kGS" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="370" y="102" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.13725490868091583" green="0.49019607901573181" blue="0.81568628549575806" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -1019,8 +1044,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCf-PU-fcx" customClass="CircularSnail" customModule="ProgressKit" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCf-PU-fcx" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="123" y="80" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="40"/>
@@ -1029,9 +1055,11 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rp1-na-hhA" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-mO-3Yh" customClass="Rainbow" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="123" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="onLightOffDark" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -1056,6 +1084,7 @@
                         <subviews>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-DU-bI3">
                                 <rect key="frame" x="136" y="264" width="289" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.29999999999999999" tickMarkPosition="above" sliderType="linear" id="kV7-A8-t5m"/>
                                 <connections>
                                     <action selector="sliderDragged:" target="XfG-lQ-9wD" id="mes-ql-pK5"/>
@@ -1063,6 +1092,7 @@
                             </slider>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-Jj-cPs">
                                 <rect key="frame" x="18" y="266" width="106" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Live Progress" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Pp0-aX-cfK">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1073,6 +1103,7 @@
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-N3-gG1">
                                 <rect key="frame" x="437" y="265" width="45" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100 %" id="7Nr-gz-yTj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1084,6 +1115,7 @@
                             </textField>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-hN-yoj" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="45" width="454" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="foreground">
                                         <color key="value" red="0.29411765933036804" green="0.22352941334247589" blue="0.5372549295425415" alpha="1" colorSpace="calibratedRGB"/>
@@ -1098,6 +1130,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-gs-jO8" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="91" width="454" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.34999999999999998"/>
@@ -1106,6 +1139,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYN-D7-hBy" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="132" width="101" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.40999999999999998"/>
@@ -1114,6 +1148,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S81-p1-vGt" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="171" y="150" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.83921569585800171" green="0.44705882668495178" blue="0.43921568989753723" alpha="1" colorSpace="calibratedRGB"/>
@@ -1131,6 +1166,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-Em-IM9" customClass="CircularProgressView" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="265" y="132" width="101" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1149,6 +1185,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-PV-rE0" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="26" y="67" width="454" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.80000000000000004"/>
@@ -1184,6 +1221,7 @@
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-vb-sC9" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="20" y="122" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="7" height="7"/>
@@ -1195,6 +1233,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOH-IG-9v8" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="103" y="117" width="67" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="3" height="13"/>
@@ -1210,6 +1249,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbE-4t-MsT" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="198" y="98" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="8" height="8"/>
@@ -1227,6 +1267,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4re-h9-0B8" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="324" y="98" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="8" height="8"/>
@@ -1245,6 +1286,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-XU-BMs" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="324" y="98" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="8" height="8"/>
@@ -1263,6 +1305,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQW-TQ-ZTf" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="198" y="13" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="8" height="8"/>
@@ -1284,6 +1327,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCX-xw-cn0" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="198" y="13" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="7" height="7"/>
@@ -1305,9 +1349,11 @@
                             </customView>
                             <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="rV6-J2-9Jn">
                                 <rect key="frame" x="20" y="48" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0A-06-Wvu" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="103" y="23" width="67" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="9" height="6"/>
@@ -1329,6 +1375,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-hQ-H17" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="339" y="28" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="7" height="7"/>
@@ -1343,6 +1390,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sop-qz-vfQ" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="58" y="48" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                         <size key="value" width="2" height="4"/>
@@ -1379,6 +1427,7 @@
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-ge-io4" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="12" y="17" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.96470588445663452" green="0.48627451062202454" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -1390,6 +1439,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mje-ex-whw" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="105" y="17" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
@@ -1398,6 +1448,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-xS-5EM" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="193" y="17" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.76862746477127075" green="0.25882354378700256" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
@@ -1409,6 +1460,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mj-vA-VO1" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="284" y="17" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" white="0.1178155164969595" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
@@ -1420,6 +1472,7 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-fC-Weh" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
                                 <rect key="frame" x="369" y="17" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="background">
                                         <color key="value" red="0.46666666865348816" green="0.7137255072593689" blue="0.94901961088180542" alpha="1" colorSpace="calibratedRGB"/>

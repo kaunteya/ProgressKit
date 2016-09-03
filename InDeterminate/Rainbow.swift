@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-open class Rainbow: CircularSnail {
+open class Rainbow: MaterialProgress {
 
     @IBInspectable open var onLightOffDark: Bool = false
 

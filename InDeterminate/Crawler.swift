@@ -30,6 +30,7 @@ open class Crawler: IndeterminateAnimation {
             star.backgroundColor = foreground.cgColor
         }
     }
+    
     override func configureLayers() {
         super.configureLayers()
         let rect = self.bounds
