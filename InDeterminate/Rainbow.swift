@@ -10,29 +10,29 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-public class Rainbow: CircularSnail {
+open class Rainbow: MaterialProgress {
 
-    @IBInspectable public var onLightOffDark: Bool = false
+    @IBInspectable open var onLightOffDark: Bool = false
 
     override func configureLayers() {
         super.configureLayers()
-        self.background = NSColor.clearColor()
+        self.background = NSColor.clear
     }
 
-    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    override open func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         super.animationDidStop(anim, finished: flag)
         if onLightOffDark {
-            progressLayer.strokeColor = lightColorList[Int(arc4random()) % lightColorList.count].CGColor
+            progressLayer.strokeColor = lightColorList[Int(arc4random()) % lightColorList.count].cgColor
         } else {
-            progressLayer.strokeColor = darkColorList[Int(arc4random()) % darkColorList.count].CGColor
+            progressLayer.strokeColor = darkColorList[Int(arc4random()) % darkColorList.count].cgColor
         }
     }
 }
 
 var randomColor: NSColor {
-    let red   = CGFloat(Double(arc4random()) % 256.0 / 256.0)
-    let green = CGFloat(Double(arc4random()) % 256.0 / 256.0)
-    let blue  = CGFloat(Double(arc4random()) % 256.0 / 256.0)
+    let red   = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 256.0) / 256.0)
+    let green = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 256.0) / 256.0)
+    let blue  = CGFloat(Double(arc4random()).truncatingRemainder(dividingBy: 256.0) / 256.0)
     return NSColor(calibratedRed: red, green: green, blue: blue, alpha: 1.0)
 }
 

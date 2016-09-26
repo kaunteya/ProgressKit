@@ -14,12 +14,12 @@ protocol DeterminableAnimation {
 }
 
 @IBDesignable
-public class DeterminateAnimation: BaseView, DeterminableAnimation {
+open class DeterminateAnimation: BaseView, DeterminableAnimation {
     
-    @IBInspectable public var animated: Bool = true
+    @IBInspectable open var animated: Bool = true
 
     /// Value of progress now. Range 0..1
-    @IBInspectable public var progress: CGFloat = 0 {
+    @IBInspectable open var progress: CGFloat = 0 {
         didSet {
             updateProgress()
         }

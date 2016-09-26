@@ -1,5 +1,5 @@
 //
-//  WhatsAppCircular.swift
+//  MaterialProgress.swift
 //  ProgressKit
 //
 //  Created by Kauntey Suryawanshi on 30/06/15.
@@ -13,9 +13,9 @@ private let duration = 1.5
 private let strokeRange = (start: 0.0, end: 0.8)
 
 @IBDesignable
-public class CircularSnail: IndeterminateAnimation {
+open class MaterialProgress: IndeterminateAnimation {
 
-    @IBInspectable public var lineWidth: CGFloat = -1 {
+    @IBInspectable open var lineWidth: CGFloat = -1 {
         didSet {
             progressLayer.lineWidth = lineWidth
         }
@@ -23,7 +23,7 @@ public class CircularSnail: IndeterminateAnimation {
 
     override func notifyViewRedesigned() {
         super.notifyViewRedesigned()
-        progressLayer.strokeColor = foreground.CGColor
+        progressLayer.strokeColor = foreground.cgColor
     }
 
     var backgroundRotationLayer = CAShapeLayer()
@@ -32,7 +32,7 @@ public class CircularSnail: IndeterminateAnimation {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeEnd = CGFloat(strokeRange.end)
         tempLayer.lineCap = kCALineCapRound
-        tempLayer.fillColor = NSColor.clearColor().CGColor
+        tempLayer.fillColor = NSColor.clear.cgColor
         return tempLayer
     }()
 
@@ -50,7 +50,7 @@ public class CircularSnail: IndeterminateAnimation {
         tempRotation.repeatCount = Float.infinity
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
-        tempRotation.cumulative = true
+        tempRotation.isCumulative = true
         tempRotation.duration = duration / 2
         return tempRotation
         }()
@@ -60,7 +60,7 @@ public class CircularSnail: IndeterminateAnimation {
         var strokeStartAnimation: CABasicAnimation!
         var strokeEndAnimation: CABasicAnimation!
 
-        func makeAnimationforKeyPath(keyPath: String) -> CABasicAnimation {
+        func makeAnimationforKeyPath(_ keyPath: String) -> CABasicAnimation {
             let tempAnimation = CABasicAnimation(keyPath: keyPath)
             tempAnimation.repeatCount = 1
             tempAnimation.speed = 2.0
@@ -92,30 +92,33 @@ public class CircularSnail: IndeterminateAnimation {
         progressLayer.frame =  rect
         progressLayer.lineWidth = lineWidth == -1 ? radius / 10: lineWidth
         let arcPath = NSBezierPath()
-        arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
+        arcPath.appendArc(withCenter: rect.mid, radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
         progressLayer.path = arcPath.CGPath
         backgroundRotationLayer.addSublayer(progressLayer)
     }
 
     var currentRotation = 0.0
     let π2 = M_PI * 2
-    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if !animate { return }
-        CATransaction.begin()
-        CATransaction.setDisableActions(true)
-        currentRotation += strokeRange.end * π2
-        currentRotation %= π2
-        progressLayer.setAffineTransform(CGAffineTransformMakeRotation(CGFloat( currentRotation)))
-        CATransaction.commit()
-        progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-    }
 
     override func startAnimation() {
-        progressLayer.addAnimation(animationGroup, forKey: "strokeEnd")
-        backgroundRotationLayer.addAnimation(rotationAnimation, forKey: rotationAnimation.keyPath)
+        progressLayer.add(animationGroup, forKey: "strokeEnd")
+        backgroundRotationLayer.add(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
     override func stopAnimation() {
         backgroundRotationLayer.removeAllAnimations()
         progressLayer.removeAllAnimations()
+    }
+}
+
+extension MaterialProgress: CAAnimationDelegate {
+    open func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if !animate { return }
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        currentRotation += strokeRange.end * π2
+        currentRotation = currentRotation.truncatingRemainder(dividingBy: π2)
+        progressLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat( currentRotation)))
+        CATransaction.commit()
+        progressLayer.add(animationGroup, forKey: "strokeEnd")
     }
 }
