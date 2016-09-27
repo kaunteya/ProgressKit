@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D451CC01D9B128A002371F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CBF1D9B128A002371F2 /* AppDelegate.swift */; };
+		3D451CC21D9B128A002371F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CC11D9B128A002371F2 /* ViewController.swift */; };
+		3D451CC51D9B128A002371F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D451CC31D9B128A002371F2 /* Main.storyboard */; };
+		3D451CC71D9B128A002371F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D451CC61D9B128A002371F2 /* Assets.xcassets */; };
+		3D451CCA1D9B128A002371F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D451CC81D9B128A002371F2 /* LaunchScreen.storyboard */; };
+		3D451CDD1D9B12C0002371F2 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD21D9B12C0002371F2 /* CircularProgressView.swift */; };
+		3D451CDE1D9B12C0002371F2 /* DeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD31D9B12C0002371F2 /* DeterminateAnimation.swift */; };
+		3D451CDF1D9B12C0002371F2 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD41D9B12C0002371F2 /* ProgressBar.swift */; };
+		3D451CE01D9B12C0002371F2 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD61D9B12C0002371F2 /* Crawler.swift */; };
+		3D451CE11D9B12C0002371F2 /* IndeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD71D9B12C0002371F2 /* IndeterminateAnimation.swift */; };
+		3D451CE21D9B12C0002371F2 /* MaterialProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD81D9B12C0002371F2 /* MaterialProgress.swift */; };
+		3D451CE31D9B12C0002371F2 /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CD91D9B12C0002371F2 /* Rainbow.swift */; };
+		3D451CE41D9B12C0002371F2 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CDA1D9B12C0002371F2 /* RotatingArc.swift */; };
+		3D451CE51D9B12C0002371F2 /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CDB1D9B12C0002371F2 /* ShootingStars.swift */; };
+		3D451CE61D9B12C0002371F2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CDC1D9B12C0002371F2 /* Spinner.swift */; };
+		3D451CEA1D9B131F002371F2 /* ProgressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CE91D9B131F002371F2 /* ProgressUtils.swift */; };
+		3D451CEC1D9B1329002371F2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D451CEB1D9B1329002371F2 /* BaseView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D451CBC1D9B128A002371F2 /* ProgressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D451CBF1D9B128A002371F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D451CC11D9B128A002371F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D451CC41D9B128A002371F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D451CC61D9B128A002371F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D451CC91D9B128A002371F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D451CCB1D9B128A002371F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D451CD21D9B12C0002371F2 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		3D451CD31D9B12C0002371F2 /* DeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeterminateAnimation.swift; sourceTree = "<group>"; };
+		3D451CD41D9B12C0002371F2 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		3D451CD61D9B12C0002371F2 /* Crawler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
+		3D451CD71D9B12C0002371F2 /* IndeterminateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndeterminateAnimation.swift; sourceTree = "<group>"; };
+		3D451CD81D9B12C0002371F2 /* MaterialProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialProgress.swift; sourceTree = "<group>"; };
+		3D451CD91D9B12C0002371F2 /* Rainbow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rainbow.swift; sourceTree = "<group>"; };
+		3D451CDA1D9B12C0002371F2 /* RotatingArc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingArc.swift; sourceTree = "<group>"; };
+		3D451CDB1D9B12C0002371F2 /* ShootingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShootingStars.swift; sourceTree = "<group>"; };
+		3D451CDC1D9B12C0002371F2 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		3D451CE91D9B131F002371F2 /* ProgressUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressUtils.swift; sourceTree = "<group>"; };
+		3D451CEB1D9B1329002371F2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D451CB91D9B128A002371F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D451CB31D9B128A002371F2 = {
+			isa = PBXGroup;
+			children = (
+				3D451CE91D9B131F002371F2 /* ProgressUtils.swift */,
+				3D451CEB1D9B1329002371F2 /* BaseView.swift */,
+				3D451CD11D9B12C0002371F2 /* Determinate */,
+				3D451CD51D9B12C0002371F2 /* InDeterminate */,
+				3D451CBE1D9B128A002371F2 /* ProgressKit */,
+				3D451CBD1D9B128A002371F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D451CBD1D9B128A002371F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D451CBC1D9B128A002371F2 /* ProgressKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D451CBE1D9B128A002371F2 /* ProgressKit */ = {
+			isa = PBXGroup;
+			children = (
+				3D451CBF1D9B128A002371F2 /* AppDelegate.swift */,
+				3D451CC11D9B128A002371F2 /* ViewController.swift */,
+				3D451CC31D9B128A002371F2 /* Main.storyboard */,
+				3D451CC61D9B128A002371F2 /* Assets.xcassets */,
+				3D451CC81D9B128A002371F2 /* LaunchScreen.storyboard */,
+				3D451CCB1D9B128A002371F2 /* Info.plist */,
+			);
+			path = ProgressKit;
+			sourceTree = "<group>";
+		};
+		3D451CD11D9B12C0002371F2 /* Determinate */ = {
+			isa = PBXGroup;
+			children = (
+				3D451CD21D9B12C0002371F2 /* CircularProgressView.swift */,
+				3D451CD31D9B12C0002371F2 /* DeterminateAnimation.swift */,
+				3D451CD41D9B12C0002371F2 /* ProgressBar.swift */,
+			);
+			name = Determinate;
+			path = ProgressKit/Determinate;
+			sourceTree = "<group>";
+		};
+		3D451CD51D9B12C0002371F2 /* InDeterminate */ = {
+			isa = PBXGroup;
+			children = (
+				3D451CD61D9B12C0002371F2 /* Crawler.swift */,
+				3D451CD71D9B12C0002371F2 /* IndeterminateAnimation.swift */,
+				3D451CD81D9B12C0002371F2 /* MaterialProgress.swift */,
+				3D451CD91D9B12C0002371F2 /* Rainbow.swift */,
+				3D451CDA1D9B12C0002371F2 /* RotatingArc.swift */,
+				3D451CDB1D9B12C0002371F2 /* ShootingStars.swift */,
+				3D451CDC1D9B12C0002371F2 /* Spinner.swift */,
+			);
+			name = InDeterminate;
+			path = ProgressKit/InDeterminate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D451CBB1D9B128A002371F2 /* ProgressKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D451CCE1D9B128A002371F2 /* Build configuration list for PBXNativeTarget "ProgressKit" */;
+			buildPhases = (
+				3D451CB81D9B128A002371F2 /* Sources */,
+				3D451CB91D9B128A002371F2 /* Frameworks */,
+				3D451CBA1D9B128A002371F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProgressKit;
+			productName = ProgressKit;
+			productReference = 3D451CBC1D9B128A002371F2 /* ProgressKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D451CB41D9B128A002371F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = BinaryBoy;
+				TargetAttributes = {
+					3D451CBB1D9B128A002371F2 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LXW484D3N9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3D451CB71D9B128A002371F2 /* Build configuration list for PBXProject "ProgressKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D451CB31D9B128A002371F2;
+			productRefGroup = 3D451CBD1D9B128A002371F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D451CBB1D9B128A002371F2 /* ProgressKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D451CBA1D9B128A002371F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D451CCA1D9B128A002371F2 /* LaunchScreen.storyboard in Resources */,
+				3D451CC71D9B128A002371F2 /* Assets.xcassets in Resources */,
+				3D451CC51D9B128A002371F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D451CB81D9B128A002371F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D451CE41D9B12C0002371F2 /* RotatingArc.swift in Sources */,
+				3D451CEA1D9B131F002371F2 /* ProgressUtils.swift in Sources */,
+				3D451CE31D9B12C0002371F2 /* Rainbow.swift in Sources */,
+				3D451CE01D9B12C0002371F2 /* Crawler.swift in Sources */,
+				3D451CC21D9B128A002371F2 /* ViewController.swift in Sources */,
+				3D451CE11D9B12C0002371F2 /* IndeterminateAnimation.swift in Sources */,
+				3D451CDD1D9B12C0002371F2 /* CircularProgressView.swift in Sources */,
+				3D451CC01D9B128A002371F2 /* AppDelegate.swift in Sources */,
+				3D451CE61D9B12C0002371F2 /* Spinner.swift in Sources */,
+				3D451CE21D9B12C0002371F2 /* MaterialProgress.swift in Sources */,
+				3D451CDF1D9B12C0002371F2 /* ProgressBar.swift in Sources */,
+				3D451CEC1D9B1329002371F2 /* BaseView.swift in Sources */,
+				3D451CDE1D9B12C0002371F2 /* DeterminateAnimation.swift in Sources */,
+				3D451CE51D9B12C0002371F2 /* ShootingStars.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D451CC31D9B128A002371F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D451CC41D9B128A002371F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D451CC81D9B128A002371F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D451CC91D9B128A002371F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D451CCC1D9B128A002371F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D451CCD1D9B128A002371F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D451CCF1D9B128A002371F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LXW484D3N9;
+				INFOPLIST_FILE = ProgressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.ProgressKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3D451CD01D9B128A002371F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LXW484D3N9;
+				INFOPLIST_FILE = ProgressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.ProgressKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D451CB71D9B128A002371F2 /* Build configuration list for PBXProject "ProgressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D451CCC1D9B128A002371F2 /* Debug */,
+				3D451CCD1D9B128A002371F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D451CCE1D9B128A002371F2 /* Build configuration list for PBXNativeTarget "ProgressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D451CCF1D9B128A002371F2 /* Debug */,
+				3D451CD01D9B128A002371F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D451CB41D9B128A002371F2 /* Project object */;
+}
