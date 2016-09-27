@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E310B1D31D7AB2D4008DEF62 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E310B1D21D7AB2D4008DEF62 /* README.md */; };
-		E310B1D51D7AB2EA008DEF62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E310B1D41D7AB2EA008DEF62 /* LICENSE */; };
 		E31617A61BC0596C007AD70F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31617A51BC0596C007AD70F /* BaseView.swift */; };
 		E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340FDB71BDE45F000CE6550 /* RotatingArc.swift */; };
 		E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35D1C6B1B676889001DBAF2 /* Spinner.swift */; };
@@ -25,7 +23,6 @@
 		E3AD65DF1B426758009541CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65DD1B426758009541CD /* Main.storyboard */; };
 		E3AD65EB1B426758009541CD /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65EA1B426758009541CD /* ProgressKitTests.swift */; };
 		E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65F61B427511009541CD /* InDeterminateVC.swift */; };
-		E3CCD5981BBC19ED00F7DB9A /* ProgressKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3CCD5971BBC19ED00F7DB9A /* ProgressKit.podspec */; };
 		E3CCD59A1BBC2B9B00F7DB9A /* ProgressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD5991BBC2B9B00F7DB9A /* ProgressUtils.swift */; };
 /* End PBXBuildFile section */
 
@@ -254,8 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E310B1D51D7AB2EA008DEF62 /* LICENSE in Resources */,
-				E3CCD5981BBC19ED00F7DB9A /* ProgressKit.podspec in Resources */,
 				E3AD65DF1B426758009541CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +275,6 @@
 				E3AD65F71B427511009541CD /* InDeterminateVC.swift in Sources */,
 				E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */,
 				E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */,
-				E310B1D31D7AB2D4008DEF62 /* README.md in Sources */,
 				E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */,
 				E3918F841B4E88DE00558DAB /* MaterialProgress.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
