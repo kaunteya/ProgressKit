@@ -12,9 +12,9 @@ import Cocoa
 @IBDesignable
 open class CircularProgressView: DeterminateAnimation {
 
-    var backgroundCircle = CAShapeLayer()
-    var progressLayer = CAShapeLayer()
-    var percentLabelLayer = CATextLayer()
+    open var backgroundCircle = CAShapeLayer()
+    open var progressLayer = CAShapeLayer()
+    open var percentLabelLayer = CATextLayer()
 
     @IBInspectable open var strokeWidth: CGFloat = -1 {
         didSet {
