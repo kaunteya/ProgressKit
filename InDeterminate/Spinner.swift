@@ -77,7 +77,7 @@ open class Spinner: IndeterminateAnimation {
         animation.values = [Double]()
         var i = 0.0
         while i < 360 {
-            var iRadian = CGFloat(i * M_PI / 180.0)
+            var iRadian = CGFloat(i * Double.pi / 180.0)
             if clockwise { iRadian = -iRadian }
 
             animation.values?.append(iRadian)
