@@ -42,11 +42,11 @@ extension NSBezierPath {
 }
 
 func degreeToRadian(_ degree: Int) -> Double {
-    return Double(degree) * (M_PI / 180)
+    return Double(degree) * (Double.pi / 180)
 }
 
 func radianToDegree(_ radian: Double) -> Int {
-    return Int(radian * (180 / M_PI))
+    return Int(radian * (180 / Double.pi))
 }
 
 func + (p1: CGPoint, p2: CGPoint) -> CGPoint {

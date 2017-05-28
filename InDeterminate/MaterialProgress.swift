@@ -98,7 +98,7 @@ open class MaterialProgress: IndeterminateAnimation {
     }
 
     var currentRotation = 0.0
-    let π2 = M_PI * 2
+    let π2 = Double.pi * 2
 
     override func startAnimation() {
         progressLayer.add(animationGroup, forKey: "strokeEnd")
