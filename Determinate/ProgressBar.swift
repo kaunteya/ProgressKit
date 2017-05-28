@@ -12,8 +12,8 @@ import Cocoa
 @IBDesignable
 open class ProgressBar: DeterminateAnimation {
 
-    var borderLayer = CAShapeLayer()
-    var progressLayer = CAShapeLayer()
+    open var borderLayer = CAShapeLayer()
+    open var progressLayer = CAShapeLayer()
     
     @IBInspectable open var borderColor: NSColor = NSColor.black {
         didSet {
