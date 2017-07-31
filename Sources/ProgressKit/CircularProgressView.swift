@@ -7,6 +7,9 @@
 //
 
 import Foundation
+
+#if os(OSX)
+
 import Cocoa
 
 @IBDesignable
@@ -102,3 +105,5 @@ open class CircularProgressView: DeterminateAnimation {
         }
     }
 }
+
+#endif

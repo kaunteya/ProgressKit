@@ -6,6 +6,8 @@
 //  Copyright © 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Foundation
 import Cocoa
 
@@ -102,3 +104,5 @@ open class RotatingArc: IndeterminateAnimation {
         arcLayer.removeAllAnimations()
     }
 }
+
+#endif

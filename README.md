@@ -1,5 +1,5 @@
 
-![ProgressKit Banner](/Images/banner.gif)
+![ProgressKit Banner](Images/banner.gif)
 
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/ProgressKit.svg)](https://img.shields.io/cocoapods/v/ProgressKit.svg)
 [![Platform](https://img.shields.io/cocoapods/p/ProgressKit.svg?style=flat)](http://cocoadocs.org/docsets/ProgressKit)
@@ -25,6 +25,10 @@ You can now make spinners, progress bar, crawlers etc, which can be finely custo
   - [Progress Bar](#progress-bar)
 - [License](#license)
 
+# Minimum Requirments
+
+``` macOS 10.10 or later. ```
+
 # Installation
 ##CocoaPods
 [CocoaPods](http://cocoapods.org) adds supports for Swift and embedded frameworks.
@@ -47,6 +51,27 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+##Carthage
+
+add to your ```Cartfile``` :
+
+``` github kaunteya/ProgressKit ```
+
+##Swift Package Manager
+
+add to ``` Package.swift``` :
+
+```
+import PackageDescription
+
+let package = Package(
+    name: "myProject",
+    dependencies: [
+        .Package(url: "https://github.com/kaunteya/ProgressKit.git", majorVersion: 0, minor: 5)
+    ])
+```
+
   
 # Usage
 - Drag  a View at desired location in `XIB` or `Storyboard`
@@ -61,36 +86,36 @@ $ pod install
 
 # Indeterminate Progress
 
-![Indeterminate](/Images/indeterminate.gif)  
+![Indeterminate](Images/indeterminate.gif)  
 Progress indicators which animate indefinately are `Indeterminate Progress` Views.
 
 This are the set of Indeterminate Progress Indicators.
 
 ## MaterialProgress
-![CircularSnail](/Images/CircularSnail.gif)
+![CircularSnail](Images/CircularSnail.gif)
 
 ## Rainbow
-![Rainbow](/Images/Rainbow.gif)
+![Rainbow](Images/Rainbow.gif)
 ## Crawler
-![Crawler](/Images/Crawler.gif)
+![Crawler](Images/Crawler.gif)
 
 ## Spinner
-![Spinner](/Images/Spinner.gif)
+![Spinner](Images/Spinner.gif)
 
 ## Shooting Stars
-![Shooting Stars](/Images/ShootingStars.gif)
+![Shooting Stars](Images/ShootingStars.gif)
 
 ## Rotating Arc
-![Rotating Arc](/Images/RotatingArc.gif)
+![Rotating Arc](Images/RotatingArc.gif)
 
 # Determinate Progress
 Determinate progress views can be used for tasks whos progress can be seen and determined.
 
 ## Circular Progress
-![Circular Progress](/Images/CircularProgress.png)
+![Circular Progress](Images/CircularProgress.png)
 
 ## Progress Bar
-![Progress Bar](/Images/ProgressBar.png)
+![Progress Bar](Images/ProgressBar.png)
 
 # License
 `ProgressKit` is released under the MIT license. See LICENSE for details.

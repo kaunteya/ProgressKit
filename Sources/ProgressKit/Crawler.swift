@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Foundation
 import Cocoa
 
@@ -65,16 +67,16 @@ open class Crawler: IndeterminateAnimation {
         }
     }
 
-    override func startAnimation() {
+    public override func startAnimation() {
         for (index, star) in starList.enumerated() {
             star.add(animationGroups[index], forKey: "")
         }
     }
 
-    override func stopAnimation() {
+    public override func stopAnimation() {
         for star in starList {
             star.removeAllAnimations()
         }
     }
 }
-
+#endif
