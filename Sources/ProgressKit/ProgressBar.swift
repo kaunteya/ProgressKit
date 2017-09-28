@@ -5,7 +5,8 @@
 //  Created by Kauntey Suryawanshi on 31/07/15.
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
-
+#if os(OSX)
+    
 import Foundation
 import Cocoa
 
@@ -57,3 +58,4 @@ open class ProgressBar: DeterminateAnimation {
         CATransaction.commit()
     }
 }
+#endif

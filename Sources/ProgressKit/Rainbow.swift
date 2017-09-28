@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Foundation
 import Cocoa
 
@@ -74,3 +76,4 @@ let darkColorList: [NSColor] = [
     NSColor(red: 0.4183, green: 0.4842, blue: 0.5372, alpha: 1.0),
     NSColor(red: 0.0,    green: 0.0,    blue: 0.0,    alpha: 1.0),
 ]
+#endif

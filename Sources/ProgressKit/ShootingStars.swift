@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Foundation
 import Cocoa
 
@@ -84,3 +86,5 @@ extension ShootingStars: CAAnimationDelegate {
         starLayer2.add(animation, forKey: "default")
     }
 }
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Foundation
 import Cocoa
 
@@ -112,3 +114,5 @@ open class Spinner: IndeterminateAnimation {
         containerLayer.removeAllAnimations()
     }
 }
+
+#endif

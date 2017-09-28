@@ -6,16 +6,17 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
-
+#if os(OSX)
+    
 import AppKit
 
-extension NSRect {
+public extension NSRect {
     var mid: CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
     }
 }
 
-extension NSBezierPath {
+public extension NSBezierPath {
     /// Converts NSBezierPath to CGPath
     var CGPath: CGPath {
         let path = CGMutablePath()
@@ -41,15 +42,16 @@ extension NSBezierPath {
     }
 }
 
-func degreeToRadian(_ degree: Int) -> Double {
+public func degreeToRadian(_ degree: Int) -> Double {
     return Double(degree) * (Double.pi / 180)
 }
 
-func radianToDegree(_ radian: Double) -> Int {
+public func radianToDegree(_ radian: Double) -> Int {
     return Int(radian * (180 / Double.pi))
 }
 
-func + (p1: CGPoint, p2: CGPoint) -> CGPoint {
+public func + (p1: CGPoint, p2: CGPoint) -> CGPoint {
     return CGPoint(x: p1.x + p2.x, y: p1.y + p2.y)
 }
+#endif
 

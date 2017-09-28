@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
+
 import Cocoa
 
 protocol AnimationStatusDelegate {
@@ -55,3 +57,5 @@ open class IndeterminateAnimation: BaseView, AnimationStatusDelegate {
         fatalError("This is an abstract function")
     }
 }
+
+#endif

@@ -5,6 +5,7 @@
 //  Created by Kauntey Suryawanshi on 09/07/15.
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
+#if os(OSX)
 
 import Foundation
 import Cocoa
@@ -30,3 +31,5 @@ open class DeterminateAnimation: BaseView, DeterminableAnimation {
         fatalError("Must be overriden in subclass")
     }
 }
+    
+#endif

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Kauntey Suryawanshi. All rights reserved.
 //
 
+#if os(OSX)
 import AppKit
 
 @IBDesignable
@@ -51,3 +52,8 @@ open class BaseView : NSView {
         self.layer?.cornerRadius = cornerRadius
     }
 }
+
+#endif
+
+
+
