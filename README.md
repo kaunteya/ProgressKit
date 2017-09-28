@@ -21,7 +21,7 @@ You can now make spinners, progress bar, crawlers etc, which can be finely custo
   - [Shooting Stars](#shooting-stars)
   - [Rotating Arc](#rotating-arc)
 - [Determinate Progress](#determinate-progress)
-  - [Circular Progress] (#circular-progress)
+  - [Circular Progress](#circular-progress)
   - [Progress Bar](#progress-bar)
 - [License](#license)
 
