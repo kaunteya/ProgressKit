@@ -10,8 +10,8 @@ import Cocoa
 
 class DeterminateViewController: NSViewController {
 
-    dynamic var liveProgress: Bool = true
-    dynamic var labelPercentage: String = "30%"
+    @objc dynamic var liveProgress: Bool = true
+    @objc dynamic var labelPercentage: String = "30%"
 
     override func viewDidLoad() {
         preferredContentSize = NSMakeSize(500, 300)
@@ -21,9 +21,9 @@ class DeterminateViewController: NSViewController {
 
     @IBAction func sliderDragged(_ sender: NSSlider) {
 
-        let event = NSApplication.shared().currentEvent
+        let event = NSApplication.shared.currentEvent
 //        let dragStart = event!.type == NSEventType.LeftMouseDown
-        let dragEnd = event!.type == NSEventType.leftMouseUp
+        let dragEnd = event!.type == NSEvent.EventType.leftMouseUp
 //        let dragging = event!.type == NSEventType.LeftMouseDragged
 
         if liveProgress || dragEnd {
