@@ -31,7 +31,7 @@ open class MaterialProgress: IndeterminateAnimation {
     var progressLayer: CAShapeLayer = {
         var tempLayer = CAShapeLayer()
         tempLayer.strokeEnd = CGFloat(strokeRange.end)
-        tempLayer.lineCap = kCALineCapRound
+        tempLayer.lineCap = CAShapeLayerLineCap.round
         tempLayer.fillColor = NSColor.clear.cgColor
         return tempLayer
     }()
@@ -64,7 +64,7 @@ open class MaterialProgress: IndeterminateAnimation {
             let tempAnimation = CABasicAnimation(keyPath: keyPath)
             tempAnimation.repeatCount = 1
             tempAnimation.speed = 2.0
-            tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            tempAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
             tempAnimation.fromValue = strokeRange.start
             tempAnimation.toValue =  strokeRange.end

@@ -51,7 +51,7 @@ open class ShootingStars: IndeterminateAnimation {
             animation.fromValue = -dimension
             animation.toValue = rect.width * 0.9
             animation.duration = animationDuration
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
             animation.isRemovedOnCompletion = false
             animation.repeatCount = Float.infinity
         }
@@ -64,7 +64,7 @@ open class ShootingStars: IndeterminateAnimation {
         tempAnimation.toValue = rect.width
         tempAnimation.delegate = self
         tempAnimation.duration = animationDuration / 2
-        tempAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        tempAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
     }
 
     //MARK: Indeterminable protocol

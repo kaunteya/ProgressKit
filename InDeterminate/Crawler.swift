@@ -52,9 +52,9 @@ open class Crawler: IndeterminateAnimation {
 
             let rotationAnimation = CAKeyframeAnimation(keyPath: "position")
             rotationAnimation.path = arcPath.CGPath
-            rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            rotationAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
             rotationAnimation.beginTime = (duration * 0.075) * Double(i)
-            rotationAnimation.calculationMode = kCAAnimationCubicPaced
+            rotationAnimation.calculationMode = CAAnimationCalculationMode.cubicPaced
 
             let animationGroup = CAAnimationGroup()
             animationGroup.animations = [rotationAnimation]

@@ -46,7 +46,7 @@ open class CircularProgressView: DeterminateAnimation {
         } else {
             CATransaction.setDisableActions(true)
         }
-        let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        let timing = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         CATransaction.setAnimationTimingFunction(timing)
         progressLayer.strokeEnd = max(0, min(progress, 1))
         percentLabelLayer.string = "\(Int(progress * 100))%"
@@ -77,7 +77,7 @@ open class CircularProgressView: DeterminateAnimation {
         do {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clear.cgColor
-            progressLayer.lineCap = kCALineCapRound
+            progressLayer.lineCap = CAShapeLayerLineCap.round
             progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor) : strokeWidth
             
             progressLayer.frame = rect
@@ -95,7 +95,7 @@ open class CircularProgressView: DeterminateAnimation {
             percentLabelLayer.foregroundColor = foreground.cgColor
             percentLabelLayer.frame = rect
             percentLabelLayer.font = "Helvetica Neue Light" as CFTypeRef
-            percentLabelLayer.alignmentMode = kCAAlignmentCenter
+            percentLabelLayer.alignmentMode = CATextLayerAlignmentMode.center
             percentLabelLayer.position.y = rect.midY * 0.25
             percentLabelLayer.fontSize = rect.width * 0.2
             self.layer?.addSublayer(percentLabelLayer)
