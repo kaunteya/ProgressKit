@@ -77,7 +77,7 @@ open class CircularProgressView: DeterminateAnimation {
         do {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clear.cgColor
-            progressLayer.lineCap = CAShapeLayerLineCap.round
+            progressLayer.lineCap = .round
             progressLayer.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor) : strokeWidth
             
             progressLayer.frame = rect

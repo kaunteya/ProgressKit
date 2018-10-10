@@ -15,7 +15,7 @@ open class ProgressBar: DeterminateAnimation {
     open var borderLayer = CAShapeLayer()
     open var progressLayer = CAShapeLayer()
     
-    @IBInspectable open var borderColor: NSColor = NSColor.black {
+    @IBInspectable open var borderColor: NSColor = .black {
         didSet {
             notifyViewRedesigned()
         }
@@ -51,7 +51,7 @@ open class ProgressBar: DeterminateAnimation {
         } else {
             CATransaction.setDisableActions(true)
         }
-        let timing = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        let timing = CAMediaTimingFunction(name: .easeOut)
         CATransaction.setAnimationTimingFunction(timing)
         progressLayer.frame.size.width = (borderLayer.bounds.width - 6) * progress
         CATransaction.commit()

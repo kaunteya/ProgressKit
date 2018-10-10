@@ -41,7 +41,7 @@ open class RotatingArc: IndeterminateAnimation {
 
     var rotationAnimation: CABasicAnimation = {
         var tempRotation = CABasicAnimation(keyPath: "transform.rotation")
-        tempRotation.repeatCount = Float.infinity
+        tempRotation.repeatCount = .infinity
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
         tempRotation.isCumulative = true

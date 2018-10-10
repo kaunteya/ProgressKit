@@ -18,8 +18,8 @@ open class Spinner: IndeterminateAnimation {
     
     var animation: CAKeyframeAnimation = {
         var animation = CAKeyframeAnimation(keyPath: "transform.rotation")
-        animation.repeatCount = Float.infinity
-        animation.calculationMode = CAAnimationCalculationMode.discrete
+        animation.repeatCount = .infinity
+        animation.calculationMode = .discrete
         return animation
         }()
 
