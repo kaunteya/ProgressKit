@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11198.2"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -649,11 +651,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="ProgressKit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+                    <window key="window" title="ProgressKit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="206" height="54"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="ItK-CW-Ojy"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="GTh-XG-eDn" kind="relationship" relationship="window.shadowedContentViewController" id="ztZ-rM-59J"/>
@@ -675,9 +680,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="321" height="113"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="GTh-XG-eDn" id="ded-jz-llQ"/>
+                        </connections>
                     </tabView>
                     <connections>
+                        <outlet property="tabView" destination="nfr-Au-q0a" id="OHt-L1-HI3"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="nlJ-xP-ZKw"/>
                         <segue destination="rgo-kk-Wcf" kind="relationship" relationship="tabItems" id="4Yk-6n-yUT"/>
                     </connections>
@@ -691,15 +699,15 @@
             <objects>
                 <viewController id="rgo-kk-Wcf" customClass="InDeterminateViewController" customModule="ProgressKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="lmx-kT-Si1">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="184"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="214"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-BT-qLK" customClass="MaterialProgress" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="84" width="80" height="80"/>
+                                <rect key="frame" x="20" y="114" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-2H-wiR">
-                                <rect key="frame" x="59" y="59" width="41" height="17"/>
+                                <rect key="frame" x="59" y="89" width="41" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="lBv-3R-Zg0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -710,7 +718,7 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VR-oT-y2I" customClass="Spinner" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="250" y="84" width="80" height="80"/>
+                                <rect key="frame" x="250" y="114" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
@@ -723,14 +731,14 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haM-Vg-aIY" customClass="Crawler" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="129" y="84" width="80" height="80"/>
+                                <rect key="frame" x="129" y="114" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-8G-HkC">
-                                <rect key="frame" x="168" y="59" width="41" height="17"/>
+                                <rect key="frame" x="168" y="89" width="41" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="SqX-Fr-AwH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -741,7 +749,7 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-H3-AT2" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="34" width="438" height="3"/>
+                                <rect key="frame" x="20" y="64" width="438" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="foreground">
@@ -753,7 +761,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfH-n9-vtu" customClass="ShootingStars" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="20" y="11" width="438" height="3"/>
+                                <rect key="frame" x="20" y="41" width="438" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow" blurRadius="1">
                                     <color key="color" red="0.25490197539329529" green="0.63529413938522339" blue="0.87058824300765991" alpha="1" colorSpace="calibratedRGB"/>
@@ -770,8 +778,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-cP-p4r" customClass="Gradient" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="438" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <color key="color" red="0.25490197539999998" green="0.63529413940000001" blue="0.87058824300000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" red="0.25490197539999998" green="0.63529413940000001" blue="0.87058824300000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-1B-PXN">
-                                <rect key="frame" x="289" y="59" width="41" height="17"/>
+                                <rect key="frame" x="289" y="89" width="41" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" controlSize="small" borderStyle="border" inset="2" id="Z8O-Rd-zkL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -782,7 +808,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-Bp-9Zv">
-                                <rect key="frame" x="422" y="59" width="41" height="17"/>
+                                <rect key="frame" x="422" y="89" width="41" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="inline" title="More" bezelStyle="inline" alignment="center" controlSize="small" borderStyle="border" inset="2" id="zgh-wl-Oer">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -793,7 +819,7 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR0-9k-CEu" customClass="RotatingArc" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="378" y="84" width="80" height="80"/>
+                                <rect key="frame" x="378" y="114" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
@@ -801,7 +827,7 @@
                 </viewController>
                 <customObject id="lcO-Gc-g97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="228"/>
+            <point key="canvasLocation" x="477" y="243"/>
         </scene>
         <!--In Determinate View Controller-->
         <scene sceneID="vp2-ly-Hqp">
@@ -1072,7 +1098,7 @@
                 </viewController>
                 <customObject id="qek-pA-X3K" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="525"/>
+            <point key="canvasLocation" x="1161" y="683"/>
         </scene>
         <!--Determinate View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -1415,7 +1441,7 @@
                 </viewController>
                 <customObject id="aXo-xa-gLk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="518.5"/>
+            <point key="canvasLocation" x="107" y="701"/>
         </scene>
         <!--In Determinate View Controller-->
         <scene sceneID="7yv-As-dUl">
