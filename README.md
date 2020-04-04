@@ -93,17 +93,18 @@ Determinate progress views can be used for tasks whos progress can be seen and d
 ## Progress Bar
 ![Progress Bar](/Images/ProgressBar.png)
 
-# Other Apps
+# Other Apps for Mac
+Apart from making Open source libraries I also make apps for Mac OS. Please have a look.
 
-## Lexi
+## [Lexi](https://apps.apple.com/tr/app/lexi-visual-json-browser/id1462580127?mt=12)
 Lexi is a split screen app that lets you browse large JSON with ease.
 
 It also has other featuers like `Prettify JSON`, `Minify JSON` `Copy JSON Path` and `Pin Large JSON` to narrow your visibility
 
-[View on Mac AppStore](https://itunes.apple.com/us/app/linex-for-xcode/id1290932760?ls=1&mt=12) 
+[View on Mac AppStore](https://apps.apple.com/tr/app/lexi-visual-json-browser/id1462580127?mt=12) 
 
-## Quick Note - A click menubar notes
-Quick Note lets you quickly add text either from Menu bar or from Shortcut.
+## [Quick Note](https://apps.apple.com/in/app/quicknote-one-click-notes/id1472935217?mt=12) 
+Quick Note is a Mac OS app, lets you quickly add text either from Menu bar or from Shortcut.
 
 The text floats on other windows so that they are always visible
 
