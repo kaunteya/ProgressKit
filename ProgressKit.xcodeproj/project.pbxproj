@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C580088219531CE00A1D8B9 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C580087219531CE00A1D8B9 /* Gradient.swift */; };
 		E31617A61BC0596C007AD70F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31617A51BC0596C007AD70F /* BaseView.swift */; };
 		E340FDB81BDE45F000CE6550 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340FDB71BDE45F000CE6550 /* RotatingArc.swift */; };
 		E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35D1C6B1B676889001DBAF2 /* Spinner.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C580087219531CE00A1D8B9 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = InDeterminate/Gradient.swift; sourceTree = "<group>"; };
 		E310B1D21D7AB2D4008DEF62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E310B1D41D7AB2EA008DEF62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		E31617A51BC0596C007AD70F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				E3918F831B4E88DE00558DAB /* ShootingStars.swift */,
 				E35D1C6B1B676889001DBAF2 /* Spinner.swift */,
 				E340FDB71BDE45F000CE6550 /* RotatingArc.swift */,
+				4C580087219531CE00A1D8B9 /* Gradient.swift */,
 			);
 			name = Indeterminate;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				E3918F851B4E88DE00558DAB /* ShootingStars.swift in Sources */,
 				E3918F811B4E88CF00558DAB /* CircularProgressView.swift in Sources */,
 				E35D1C6C1B676889001DBAF2 /* Spinner.swift in Sources */,
+				4C580088219531CE00A1D8B9 /* Gradient.swift in Sources */,
 				E3918F841B4E88DE00558DAB /* MaterialProgress.swift in Sources */,
 				E3AD65D81B426758009541CD /* AppDelegate.swift in Sources */,
 				E37568DF1B6AAB530073E26F /* ProgressBar.swift in Sources */,
